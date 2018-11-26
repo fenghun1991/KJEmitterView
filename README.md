@@ -1,29 +1,27 @@
-# KJEmitterDemo
+# KJEmitterView
 a simple project for KJEmitterDemo
 
 * 这个工程提供了一些iOS开发中用到的类目, 方便开发
-* pod 'KJEmitterDemo'，'～> 1.0.1'
-
-# 开源框架到CocoaPods
+* pod 'KJEmitterView'
 
 #### 相关Demo下载地址
-[Demo下载地址](https://github.com/yangKJ/KJEmitterDemo）
+[Demo下载地址](https://github.com/yangKJ/KJEmitterView）
 #### 简书地址
 [简书地址](https://www.jianshu.com/p/3ef51991c0e9）
 
 
 ### 一、先将代码传到github上
 ###### 1．创建本地仓库                 ```git init```
-###### 2．添加名称为origin的远程连接    ```git remote add origin '你的github项目地址'```
+###### 2．添加名称为origin的远程连接    ```git remote add origin 'Github项目地址'```
 ###### 3．将本地代码加入到本地仓库       ```git add .```
-###### 4．提交修改到本地仓库            ```git commit -m '你的修改记录'```
+###### 4．提交修改到本地仓库            ```git commit -m '修改记录'```
 ###### 5．推送master分支的代码到名称为orgigin的远程仓库   ```git push origin master```
 
 ### 二、给你git打上tag
 #### 打tag的目的就相当于给你的开源框架制定版本号，每个版本一个tag
 ###### 1．cd仓库目录
 ###### 2．查看本地tag           ```git tag```
-###### 3．添加本地tag 1.0.0     ```git tag -a 1.0.0 -m ‘release 1.0.0’```
+###### 3．添加本地tag 1.0.0     ```git tag -a 1.0.0 -m 'release 1.0.0'```
 ![图片 1.png](https://upload-images.jianshu.io/upload_images/1933747-44046777bef06be9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ###### 4．将tag传到远程       ```git push origin --tags```
 
@@ -32,7 +30,7 @@ a simple project for KJEmitterDemo
 ###### 2．删除远程tag          ```git push origin -d tag 1.0.0```
 
 ### 三、注册Trunk
-###### 1．注册Trunk        ```pod trunk register 你的邮箱 '你的用户名' --description='你的描述'```
+###### 1．注册Trunk        ```pod trunk register 邮箱 '用户名' --description='描述'```
 ![图片 2.png](https://upload-images.jianshu.io/upload_images/1933747-c852db27cf095480.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 成功的话就会受到一份邮件，点击邮件中的链接后验证一下：
 
@@ -56,20 +54,46 @@ a simple project for KJEmitterDemo
 ###### 2．将生成的LICENSE文件同步至Github
 
 ### 五、创建自己项目的Podspec描述文件
-###### 1．创建podspec文件            ```pod spec create KJEmitterDemo```
-###### 2．验证你本地的podspec文件     ```pod spec lint KJEmitterDemo.podspec```
-###### 3．忽略警告     ```pod spec lint KJEmitterDemo.podspec --allow-warnings```
+###### 1．创建podspec文件            ```pod spec create KJEmitterView```
+###### 2．podspec文件代码
+```
+Pod::Spec.new do |s|
+  s.name         = "KJEmitterView"
+  s.version      = "1.0.0"
+  s.summary      = "Some iOS Emitter"
+  s.homepage     = "https://github.com/yangKJ/KJEmitterView"
+  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.license      = "Copyright (c) 2018 yangkejun"
+  s.author       = { "77" => "393103982@qq.com" }
+  s.platform     = :ios
+  s.source       = { :git => "https://github.com/yangKJ/KJEmitterView.git", :tag => "#{s.version}" }
+  s.framework    = "UIKit"
+  # s.dependency "JSONKit", "~> 1.4"
+  s.requires_arc = true
+
+  s.subspec 'Classes' do |ss|
+    ss.source_files = "KJEmitterView/Classes/**/*.{h,m}" # 添加文件
+    ss.public_header_files = 'KJEmitterView/Classes/*.h',"KJEmitterView/Classes/**/*.h"   # 添加头文件
+    ss.resources    = "KJEmitterView/Classes/**/*.{bundle}" # 添加数据资料
+  end
+  
+end
+```
+###### 3．验证你本地的podspec文件     ```pod spec lint KJEmitterView.podspec```
+###### 4．忽略警告     ```pod spec lint KJEmitterView.podspec --allow-warnings```
 验证成功，
 ![图片 7.png](https://upload-images.jianshu.io/upload_images/1933747-a0561698c89fcacf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### 六、传到CocoaPods上
 ###### 1．首先验证你本地的podspec文件，之后会上传spec文件到trunk
-###### 2．将podspec文件传到trunk上    ```pod trunk push KJEmitterDemo.podspec```
+###### 2．将podspec文件传到trunk上    ```pod trunk push KJEmitterView.podspec```
 成功如下：
 ![图片 8.png](https://upload-images.jianshu.io/upload_images/1933747-f534f0b699fd2e63.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###### 3．一直处于Updating spec repo `master`状态   可以选择更新下                 pod repo update --verbose
-###### 4．检查是否上传成功：          ```pod search KJEmitterDemo```
+###### 3．一直处于Updating spec repo master 状态   
+可以选择更新下              ```pod repo update --verbose```
+###### 4．检查是否上传成功：        ```pod search KJEmitterView```
 
 ### 七、Bug总结
 ###### 1、[!] There was an error registering with trunk: getaddrinfo: nodename nor servname provided, or not known
@@ -126,4 +150,9 @@ a simple project for KJEmitterDemo
 - 删除远端tag： ```git push origin -d tag 1.0.0```
 - 重新添加本地tag：```git tag -a 1.0.0 -m ‘release 1.0.0’```
 - 重新上传到远端：```git push origin --tags```
-- 再次校验：```pod spec lint KJEmitterDemo.podspec```
+- 再次校验：```pod spec lint KJEmitterView.podspec```
+
+###### 7、[!] There was an error pushing a new version to trunk: execution expired
+
+- 原因：推送过期
+- 解决方案：重新将podspec文件传到trunk上 ```pod trunk push KJEmitterView.podspec```
