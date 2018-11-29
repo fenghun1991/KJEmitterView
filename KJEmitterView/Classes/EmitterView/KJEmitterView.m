@@ -251,7 +251,7 @@
     cell.alphaSpeed = -0.3f;      // 粒子消逝的速度
     
     //发射器
-    cell.birthRate = arc4random_uniform(5);        // 每秒生成粒子的个数
+    cell.birthRate = 20;        // 每秒生成粒子的个数
     cell.xAcceleration = 5;
     cell.yAcceleration = 2;   // 粒子的初始加速度
     cell.zAcceleration = 2;
@@ -259,9 +259,10 @@
     cell.velocityRange = 30.f;    // 粒子运动的速度扰动范围
     cell.emissionRange = 2*M_PI; // 粒子发射角度范围
     
-    cell.scale = 0.2;             // 缩放比例
-    cell.scaleRange = 0.4;        // 缩放比例范围
-    cell.spin = 2 * M_PI;         // 自旋转角度
+    cell.scale = 0.05;             // 缩放比例
+    cell.scaleRange = 0.1;        // 缩放比例范围
+    cell.scaleSpeed = 0.05;
+    cell.spin = M_PI;         // 自旋转角度
     cell.spinRange = 2 * M_PI;    // 自旋转角度范围
     
     emitterLayer.emitterCells = @[cell];

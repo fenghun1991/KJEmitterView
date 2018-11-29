@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [KJEmitterView createEmitterViewWithType:(KJEmitterTypeSnowflake) Block:^(KJEmitterView *obj) {
+    [KJEmitterView createEmitterViewWithType:(KJEmitterTypeStarrySky) Block:^(KJEmitterView *obj) {
         obj.KJFrame(self.view.bounds).KJAddView(self.view).KJBackgroundColor(UIColor.blackColor);
     }];
 }
