@@ -13,11 +13,11 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
   s.requires_arc = true
   
-  s.public_header_files = 'KJEmitterView/Classes/*.h' # 添加头文件
+  s.public_header_files = 'KJEmitterView/KJHeader.h' # 添加头文件
 
   s.subspec 'Classes' do |ss|
     ss.source_files = "KJEmitterView/Classes/**/*.{h,m}" # 添加文件
-    ss.public_header_files = "KJEmitterView/Classes/**/*.h"   # 添加头文件
+    ss.public_header_files = 'KJEmitterView/Classes/*.h',"KJEmitterView/Classes/**/*.h"   # 添加头文件
     ss.resources    = "KJEmitterView/Classes/**/*.{bundle}" # 添加数据资料
   end
   

@@ -156,3 +156,10 @@ end
 
 - 原因：推送过期
 - 解决方案：重新将podspec文件传到trunk上 ```pod trunk push KJEmitterView.podspec```
+
+###### 8、- ERROR | [iOS] public_header_files: The pattern includes header files that are not listed in source_files 
+
+- 原因：文件夹层次结构过浅，导致无法找到对应的文件
+- 解决方案：默认的头文件目录设置为：
+- s.public_header_files = 'KJEmitterView/Classes/** / *.h'
+- 但是如果Classes目录中，你的代码文件夹层次结构超过两级，就会出现该错误。修改文件层级
