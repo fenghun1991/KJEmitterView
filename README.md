@@ -163,3 +163,10 @@ end
 - 解决方案：默认的头文件目录设置为：
 - s.public_header_files = 'KJEmitterView/Classes/** / *.h'
 - 但是如果Classes目录中，你的代码文件夹层次结构超过两级，就会出现该错误。修改文件层级
+
+###### 9、搜索不到最新版本pod库
+
+- 原因：没有更新pod库
+- 解决方案：更新pod库
+- pod update 要更新库的名字
+- 查看Podfile文件中的依赖库的最新版本：pod outdated

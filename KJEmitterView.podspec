@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "1.0.2"
+  s.version      = "1.1.0"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   # s.dependency "JSONKit", "~> 1.4"
   s.requires_arc = true
   
-  s.public_header_files = 'KJEmitterView/KJHeader.h' # 添加头文件
+  s.ios.source_files = 'KJEmitterView/KJHeader.h' # 添加头文件
 
   s.subspec 'Classes' do |ss|
     ss.source_files = "KJEmitterView/Classes/**/*.{h,m}" # 添加文件
