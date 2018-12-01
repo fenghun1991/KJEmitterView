@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.author       = { "77" => "393103982@qq.com" }
   s.platform     = :ios
   s.source       = { :git => "https://github.com/yangKJ/KJEmitterView.git", :tag => "#{s.version}" }
+  s.social_media_url = 'https://www.jianshu.com/u/c84c00476ab6'
   s.requires_arc = true
   
   
@@ -25,7 +26,7 @@ Pod::Spec.new do |s|
   #   # aa.public_header_files = 'KJEmitterView/UIKit/*.h',"KJEmitterView/UIKit/**/*.h"   # 添加头文件
   # end
   
-  s.frameworks = 'UIKit', 'Foundation', 'Dispatch', 'CoreFoundation', 'CoreText', 'CoreGraphics', 'CoreImage', 'QuartzCore', 'ImageIO', 'AssetsLibrary', 'Accelerate', 'MobileCoreServices', 'SystemConfiguration'
+  s.frameworks = 'Foundation','UIKit','QuartzCore','Accelerate'#,'AssetsLibrary','MobileCoreServices','CoreFoundation','CoreGraphics','CoreImage','ImageIO','CoreText','SystemConfiguration'
   # s.dependency "JSONKit", "~> 1.4"
   
 end

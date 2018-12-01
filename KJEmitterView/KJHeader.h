@@ -15,7 +15,7 @@
 
 /******************* Category ******************************/
 #import "UIButton+KJIndicator.h"
-#import "UIButton+KJButtonCountDown.h"  // 倒计时
+//#import "UIButton+KJButtonCountDown.h"  // 倒计时
 #import "UIButton+KJButtonContentLayout.h"  // 图文混排
 
 #import "UIView+KJXib.h"   // Xib
