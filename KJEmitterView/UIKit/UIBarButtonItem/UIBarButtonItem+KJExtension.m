@@ -7,6 +7,7 @@
 //
 
 #import "UIBarButtonItem+KJExtension.h"
+#import "UIView+KJFrame.h"
 
 @implementation UIBarButtonItem (KJExtension)
 

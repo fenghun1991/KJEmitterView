@@ -238,12 +238,12 @@
 		68BA6C1021B303D40013C4AD /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				68BA6C1121B303D40013C4AD /* UIButton+KJIndicator.m */,
-				68BA6C1221B303D40013C4AD /* UIButton+KJButtonContentLayout.m */,
-				68BA6C1321B303D40013C4AD /* UIButton+KJButtonCountDown.m */,
 				68BA6C1421B303D40013C4AD /* UIButton+KJIndicator.h */,
+				68BA6C1121B303D40013C4AD /* UIButton+KJIndicator.m */,
 				68BA6C1521B303D40013C4AD /* UIButton+KJButtonCountDown.h */,
+				68BA6C1321B303D40013C4AD /* UIButton+KJButtonCountDown.m */,
 				68BA6C1621B303D40013C4AD /* UIButton+KJButtonContentLayout.h */,
+				68BA6C1221B303D40013C4AD /* UIButton+KJButtonContentLayout.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -251,12 +251,12 @@
 		68BA6C1721B303D40013C4AD /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				68BA6C1821B303D40013C4AD /* UIView+KJFrame.h */,
+				68BA6C1D21B303D40013C4AD /* UIView+KJXib.h */,
 				68BA6C1921B303D40013C4AD /* UIView+KJXib.m */,
-				68BA6C1A21B303D40013C4AD /* UIView+KJRectCorner.m */,
+				68BA6C1821B303D40013C4AD /* UIView+KJFrame.h */,
 				68BA6C1B21B303D40013C4AD /* UIView+KJFrame.m */,
 				68BA6C1C21B303D40013C4AD /* UIView+KJRectCorner.h */,
-				68BA6C1D21B303D40013C4AD /* UIView+KJXib.h */,
+				68BA6C1A21B303D40013C4AD /* UIView+KJRectCorner.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";

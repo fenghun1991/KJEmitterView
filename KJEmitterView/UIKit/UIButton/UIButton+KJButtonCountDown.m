@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString *normalTitle;
 @property (nonatomic, copy) NSString *countDownFormat;
 @property (nonatomic, assign) NSTimeInterval leaveTime;
-@property (nonatomic, strong) dispatch_source_t timer;
+@property (nonatomic, assign) dispatch_source_t timer;
 
 @end
 
