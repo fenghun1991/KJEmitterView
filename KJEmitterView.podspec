@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "2.0.1"
+  s.version      = "2.0.2"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
@@ -17,14 +17,14 @@ Pod::Spec.new do |s|
   
   s.subspec 'Classes' do |ss|
     ss.source_files = "KJEmitterView/Classes/**/*.{h,m}" # 添加文件
-    ss.public_header_files = 'KJEmitterView/Classes/*.h',"KJEmitterView/Classes/**/*.h"# 添加头文件
+    ss.public_header_files = "KJEmitterView/Classes/**/*.h",'KJEmitterView/Classes/*.h'# 添加头文件
     ss.resources    = "KJEmitterView/Classes/**/*.{bundle}" # 添加数据资料
   end
 
-  # s.subspec 'AAA' do |aa|
-  #   aa.source_files = "KJEmitterView/UIKit/**/*.{h,m}" # 添加文件
-  #   # aa.public_header_files = 'KJEmitterView/UIKit/*.h',"KJEmitterView/UIKit/**/*.h"   # 添加头文件
-  # end
+  s.subspec 'UIKit' do |aa|
+    aa.source_files = "KJEmitterView/UIKit/**/*.{h,m}" # 添加文件
+    aa.public_header_files = 'KJEmitterView/UIKit/*.h',"KJEmitterView/UIKit/**/*.h"   # 添加头文件
+  end
   
   s.frameworks = 'Foundation','UIKit','QuartzCore','Accelerate'#,'AssetsLibrary','MobileCoreServices','CoreFoundation','CoreGraphics','CoreImage','ImageIO','CoreText','SystemConfiguration'
   # s.dependency "JSONKit", "~> 1.4"
