@@ -9,9 +9,8 @@ Pod::Spec.new do |s|
   s.author       = { "77" => "393103982@qq.com" }
   s.platform     = :ios
   s.source       = { :git => "https://github.com/yangKJ/KJEmitterView.git", :tag => "#{s.version}" }
-  s.framework    = "UIKit"
+  s.framework    = "UIKit","Foundation"
   # s.dependency "JSONKit", "~> 1.4"
-  s.requires_arc = true
   
   s.ios.source_files = 'KJEmitterView/KJHeader.h' # 添加头文件
 
@@ -21,11 +20,12 @@ Pod::Spec.new do |s|
     ss.resources    = "KJEmitterView/Classes/**/*.{bundle}" # 添加数据资料
   end
 
-  s.subspec 'UIKit' do |ss|
-    ss.source_files = "KJEmitterView/UIKit/**/*.{h,m}" # 添加文件
-    ss.public_header_files = 'KJEmitterView/UIKit/*.h',"KJEmitterView/UIKit/**/*.h"   # 添加头文件
-    ss.resources    = "KJEmitterView/UIKit/**/*.{bundle}" # 添加数据资料
+  s.subspec 'KJUIKit' do |kj|
+    kj.source_files = "KJEmitterView/UIKit/**/*.{h,m}" # 添加文件
+    kj.public_header_files = 'KJEmitterView/UIKit/*.h',"KJEmitterView/UIKit/**/*.h"   # 添加头文件
   end
+
+  s.requires_arc = true
   
 end
 
