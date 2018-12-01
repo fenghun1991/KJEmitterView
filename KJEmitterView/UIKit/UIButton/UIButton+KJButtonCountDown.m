@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString *normalTitle;
 @property (nonatomic, copy) NSString *countDownFormat;
 @property (nonatomic, assign) NSTimeInterval leaveTime;
-@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) dispatch_source_t timer;
 
 @end
 
@@ -26,13 +26,13 @@ static NSString * const knormalTitle = @"normalTitle";
 
 @implementation UIButton (KJButtonCountDown)
 
-- (void)setTimer:(NSTimer*)timer {
+- (void)setTimer:(dispatch_source_t)timer {
     [self willChangeValueForKey:ktimer];
     objc_setAssociatedObject(self, &ktimer, timer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self didChangeValueForKey:ktimer];
 }
 
-- (NSTimer*)timer {
+- (dispatch_source_t)timer {
     return objc_getAssociatedObject(self, &ktimer);
 }
 

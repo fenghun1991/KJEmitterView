@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   
   
   s.ios.source_files = 'KJEmitterView/KJHeader.h' # 添加头文件
-
+  s.exclude_files = "Classes/Exclude"
   s.subspec 'Classes' do |ss|
     ss.source_files = "KJEmitterView/Classes/**/*.{h,m}" # 添加文件
     ss.public_header_files = 'KJEmitterView/Classes/*.h',"KJEmitterView/Classes/**/*.h"   # 添加头文件
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
     kj.public_header_files = 'KJEmitterView/UIKit/*.h',"KJEmitterView/UIKit/**/*.h"   # 添加头文件
   end
   
-  s.frameworks = 'UIKit', 'CoreFoundation', 'CoreText', 'CoreGraphics', 'CoreImage', 'QuartzCore', 'ImageIO', 'AssetsLibrary', 'Accelerate', 'MobileCoreServices', 'SystemConfiguration'
+  s.frameworks = 'UIKit', 'Foundation','Dispatch','CoreFoundation', 'CoreText', 'CoreGraphics', 'CoreImage', 'QuartzCore', 'ImageIO', 'AssetsLibrary', 'Accelerate', 'MobileCoreServices', 'SystemConfiguration'
   # s.dependency "JSONKit", "~> 1.4"
   
 end
