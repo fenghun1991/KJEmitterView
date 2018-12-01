@@ -29,16 +29,16 @@
     
     [self settingRunBtn:self.button]; // 设置倒计时中的颜色
     
-//    // 开始发起倒计时
-//    [self.button kj_CountDownWithTimeInterval:10 CountDownFormat:@"%zd秒后重试"];
-//    __weak typeof(self) weakSelf = self;
-//    // 倒计时结束后的Block回调
-//    self.button.kj_ButtonTimeStoppedCallback = ^{
-//        weakSelf.button.enabled = YES; // 设置启用触发
-//
-//        [weakSelf settingBtn:weakSelf.button]; // 设置初始的颜色等
-//        NSLog(@"倒计时完毕");
-//    };
+    // 开始发起倒计时
+    [self.button kj_CountDownWithTimeInterval:10 CountDownFormat:@"%zd秒后重试"];
+    __weak typeof(self) weakSelf = self;
+    // 倒计时结束后的Block回调
+    self.button.kj_ButtonTimeStoppedCallback = ^{
+        weakSelf.button.enabled = YES; // 设置启用触发
+
+        [weakSelf settingBtn:weakSelf.button]; // 设置初始的颜色等
+        NSLog(@"倒计时完毕");
+    };
 }
 
 - (void)settingRunBtn:(UIButton *)sender{
