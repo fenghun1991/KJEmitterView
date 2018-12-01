@@ -149,7 +149,6 @@
 				6826813D21B2EB05004A8D87 /* UIButton */,
 				6826814421B2EB05004A8D87 /* UIView */,
 				6826814B21B2EB05004A8D87 /* UITextView */,
-				6826815021B2EB05004A8D87 /* UIBarButtonItem */,
 				6826815321B2EB05004A8D87 /* UINavigationBar */,
 			);
 			path = UIKit;
@@ -292,6 +291,7 @@
 		689B1C0921B2F43B0043EB39 /* abc */ = {
 			isa = PBXGroup;
 			children = (
+				6826815021B2EB05004A8D87 /* UIBarButtonItem */,
 				689B1C0A21B2F43B0043EB39 /* UIButton+KJButtonCountDown.m */,
 				689B1C0B21B2F43B0043EB39 /* UIButton+KJButtonCountDown.h */,
 			);
