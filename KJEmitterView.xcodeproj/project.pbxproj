@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6869042921B24E4200ED072F /* UIButton+KJButtonContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869042721B24E4200ED072F /* UIButton+KJButtonContentLayout.m */; };
+		6869042A21B24E4200ED072F /* UIButton+KJButtonCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869042821B24E4200ED072F /* UIButton+KJButtonCountDown.m */; };
+		6869043021B25BC700ED072F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869042F21B25BC700ED072F /* BaseViewController.m */; };
+		6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043221B25C5C00ED072F /* KJEmitterVC.m */; };
+		6869043621B25EAE00ED072F /* KJButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043521B25EAE00ED072F /* KJButtonVC.m */; };
+		6869043921B265E400ED072F /* KJButtonVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043821B265E400ED072F /* KJButtonVC2.m */; };
+		6869043D21B27A5400ED072F /* UIView+KJRectCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043B21B27A5400ED072F /* UIView+KJRectCorner.m */; };
+		6869044021B27A6600ED072F /* KJViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043F21B27A6600ED072F /* KJViewVC.m */; };
+		6869044621B28DDE00ED072F /* UITextView+KJPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869044221B28DDE00ED072F /* UITextView+KJPlaceHolder.m */; };
+		6869044721B28DDE00ED072F /* UITextView+KJLimitCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869044321B28DDE00ED072F /* UITextView+KJLimitCounter.m */; };
+		6869044A21B28E0300ED072F /* KJTextViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869044921B28E0300ED072F /* KJTextViewVC.m */; };
+		6869044D21B294CA00ED072F /* UIView+KJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869044C21B294CA00ED072F /* UIView+KJFrame.m */; };
+		6869045021B297FE00ED072F /* UIView+KJXib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869044F21B297FE00ED072F /* UIView+KJXib.m */; };
+		6869045421B29B0F00ED072F /* UINavigationBar+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869045321B29B0F00ED072F /* UINavigationBar+KJExtension.m */; };
+		6869045821B2AAEC00ED072F /* UIBarButtonItem+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869045721B2AAEC00ED072F /* UIBarButtonItem+KJExtension.m */; };
+		6869045B21B2B7EB00ED072F /* UIButton+KJIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869045A21B2B7EB00ED072F /* UIButton+KJIndicator.m */; };
+		6869045F21B2BEDA00ED072F /* UIImage+KJFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869045E21B2BEDA00ED072F /* UIImage+KJFilter.m */; };
+		6869046221B2C03E00ED072F /* UIImage+KJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869046121B2C03E00ED072F /* UIImage+KJFrame.m */; };
+		6869046521B2CA8F00ED072F /* UIImage+FloodFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869046421B2CA8F00ED072F /* UIImage+FloodFill.m */; };
+		6869046C21B2D36B00ED072F /* KJFloodImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869046A21B2D36B00ED072F /* KJFloodImageVC.m */; };
+		6869046D21B2D36B00ED072F /* KJFloodImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6869046B21B2D36B00ED072F /* KJFloodImageVC.xib */; };
 		68776CEA21AC34A0000A1435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68776CE921AC34A0000A1435 /* AppDelegate.m */; };
 		68776CED21AC34A0000A1435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68776CEC21AC34A0000A1435 /* ViewController.m */; };
 		68776CF021AC34A0000A1435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68776CEE21AC34A0000A1435 /* Main.storyboard */; };
@@ -20,6 +41,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6869042521B24E4200ED072F /* UIButton+KJButtonContentLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KJButtonContentLayout.h"; sourceTree = "<group>"; };
+		6869042621B24E4200ED072F /* UIButton+KJButtonCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KJButtonCountDown.h"; sourceTree = "<group>"; };
+		6869042721B24E4200ED072F /* UIButton+KJButtonContentLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJButtonContentLayout.m"; sourceTree = "<group>"; };
+		6869042821B24E4200ED072F /* UIButton+KJButtonCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJButtonCountDown.m"; sourceTree = "<group>"; };
+		6869042D21B25B1000ED072F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6869042E21B25BC700ED072F /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6869042F21B25BC700ED072F /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		6869043121B25C5C00ED072F /* KJEmitterVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJEmitterVC.h; sourceTree = "<group>"; };
+		6869043221B25C5C00ED072F /* KJEmitterVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJEmitterVC.m; sourceTree = "<group>"; };
+		6869043421B25EAE00ED072F /* KJButtonVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJButtonVC.h; sourceTree = "<group>"; };
+		6869043521B25EAE00ED072F /* KJButtonVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJButtonVC.m; sourceTree = "<group>"; };
+		6869043721B265E400ED072F /* KJButtonVC2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJButtonVC2.h; sourceTree = "<group>"; };
+		6869043821B265E400ED072F /* KJButtonVC2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJButtonVC2.m; sourceTree = "<group>"; };
+		6869043B21B27A5400ED072F /* UIView+KJRectCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KJRectCorner.m"; sourceTree = "<group>"; };
+		6869043C21B27A5400ED072F /* UIView+KJRectCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KJRectCorner.h"; sourceTree = "<group>"; };
+		6869043E21B27A6600ED072F /* KJViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJViewVC.h; sourceTree = "<group>"; };
+		6869043F21B27A6600ED072F /* KJViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJViewVC.m; sourceTree = "<group>"; };
+		6869044221B28DDE00ED072F /* UITextView+KJPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+KJPlaceHolder.m"; sourceTree = "<group>"; };
+		6869044321B28DDE00ED072F /* UITextView+KJLimitCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+KJLimitCounter.m"; sourceTree = "<group>"; };
+		6869044421B28DDE00ED072F /* UITextView+KJPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+KJPlaceHolder.h"; sourceTree = "<group>"; };
+		6869044521B28DDE00ED072F /* UITextView+KJLimitCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+KJLimitCounter.h"; sourceTree = "<group>"; };
+		6869044821B28E0300ED072F /* KJTextViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJTextViewVC.h; sourceTree = "<group>"; };
+		6869044921B28E0300ED072F /* KJTextViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJTextViewVC.m; sourceTree = "<group>"; };
+		6869044B21B294CA00ED072F /* UIView+KJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KJFrame.h"; sourceTree = "<group>"; };
+		6869044C21B294CA00ED072F /* UIView+KJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KJFrame.m"; sourceTree = "<group>"; };
+		6869044E21B297FE00ED072F /* UIView+KJXib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KJXib.h"; sourceTree = "<group>"; };
+		6869044F21B297FE00ED072F /* UIView+KJXib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KJXib.m"; sourceTree = "<group>"; };
+		6869045221B29B0F00ED072F /* UINavigationBar+KJExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KJExtension.h"; sourceTree = "<group>"; };
+		6869045321B29B0F00ED072F /* UINavigationBar+KJExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KJExtension.m"; sourceTree = "<group>"; };
+		6869045621B2AAEC00ED072F /* UIBarButtonItem+KJExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+KJExtension.h"; sourceTree = "<group>"; };
+		6869045721B2AAEC00ED072F /* UIBarButtonItem+KJExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KJExtension.m"; sourceTree = "<group>"; };
+		6869045921B2B7EB00ED072F /* UIButton+KJIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+KJIndicator.h"; sourceTree = "<group>"; };
+		6869045A21B2B7EB00ED072F /* UIButton+KJIndicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJIndicator.m"; sourceTree = "<group>"; };
+		6869045D21B2BEDA00ED072F /* UIImage+KJFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+KJFilter.h"; sourceTree = "<group>"; };
+		6869045E21B2BEDA00ED072F /* UIImage+KJFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KJFilter.m"; sourceTree = "<group>"; };
+		6869046021B2C03E00ED072F /* UIImage+KJFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+KJFrame.h"; sourceTree = "<group>"; };
+		6869046121B2C03E00ED072F /* UIImage+KJFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KJFrame.m"; sourceTree = "<group>"; };
+		6869046321B2CA8F00ED072F /* UIImage+FloodFill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+FloodFill.h"; sourceTree = "<group>"; };
+		6869046421B2CA8F00ED072F /* UIImage+FloodFill.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FloodFill.m"; sourceTree = "<group>"; };
+		6869046921B2D36B00ED072F /* KJFloodImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJFloodImageVC.h; sourceTree = "<group>"; };
+		6869046A21B2D36B00ED072F /* KJFloodImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJFloodImageVC.m; sourceTree = "<group>"; };
+		6869046B21B2D36B00ED072F /* KJFloodImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KJFloodImageVC.xib; sourceTree = "<group>"; };
 		68776CE521AC349F000A1435 /* KJEmitterView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJEmitterView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68776CE821AC34A0000A1435 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68776CE921AC34A0000A1435 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -50,6 +113,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6869042321B24E4200ED072F /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				6869045C21B2BE8F00ED072F /* UIImage */,
+				6869045521B2AAD100ED072F /* UIBarButtonItem */,
+				6869045121B29AEA00ED072F /* UINavigationBar */,
+				6869044121B28DDE00ED072F /* UITextView */,
+				6869043A21B27A5400ED072F /* UIView */,
+				6869042421B24E4200ED072F /* UIButton */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		6869042421B24E4200ED072F /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				6869045921B2B7EB00ED072F /* UIButton+KJIndicator.h */,
+				6869045A21B2B7EB00ED072F /* UIButton+KJIndicator.m */,
+				6869042621B24E4200ED072F /* UIButton+KJButtonCountDown.h */,
+				6869042821B24E4200ED072F /* UIButton+KJButtonCountDown.m */,
+				6869042521B24E4200ED072F /* UIButton+KJButtonContentLayout.h */,
+				6869042721B24E4200ED072F /* UIButton+KJButtonContentLayout.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		6869042B21B253FC00ED072F /* TextVC */ = {
+			isa = PBXGroup;
+			children = (
+				6869043121B25C5C00ED072F /* KJEmitterVC.h */,
+				6869043221B25C5C00ED072F /* KJEmitterVC.m */,
+				6869043421B25EAE00ED072F /* KJButtonVC.h */,
+				6869043521B25EAE00ED072F /* KJButtonVC.m */,
+				6869043721B265E400ED072F /* KJButtonVC2.h */,
+				6869043821B265E400ED072F /* KJButtonVC2.m */,
+				6869043E21B27A6600ED072F /* KJViewVC.h */,
+				6869043F21B27A6600ED072F /* KJViewVC.m */,
+				6869044821B28E0300ED072F /* KJTextViewVC.h */,
+				6869044921B28E0300ED072F /* KJTextViewVC.m */,
+				6869046921B2D36B00ED072F /* KJFloodImageVC.h */,
+				6869046A21B2D36B00ED072F /* KJFloodImageVC.m */,
+				6869046B21B2D36B00ED072F /* KJFloodImageVC.xib */,
+			);
+			path = TextVC;
+			sourceTree = "<group>";
+		};
+		6869042C21B2541400ED072F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6869042E21B25BC700ED072F /* BaseViewController.h */,
+				6869042F21B25BC700ED072F /* BaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6869043A21B27A5400ED072F /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				6869044E21B297FE00ED072F /* UIView+KJXib.h */,
+				6869044F21B297FE00ED072F /* UIView+KJXib.m */,
+				6869044B21B294CA00ED072F /* UIView+KJFrame.h */,
+				6869044C21B294CA00ED072F /* UIView+KJFrame.m */,
+				6869043C21B27A5400ED072F /* UIView+KJRectCorner.h */,
+				6869043B21B27A5400ED072F /* UIView+KJRectCorner.m */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		6869044121B28DDE00ED072F /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				6869044421B28DDE00ED072F /* UITextView+KJPlaceHolder.h */,
+				6869044221B28DDE00ED072F /* UITextView+KJPlaceHolder.m */,
+				6869044521B28DDE00ED072F /* UITextView+KJLimitCounter.h */,
+				6869044321B28DDE00ED072F /* UITextView+KJLimitCounter.m */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
+		6869045121B29AEA00ED072F /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				6869045221B29B0F00ED072F /* UINavigationBar+KJExtension.h */,
+				6869045321B29B0F00ED072F /* UINavigationBar+KJExtension.m */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		6869045521B2AAD100ED072F /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				6869045621B2AAEC00ED072F /* UIBarButtonItem+KJExtension.h */,
+				6869045721B2AAEC00ED072F /* UIBarButtonItem+KJExtension.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		6869045C21B2BE8F00ED072F /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				6869046021B2C03E00ED072F /* UIImage+KJFrame.h */,
+				6869046121B2C03E00ED072F /* UIImage+KJFrame.m */,
+				6869045D21B2BEDA00ED072F /* UIImage+KJFilter.h */,
+				6869045E21B2BEDA00ED072F /* UIImage+KJFilter.m */,
+				6869046321B2CA8F00ED072F /* UIImage+FloodFill.h */,
+				6869046421B2CA8F00ED072F /* UIImage+FloodFill.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		68776CDC21AC349F000A1435 = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +243,16 @@
 			isa = PBXGroup;
 			children = (
 				68AB4F8521AF834E003A2A60 /* KJHeader.h */,
+				6869042321B24E4200ED072F /* UIKit */,
 				68C7331821AC353000868011 /* Classes */,
 				68776CE821AC34A0000A1435 /* AppDelegate.h */,
 				68776CE921AC34A0000A1435 /* AppDelegate.m */,
+				6869042C21B2541400ED072F /* Base */,
+				6869042B21B253FC00ED072F /* TextVC */,
 				68776CEB21AC34A0000A1435 /* ViewController.h */,
 				68776CEC21AC34A0000A1435 /* ViewController.m */,
 				68776CEE21AC34A0000A1435 /* Main.storyboard */,
+				6869042D21B25B1000ED072F /* PrefixHeader.pch */,
 				68776CF121AC34A0000A1435 /* Assets.xcassets */,
 				68776CF321AC34A0000A1435 /* LaunchScreen.storyboard */,
 				68776CF621AC34A0000A1435 /* Info.plist */,
@@ -170,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6869046D21B2D36B00ED072F /* KJFloodImageVC.xib in Resources */,
 				68776CF521AC34A0000A1435 /* LaunchScreen.storyboard in Resources */,
 				68C7332521AC353000868011 /* KJErrorView.bundle in Resources */,
 				68776CF221AC34A0000A1435 /* Assets.xcassets in Resources */,
@@ -185,10 +363,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6869044721B28DDE00ED072F /* UITextView+KJLimitCounter.m in Sources */,
+				6869042921B24E4200ED072F /* UIButton+KJButtonContentLayout.m in Sources */,
+				6869045F21B2BEDA00ED072F /* UIImage+KJFilter.m in Sources */,
+				6869045B21B2B7EB00ED072F /* UIButton+KJIndicator.m in Sources */,
+				6869043621B25EAE00ED072F /* KJButtonVC.m in Sources */,
+				6869045821B2AAEC00ED072F /* UIBarButtonItem+KJExtension.m in Sources */,
+				6869043021B25BC700ED072F /* BaseViewController.m in Sources */,
+				6869043921B265E400ED072F /* KJButtonVC2.m in Sources */,
+				6869045421B29B0F00ED072F /* UINavigationBar+KJExtension.m in Sources */,
+				6869044021B27A6600ED072F /* KJViewVC.m in Sources */,
+				6869046C21B2D36B00ED072F /* KJFloodImageVC.m in Sources */,
 				68C7332321AC353000868011 /* KJEmitterView.m in Sources */,
+				6869044A21B28E0300ED072F /* KJTextViewVC.m in Sources */,
 				68776CED21AC34A0000A1435 /* ViewController.m in Sources */,
 				68C7332421AC353000868011 /* KJErrorView.m in Sources */,
+				6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */,
+				6869043D21B27A5400ED072F /* UIView+KJRectCorner.m in Sources */,
+				6869046221B2C03E00ED072F /* UIImage+KJFrame.m in Sources */,
+				6869042A21B24E4200ED072F /* UIButton+KJButtonCountDown.m in Sources */,
+				6869045021B297FE00ED072F /* UIView+KJXib.m in Sources */,
 				68776CF821AC34A0000A1435 /* main.m in Sources */,
+				6869044D21B294CA00ED072F /* UIView+KJFrame.m in Sources */,
+				6869046521B2CA8F00ED072F /* UIImage+FloodFill.m in Sources */,
+				6869044621B28DDE00ED072F /* UITextView+KJPlaceHolder.m in Sources */,
 				68776CEA21AC34A0000A1435 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +531,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VH48VHTX9R;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KJEmitterView/PrefixHeader.pch";
 				INFOPLIST_FILE = KJEmitterView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,6 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VH48VHTX9R;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KJEmitterView/PrefixHeader.pch";
 				INFOPLIST_FILE = KJEmitterView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  KJEmitterView
+//
+//  Created by 杨科军 on 2018/12/1.
+//  Copyright © 2018 杨科军. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "KJHeader.h"
+
+#import "BaseViewController.h"
+
+//获取屏幕 宽度、高度
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+
+#endif /* PrefixHeader_pch */
