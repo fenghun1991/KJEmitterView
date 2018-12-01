@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6869042921B24E4200ED072F /* UIButton+KJButtonContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869042721B24E4200ED072F /* UIButton+KJButtonContentLayout.m */; };
-		6869042A21B24E4200ED072F /* UIButton+KJButtonCountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869042821B24E4200ED072F /* UIButton+KJButtonCountDown.m */; };
 		6869043021B25BC700ED072F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869042F21B25BC700ED072F /* BaseViewController.m */; };
 		6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043221B25C5C00ED072F /* KJEmitterVC.m */; };
 		6869043621B25EAE00ED072F /* KJButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043521B25EAE00ED072F /* KJButtonVC.m */; };
@@ -42,9 +41,7 @@
 
 /* Begin PBXFileReference section */
 		6869042521B24E4200ED072F /* UIButton+KJButtonContentLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KJButtonContentLayout.h"; sourceTree = "<group>"; };
-		6869042621B24E4200ED072F /* UIButton+KJButtonCountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KJButtonCountDown.h"; sourceTree = "<group>"; };
 		6869042721B24E4200ED072F /* UIButton+KJButtonContentLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJButtonContentLayout.m"; sourceTree = "<group>"; };
-		6869042821B24E4200ED072F /* UIButton+KJButtonCountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJButtonCountDown.m"; sourceTree = "<group>"; };
 		6869042D21B25B1000ED072F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6869042E21B25BC700ED072F /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		6869042F21B25BC700ED072F /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -131,8 +128,6 @@
 			children = (
 				6869045921B2B7EB00ED072F /* UIButton+KJIndicator.h */,
 				6869045A21B2B7EB00ED072F /* UIButton+KJIndicator.m */,
-				6869042621B24E4200ED072F /* UIButton+KJButtonCountDown.h */,
-				6869042821B24E4200ED072F /* UIButton+KJButtonCountDown.m */,
 				6869042521B24E4200ED072F /* UIButton+KJButtonContentLayout.h */,
 				6869042721B24E4200ED072F /* UIButton+KJButtonContentLayout.m */,
 			);
@@ -381,7 +376,6 @@
 				6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */,
 				6869043D21B27A5400ED072F /* UIView+KJRectCorner.m in Sources */,
 				6869046221B2C03E00ED072F /* UIImage+KJFrame.m in Sources */,
-				6869042A21B24E4200ED072F /* UIButton+KJButtonCountDown.m in Sources */,
 				6869045021B297FE00ED072F /* UIView+KJXib.m in Sources */,
 				68776CF821AC34A0000A1435 /* main.m in Sources */,
 				6869044D21B294CA00ED072F /* UIView+KJFrame.m in Sources */,
