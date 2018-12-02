@@ -97,6 +97,7 @@
         
         NSMutableArray *Group2 = [NSMutableArray array];
         [Group2 addObject:@{@"VCName":@"KJEmitterVC",@"describeName":@"粒子效果"}];
+        [Group2 addObject:@{@"VCName":@"KJAlertVC",@"describeName":@"两种AlertView"}];
         
         NSMutableArray *Group3 = [NSMutableArray array];
         [_dataArray addObject:Group1];

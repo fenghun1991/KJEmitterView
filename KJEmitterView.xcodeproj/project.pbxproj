@@ -36,6 +36,9 @@
 		68BA6C3321B303D40013C4AD /* UITextView+KJPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2221B303D40013C4AD /* UITextView+KJPlaceHolder.m */; };
 		68BA6C3421B303D40013C4AD /* UIBarButtonItem+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */; };
 		68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */; };
+		68E283B421B38983009B708F /* KJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E283B221B38983009B708F /* KJAlertView.m */; };
+		68E283B821B38DCC009B708F /* KJAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E283B621B38DCC009B708F /* KJAlertVC.m */; };
+		68E283B921B38DCC009B708F /* KJAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E283B721B38DCC009B708F /* KJAlertVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,11 @@
 		68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KJExtension.m"; sourceTree = "<group>"; };
 		68BA6C2721B303D40013C4AD /* UINavigationBar+KJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KJExtension.h"; sourceTree = "<group>"; };
 		68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KJExtension.m"; sourceTree = "<group>"; };
+		68E283B221B38983009B708F /* KJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJAlertView.m; sourceTree = "<group>"; };
+		68E283B321B38983009B708F /* KJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJAlertView.h; sourceTree = "<group>"; };
+		68E283B521B38DCC009B708F /* KJAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAlertVC.h; sourceTree = "<group>"; };
+		68E283B621B38DCC009B708F /* KJAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAlertVC.m; sourceTree = "<group>"; };
+		68E283B721B38DCC009B708F /* KJAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJAlertVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,9 @@
 				6869046921B2D36B00ED072F /* KJFloodImageVC.h */,
 				6869046A21B2D36B00ED072F /* KJFloodImageVC.m */,
 				6869046B21B2D36B00ED072F /* KJFloodImageVC.xib */,
+				68E283B521B38DCC009B708F /* KJAlertVC.h */,
+				68E283B621B38DCC009B708F /* KJAlertVC.m */,
+				68E283B721B38DCC009B708F /* KJAlertVC.xib */,
 			);
 			path = TextVC;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 		68B02FF021B2FBC400349510 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				68E283B121B38983009B708F /* AlertView */,
 				68B02FF121B2FBC400349510 /* EmitterView */,
 				68B0300821B2FBC400349510 /* ErrorView */,
 			);
@@ -280,6 +292,15 @@
 			path = UINavigationBar;
 			sourceTree = "<group>";
 		};
+		68E283B121B38983009B708F /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				68E283B321B38983009B708F /* KJAlertView.h */,
+				68E283B221B38983009B708F /* KJAlertView.m */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +364,7 @@
 				68B0301421B2FBC400349510 /* KJEmitter.bundle in Resources */,
 				68776CF221AC34A0000A1435 /* Assets.xcassets in Resources */,
 				68776CF021AC34A0000A1435 /* Main.storyboard in Resources */,
+				68E283B921B38DCC009B708F /* KJAlertVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68E283B421B38983009B708F /* KJAlertView.m in Sources */,
 				68BA6C3321B303D40013C4AD /* UITextView+KJPlaceHolder.m in Sources */,
 				68BA6C3021B303D40013C4AD /* UIView+KJRectCorner.m in Sources */,
 				68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */,
 				6869043021B25BC700ED072F /* BaseViewController.m in Sources */,
 				68BA6C2A21B303D40013C4AD /* UIImage+KJFilter.m in Sources */,
+				68E283B821B38DCC009B708F /* KJAlertVC.m in Sources */,
 				68BA6C2B21B303D40013C4AD /* UIImage+FloodFill.m in Sources */,
 				68BA6C2F21B303D40013C4AD /* UIView+KJXib.m in Sources */,
 				68BA6C2D21B303D40013C4AD /* UIButton+KJButtonContentLayout.m in Sources */,
