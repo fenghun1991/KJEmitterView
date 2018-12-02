@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "2.0.2"
+  s.version      = "2.1.0"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
