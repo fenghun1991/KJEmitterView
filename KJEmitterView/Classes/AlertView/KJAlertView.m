@@ -7,6 +7,7 @@
 //
 
 #import "KJAlertView.h"
+#import "UIView+KJFrame.h" // Frame
 
 #define UIColorFromHEXA(hex,a)    [UIColor colorWithRed:((hex&0xFF0000)>>16)/255.0f green:((hex&0xFF00)>>8)/255.0f blue:(hex&0xFF)/255.0f alpha:a]
 #define SystemFontSize(fontsize)  [UIFont systemFontOfSize:(fontsize)]
