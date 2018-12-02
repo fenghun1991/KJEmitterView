@@ -24,14 +24,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 // 没有tabar 距 底边高度
 #define kBOTTOM_SPACE_HEIGHT (iPhoneX?34.0f:0.0f)
 
-@interface KJAlertView ()<UITableViewDelegate,UITableViewDataSource>{
-    __block CGFloat bottomHeader;
-}
+@interface KJAlertView ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic, assign) CGFloat bottomHeader;
 
 @property (nonatomic, strong) NSString   *title;// 提示标题
 @property (nonatomic, strong) NSString   *contentStr;// 提示内容
 @property (nonatomic, strong) NSArray    *titleArray;// 按钮标题数组
-
 
 @property (nonatomic, strong) UIButton     *bgView;
 @property (nonatomic, strong) UIView       *centerView;
@@ -42,7 +41,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 @implementation KJAlertView
 
 - (void)_config{
-    bottomHeader = 0.1;
+    self.bottomHeader = 0.1;
     self.lineColor = UIColorFromHEXA(0xeeeeee, 1);
     self.spaceColor = UIColorFromHEXA(0xe8e8e8, 1);
     self.centerViewColor = [UIColor whiteColor];
@@ -168,12 +167,12 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 #pragma mark - AlertViewBottom
 - (void)createAlertViewBottom{
     if ([self.title isEqualToString:@""] || self.title == nil) {
-        bottomHeader = 0.1;
+        self.bottomHeader = 0.1;
     }
     else{
-        bottomHeader = (50);
+        self.bottomHeader = (50);
     }
-    _bottomView = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT+bottomHeader) style:UITableViewStyleGrouped];
+    _bottomView = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT+self.bottomHeader) style:UITableViewStyleGrouped];
     _bottomView.delegate = self;
     _bottomView.dataSource = self;
     _bottomView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -230,7 +229,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 0) {
-        return bottomHeader;
+        return self.bottomHeader;
     }
     else{
         return (10);
@@ -288,9 +287,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     else if ([self.type isEqualToString:@"bottom"]){
         UIWindow *window = [UIApplication sharedApplication].windows[0];
         [window addSubview:self];
-        __weak typeof(self)weakself = self;
         [UIView animateWithDuration:0.25 animations:^{
-            weakself.bottomView.frame = CGRectMake(0, kScreenHeight - weakself.titleArray.count * (50) - (10) - kBOTTOM_SPACE_HEIGHT - self->bottomHeader, kScreenWidth, weakself.titleArray.count * (50) + (10) + kBOTTOM_SPACE_HEIGHT + self->bottomHeader);
+            self.bottomView.frame = CGRectMake(0, kScreenHeight - self.titleArray.count * (50) - (10) - kBOTTOM_SPACE_HEIGHT - self.bottomHeader, kScreenWidth, self.titleArray.count * (50) + (10) + kBOTTOM_SPACE_HEIGHT + self.bottomHeader);
         }];
     }
 }
@@ -300,9 +298,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         [self removeFromSuperview];
     }
     else if ([self.type isEqualToString:@"bottom"]){
-        __weak typeof(self)weakself = self;
         [UIView animateWithDuration:0.25 animations:^{
-            weakself.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenHeight, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT);
+            self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenHeight, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT);
         } completion:^(BOOL finished) {
             [self removeFromSuperview];
         }];

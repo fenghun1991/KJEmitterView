@@ -20,7 +20,7 @@
 		68776CF221AC34A0000A1435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68776CF121AC34A0000A1435 /* Assets.xcassets */; };
 		68776CF521AC34A0000A1435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68776CF321AC34A0000A1435 /* LaunchScreen.storyboard */; };
 		68776CF821AC34A0000A1435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68776CF721AC34A0000A1435 /* main.m */; };
-		6885947221B396D600020BF1 /* KJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6885947021B396D600020BF1 /* KJAlertView.m */; };
+		68959C0021B3998A004F794F /* KJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68959BFE21B3998A004F794F /* KJAlertView.m */; };
 		68B0301421B2FBC400349510 /* KJEmitter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68B02FF321B2FBC400349510 /* KJEmitter.bundle */; };
 		68B0301521B2FBC400349510 /* KJEmitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B02FF421B2FBC400349510 /* KJEmitterView.m */; };
 		68B0301E21B2FBC400349510 /* KJErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B0300921B2FBC400349510 /* KJErrorView.m */; };
@@ -66,8 +66,8 @@
 		68776CF421AC34A0000A1435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68776CF621AC34A0000A1435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68776CF721AC34A0000A1435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6885947021B396D600020BF1 /* KJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJAlertView.m; sourceTree = "<group>"; };
-		6885947121B396D600020BF1 /* KJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJAlertView.h; sourceTree = "<group>"; };
+		68959BFE21B3998A004F794F /* KJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJAlertView.m; sourceTree = "<group>"; };
+		68959BFF21B3998A004F794F /* KJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJAlertView.h; sourceTree = "<group>"; };
 		68AB4F8521AF834E003A2A60 /* KJHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJHeader.h; sourceTree = "<group>"; };
 		68B02FF221B2FBC400349510 /* KJEmitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJEmitterView.h; sourceTree = "<group>"; };
 		68B02FF321B2FBC400349510 /* KJEmitter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KJEmitter.bundle; sourceTree = "<group>"; };
@@ -167,7 +167,6 @@
 				68AB4F8521AF834E003A2A60 /* KJHeader.h */,
 				68776CE821AC34A0000A1435 /* AppDelegate.h */,
 				68776CE921AC34A0000A1435 /* AppDelegate.m */,
-				6885946E21B396D600020BF1 /* test */,
 				68BA6C0821B303D40013C4AD /* UIKit */,
 				68B02FF021B2FBC400349510 /* Classes */,
 				6869042C21B2541400ED072F /* Base */,
@@ -184,19 +183,11 @@
 			path = KJEmitterView;
 			sourceTree = "<group>";
 		};
-		6885946E21B396D600020BF1 /* test */ = {
+		68959BFD21B3998A004F794F /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				6885946F21B396D600020BF1 /* AlertView */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
-		6885946F21B396D600020BF1 /* AlertView */ = {
-			isa = PBXGroup;
-			children = (
-				6885947021B396D600020BF1 /* KJAlertView.m */,
-				6885947121B396D600020BF1 /* KJAlertView.h */,
+				68959BFE21B3998A004F794F /* KJAlertView.m */,
+				68959BFF21B3998A004F794F /* KJAlertView.h */,
 			);
 			path = AlertView;
 			sourceTree = "<group>";
@@ -204,6 +195,7 @@
 		68B02FF021B2FBC400349510 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				68959BFD21B3998A004F794F /* AlertView */,
 				68B02FF121B2FBC400349510 /* EmitterView */,
 				68B0300821B2FBC400349510 /* ErrorView */,
 			);
@@ -383,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6885947221B396D600020BF1 /* KJAlertView.m in Sources */,
+				68959C0021B3998A004F794F /* KJAlertView.m in Sources */,
 				68BA6C3321B303D40013C4AD /* UITextView+KJPlaceHolder.m in Sources */,
 				68BA6C3021B303D40013C4AD /* UIView+KJRectCorner.m in Sources */,
 				68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */,
