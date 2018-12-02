@@ -7,7 +7,6 @@
 //
 
 #import "KJAlertView.h"
-#import "UIView+KJFrame.h" // Frame
 
 #define UIColorFromHEXA(hex,a)    [UIColor colorWithRed:((hex&0xFF0000)>>16)/255.0f green:((hex&0xFF00)>>8)/255.0f blue:(hex&0xFF)/255.0f alpha:a]
 #define SystemFontSize(fontsize)  [UIFont systemFontOfSize:(fontsize)]
@@ -99,12 +98,14 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     CGFloat titleHeight;
     CGFloat contentLabY;
     
+    CGFloat _centerViewwidth = CGRectGetWidth(_centerView.frame);
+    
     if ([self.title isEqualToString:@""] || self.title == nil) {
         titleHeight = 0;
         contentLabY = (25);
     }
     else{
-        UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((20), (15), _centerView.width-(20)*2, 20)];
+        UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((20), (15), _centerViewwidth-(20)*2, 20)];
         titleLab.text = self.title;
         titleLab.textColor = self.titleColor;
         titleLab.textAlignment = NSTextAlignmentCenter;
@@ -115,8 +116,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         contentLabY = titleLab.frame.origin.y + titleLab.frame.size.height+(10);
     }
     
-    CGRect rect = [self getStringFrame:self.contentStr withFont:15 withMaxSize:CGSizeMake(_centerView.width-(20)*2, MAXFLOAT)];
-    UILabel *contentLab = [[UILabel alloc] initWithFrame:CGRectMake((_centerView.width-rect.size.width)/2, contentLabY, rect.size.width, rect.size.height)];
+    CGRect rect = [self getStringFrame:self.contentStr withFont:15 withMaxSize:CGSizeMake(_centerViewwidth-(20)*2, MAXFLOAT)];
+    UILabel *contentLab = [[UILabel alloc] initWithFrame:CGRectMake((_centerViewwidth-rect.size.width)/2, contentLabY, rect.size.width, rect.size.height)];
     contentLab.text = self.contentStr;
     contentLab.textColor = self.textColor;
     contentLab.textAlignment = NSTextAlignmentCenter;
@@ -124,7 +125,10 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     contentLab.numberOfLines = 0;
     [_centerView addSubview:contentLab];
     
-    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, contentLab.y+contentLab.height+(25)-0.5, kScreenWidth, 0.5)];
+    CGFloat contentLaby = contentLab.frame.origin.y;
+    CGFloat contentLabheight = CGRectGetHeight(contentLab.frame);
+    
+    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, contentLaby+contentLabheight+(25)-0.5, kScreenWidth, 0.5)];
     imageLine.backgroundColor = self.lineColor;
     [_centerView addSubview:imageLine];
     
@@ -137,18 +141,18 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         titleBtn.titleLabel.font = SystemFontSize(15);
         
         if (self.titleArray.count == 1) {
-            titleBtn.frame = CGRectMake(_centerView.width/self.titleArray.count*i, contentLab.y+contentLab.height+(25), _centerView.width, (45));
+            titleBtn.frame = CGRectMake(_centerViewwidth/self.titleArray.count*i, contentLaby+contentLabheight+(25), _centerViewwidth, (45));
             [titleBtn setTitleColor:self.textColor forState:UIControlStateNormal];
         }
         else{
-            titleBtn.frame = CGRectMake(_centerView.width/self.titleArray.count*i, contentLab.y+contentLab.height+(25), _centerView.width/self.titleArray.count-0.5, (45));
+            titleBtn.frame = CGRectMake(_centerViewwidth/self.titleArray.count*i, contentLaby+contentLabheight+(25), _centerViewwidth/self.titleArray.count-0.5, (45));
             if (i == 0) {
                 [titleBtn setTitleColor:self.cancleColor forState:UIControlStateNormal];
             }
             else{
                 [titleBtn setTitleColor:self.textColor forState:UIControlStateNormal];
                 
-                UIImageView *centerLine = [[UIImageView alloc] initWithFrame:CGRectMake(_centerView.width/self.titleArray.count*i-0.5, titleBtn.y, 0.5, titleBtn.height)];
+                UIImageView *centerLine = [[UIImageView alloc] initWithFrame:CGRectMake(_centerViewwidth/self.titleArray.count*i-0.5, titleBtn.frame.origin.y, 0.5, titleBtn.frame.size.height)];
                 centerLine.backgroundColor = self.lineColor;
                 [_centerView addSubview:centerLine];
             }
@@ -161,7 +165,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         [_centerView addSubview:titleBtn];
     }
     
-    _centerView.frame = CGRectMake((kScreenWidth-(270))/2, (kScreenHeight-(120))/2, (270), contentLab.y+contentLab.height+(25)+(45));
+    _centerView.frame = CGRectMake((kScreenWidth-(270))/2, (kScreenHeight-(120))/2, (270), contentLaby+contentLabheight+(25)+(45));
 }
 
 
