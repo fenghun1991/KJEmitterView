@@ -7,7 +7,7 @@
 //
 
 #import "KJAlertVC.h"
-
+#import "KJAlertView.h"      // 
 @interface KJAlertVC ()
 
 @end
