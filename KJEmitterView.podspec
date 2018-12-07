@@ -27,6 +27,10 @@ Pod::Spec.new do |s|
     # y.resources    = "KJEmitterView/UIKit/**/*.{bundle}" # 添加数据资料
   end
 
+  s.subspec 'Function' do |fun|
+    fun.source_files = "KJEmitterView/Foundation/**/*.{h,m}" # 添加文件
+    fun.public_header_files = 'KJEmitterView/Foundation/*.h',"KJEmitterView/Foundation/**/*.h"   # 添加头文件
+  end
   
   
   s.frameworks = 'Foundation','UIKit','QuartzCore','Accelerate'#,'AssetsLibrary','MobileCoreServices','CoreFoundation','CoreGraphics','CoreImage','ImageIO','CoreText','SystemConfiguration'

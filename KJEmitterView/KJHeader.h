@@ -14,10 +14,18 @@
 #ifndef KJHeader_h
 #define KJHeader_h
 
+// 项目打包上线都不会打印日志，因此可放心。
+#ifdef DEBUG
+#define KJLog(s, ... ) NSLog( @"[%@ in line %d] 😎😎 =====>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#else
+#define KJLog(s, ... )
+#endif
+
 /******************* UIKit ******************************/
 #import "KJEmitterView.h"    // 粒子效果
 #import "KJErrorView.h"      // 错误效果
-#import "KJAlertView.h"      // 
+#import "KJAlertView.h"      //
+#import "KJTagTextView.h"    // 标签
 
 /******************* Category ******************************/
 #import "UIButton+KJIndicator.h"
@@ -36,5 +44,9 @@
 #import "UIImage+FloodFill.h" /// 图片泛洪算法
 #import "UIImage+KJFrame.h"   /// 处理图片尺寸相关
 #import "UIImage+KJFilter.h"  /// 处理图片滤镜，渲染相关
+
+/******************* Foundation ******************************/
+#import "NSArray+KJLog.h"
+#import "NSDictionary+KJLog.h"  // xcode控制台打印中文问题
 
 #endif /* KJHeader_h */
