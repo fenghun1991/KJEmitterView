@@ -170,3 +170,26 @@ end
 - 解决方案：更新pod库
 - pod update 要更新库的名字
 - 查看Podfile文件中的依赖库的最新版本：pod outdated
+
+###### 10、代码中有`__weak typeof(self) weakSelf = self;`
+
+- 原因：有__weak就一直验证不通过
+- 解决方案：s.frameworks当中加入可以用__weak的库
+
+###### 11、代码中有`dispatch_source_t`库相关
+
+- 原因：有`dispatch_source_t`相关的库函数，也一直验证不通过
+- 解决方案：s.frameworks当中加入可以用`dispatch_source_t`的库
+
+###### 12、- ERROR | [KJEmitterView/Classes] xcodebuild:  KJEmitterView/KJEmitterView/Classes/AlertView/KJAlertView.m:163:116: error: property 'height' not found on object of type 'UILabel *'
+![2.png](https://upload-images.jianshu.io/upload_images/1933747-7de6a4b6abcac480.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 原因：未引入头文件UIView+KJFrame在KJAlertView当中
+- 解决方案：引入头文件
+
+###### 13、- NOTE  | [iOS] [KJEmitterView/Classes] xcodebuild:  KJEmitterView/KJEmitterView/Classes/AlertView/KJAlertView.m:10:9: fatal error: 'UIView+KJFrame.h' file not found
+![3.png](https://upload-images.jianshu.io/upload_images/1933747-fab29564332b8919.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 原因：不在同一个文件夹下面
+- 解决方案：修改不引入该头文件的错误，或者将需要引入的头文件和KJAlertView放在同一个文件夹之下。
+

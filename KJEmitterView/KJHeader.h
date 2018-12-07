@@ -5,6 +5,11 @@
 //  Created by 杨科军 on 2018/11/26.
 //  Copyright © 2018 杨科军. All rights reserved.
 //
+/*
+ Github地址：https://github.com/yangKJ
+ 简书地址：https://www.jianshu.com/u/c84c00476ab6
+ 博客地址：https://blog.csdn.net/qq_34534179
+ */
 
 #ifndef KJHeader_h
 #define KJHeader_h
