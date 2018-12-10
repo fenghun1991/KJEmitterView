@@ -26,6 +26,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 @interface KJAlertView ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (nonatomic, copy) KJAlertBlock myBlock;
+@property (nonatomic, assign) KJAlertViewType type;
+
 @property (nonatomic, assign) CGFloat bottomHeader;
 
 @property (nonatomic, strong) NSString   *title;// 提示标题
@@ -36,48 +39,73 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 @property (nonatomic, strong) UIView       *centerView;
 @property (nonatomic, strong) UITableView  *bottomView;
 
+//*****************  颜色相关  *******************
+@property(nonatomic,strong) UIColor *lineColor;  // 线颜色
+@property(nonatomic,strong) UIColor *cancleColor;  // 取消颜色
+@property(nonatomic,strong) UIColor *titleColor;   // 标题颜色
+@property(nonatomic,strong) UIColor *textColor;    // 文字颜色
+// center
+@property(nonatomic,strong) UIColor *centerViewColor;  // 视图颜色
+
+// bottom
+@property(nonatomic,strong) UIColor *bottomViewColor;  // 视图颜色
+@property(nonatomic,strong) UIColor *spaceColor;   // 间隙颜色
+
 @end
 
 @implementation KJAlertView
 
 - (void)_config{
     self.bottomHeader = 0.1;
-    self.lineColor = UIColorFromHEXA(0xeeeeee, 1);
-    self.spaceColor = UIColorFromHEXA(0xe8e8e8, 1);
-    self.centerViewColor = [UIColor whiteColor];
+    self.lineColor    = UIColorFromHEXA(0xeeeeee, 1);
+    self.spaceColor   = UIColorFromHEXA(0xe8e8e8, 1);
+    self.cancleColor  = UIColor.redColor;
+    self.textColor    = UIColor.blueColor;
+    self.titleColor   = UIColor.blackColor;
+    self.centerViewColor = UIColor.whiteColor;
     self.bottomViewColor = UIColor.whiteColor;
-    self.cancleColor = [UIColor redColor];
-    self.textColor = UIColor.blueColor;
-    self.titleColor = UIColor.blackColor;
     
     self.backgroundColor = UIColorFromHEXA(0x333333, 0.3);
 }
 
-- (instancetype)initWithTitle:(NSString *)title Content:(NSString *)contentStr whitTitleArray:(NSArray *)titleArray withType:(NSString *)type{
-    if (self = [super initWithFrame:[UIScreen mainScreen].bounds]) {
-        self.title = title;
-        self.contentStr = contentStr;
-        self.titleArray = titleArray;
-        self.type = type;
-        
-        [self _config];
-        
-        [self setUI];
+/// 初始化
++ (instancetype)createAlertViewWithType:(KJAlertViewType)type Title:(NSString *)title Content:(NSString *)content DataArray:(NSArray *)array Block:(void(^)(KJAlertView *obj))objblock AlertBlock:(KJAlertBlock)block{
+    KJAlertView *obj = [[KJAlertView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    obj.title = title;
+    obj.contentStr = content;
+    obj.titleArray = array;
+    obj.type = type;
+    
+    [obj _config];
+    
+    if (objblock) {
+        objblock(obj);
     }
-    return self;
+    
+    [obj setUI];
+    
+    [obj kj_Show];
+    obj.myBlock = block;
+    
+    return obj;
 }
 
 - (void)setUI{
-    if (self.titleArray == nil || self.type == nil) {
+    if (self.titleArray == nil) {
         return;
     }
     [self addSubview:self.bgView];
     
-    if ([self.type isEqualToString:@"center"]) {
-        [self createAlertViewCenter];
-    }
-    else if ([self.type isEqualToString:@"bottom"]){
-        [self createAlertViewBottom];
+    switch (self.type) {
+        case KJAlertViewTypeCenter:
+            [self createAlertViewCenter];
+            break;
+        case KJAlertViewTypeBottom:
+            [self createAlertViewBottom];
+            break;
+        default:
+            break;
     }
 }
 
@@ -269,7 +297,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.myBlock) {
         
-        [self dissmis];
+        [self kj_Dissmiss];
         
         if (indexPath.section == 0) {
             self.myBlock(indexPath.row);
@@ -278,36 +306,45 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             self.myBlock(self.titleArray.count-1);
         }
     }
-    
-    [self dissmis];
 }
 
 #pragma mark - 公用方法
-- (void)show{
-    if ([self.type isEqualToString:@"center"]) {
-        UIWindow *window = [UIApplication sharedApplication].windows[0];
-        [window addSubview:self];
-        [self exChangeOut:_centerView dur:0.5];
-    }
-    else if ([self.type isEqualToString:@"bottom"]){
-        UIWindow *window = [UIApplication sharedApplication].windows[0];
-        [window addSubview:self];
-        [UIView animateWithDuration:0.25 animations:^{
-            self.bottomView.frame = CGRectMake(0, kScreenHeight - self.titleArray.count * (50) - (10) - kBOTTOM_SPACE_HEIGHT - self.bottomHeader, kScreenWidth, self.titleArray.count * (50) + (10) + kBOTTOM_SPACE_HEIGHT + self.bottomHeader);
-        }];
+- (void)kj_Show{
+    switch (self.type) {
+        case KJAlertViewTypeCenter:{
+            UIWindow *window = [UIApplication sharedApplication].windows[0];
+            [window addSubview:self];
+            [self exChangeOut:_centerView dur:0.5];
+        }
+            break;
+        case KJAlertViewTypeBottom:{
+            UIWindow *window = [UIApplication sharedApplication].windows[0];
+            [window addSubview:self];
+            [UIView animateWithDuration:0.25 animations:^{
+                self.bottomView.frame = CGRectMake(0, kScreenHeight - self.titleArray.count * (50) - (10) - kBOTTOM_SPACE_HEIGHT - self.bottomHeader, kScreenWidth, self.titleArray.count * (50) + (10) + kBOTTOM_SPACE_HEIGHT + self.bottomHeader);
+            }];
+        }
+            break;
+        default:
+            break;
     }
 }
 
-- (void)dissmis{
-    if ([self.type isEqualToString:@"center"]) {
-        [self removeFromSuperview];
-    }
-    else if ([self.type isEqualToString:@"bottom"]){
-        [UIView animateWithDuration:0.25 animations:^{
-            self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenHeight, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT);
-        } completion:^(BOOL finished) {
+- (void)kj_Dissmiss{
+    switch (self.type) {
+        case KJAlertViewTypeCenter:{
             [self removeFromSuperview];
-        }];
+        }
+            break;
+        case KJAlertViewTypeBottom:{
+            [UIView animateWithDuration:0.25 animations:^{
+                self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT);
+            } completion:^(BOOL finished) {
+                [self removeFromSuperview];
+            }];
+        }
+        default:
+            break;
     }
 }
 
@@ -315,12 +352,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     if (self.myBlock) {
         self.myBlock(btn.tag-2000);
     }
-    [self dissmis];
-}
-
-- (void)showAlertView:(alertBlock)myBlock{
-    [self show];
-    self.myBlock = myBlock;
+    [self kj_Dissmiss];
 }
 
 - (UIView *)bgView{
@@ -350,15 +382,72 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 }
 
 - (void)butChack{
-    [self removeFromSuperview];
+    [self kj_Dissmiss];
 }
 
--(void)dissmissView{
-    [self removeFromSuperview];
-    if (self.myBlock){
-        self.myBlock(0);
-    }
+#pragma mark - 链接编程设置View的一些属性
+- (KJAlertView *(^)(UIColor *))KJBackgroundColor {
+    return ^(UIColor *color) {
+        self.backgroundColor = color;
+        return self;
+    };
 }
+- (KJAlertView *(^)(NSInteger))KJTag {
+    return ^(NSInteger tag){
+        self.tag = tag;
+        return self;
+    };
+}
+- (KJAlertView *(^)(UIView*))KJAddView {
+    return ^(UIView *superView){
+        if (!superView) {
+            [superView addSubview:self];
+        }else{
+            [[[UIApplication sharedApplication] keyWindow] addSubview:self];
+        }
+        return self;
+    };
+}
+
+- (KJAlertView *(^)(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor))KJComColor {
+    return ^(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor){
+        if (lineColor) {
+            self.lineColor = lineColor;
+        }
+        if (titleColor) {
+            self.titleColor = titleColor;
+        }
+        if (textColor) {
+            self.textColor = textColor;
+        }
+        if (cancleColor) {
+            self.cancleColor = cancleColor;
+        }
+        return self;
+    };
+}
+
+- (KJAlertView *(^)(UIColor *centerViewColor))KJCenterColor {
+    return ^(UIColor *centerViewColor){
+        if (centerViewColor) {
+            self.centerViewColor = centerViewColor;
+        }
+        return self;
+    };
+}
+
+- (KJAlertView *(^)(UIColor *bottomViewColor,UIColor *spaceColor))KJBottomColor {
+    return ^(UIColor *bottomViewColor,UIColor *spaceColor){
+        if (bottomViewColor) {
+            self.bottomViewColor = bottomViewColor;
+        }
+        if (spaceColor) {
+            self.spaceColor = spaceColor;
+        }
+        return self;
+    };
+}
+
 
 @end
 

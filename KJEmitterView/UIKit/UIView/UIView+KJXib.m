@@ -11,6 +11,7 @@
 @implementation UIView (KJXib)
 
 @dynamic borderColor,borderWidth,masksToBounds,cornerRadius;
+@dynamic shadowColor,shadowRadius,shadowOffset,shadowOpacity;
 
 /**
  * 判断一个控件是否真正显示在主窗口
@@ -60,5 +61,22 @@
 - (void)setMasksToBounds:(BOOL)masksToBounds {
     [self.layer setMasksToBounds:masksToBounds];
 }
+
+- (void)setShadowColor:(UIColor *)shadowColor{
+    [self.layer setShadowColor:shadowColor.CGColor];
+}
+
+- (void)setShadowRadius:(CGFloat)shadowRadius{
+    [self.layer setShadowRadius:shadowRadius];
+}
+
+- (void)setShadowOpacity:(CGFloat)shadowOpacity{
+    [self.layer setShadowOpacity:shadowOpacity];
+}
+
+- (void)setShadowOffset:(CGSize)shadowOffset{
+    [self.layer setShadowOffset:shadowOffset];
+}
+
 
 @end

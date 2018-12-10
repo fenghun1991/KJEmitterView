@@ -8,29 +8,35 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^alertBlock)(NSInteger index);
+typedef NS_ENUM (NSInteger, KJAlertViewType){
+    KJAlertViewTypeCenter     = 0,  // 中间位置
+    KJAlertViewTypeBottom     = 1,  // 底部位置
+};
+
+typedef void(^KJAlertBlock)(NSInteger index);
 
 @interface KJAlertView : UIView
 
-@property (nonatomic, copy) alertBlock myBlock;
-@property (nonatomic, strong) NSString *type;
+/// 初始化
++ (instancetype)createAlertViewWithType:(KJAlertViewType)type Title:(NSString *)title Content:(NSString *)content DataArray:(NSArray *)array Block:(void(^)(KJAlertView *obj))objblock AlertBlock:(KJAlertBlock)block;
 
-//*****************  颜色相关  *******************
-@property(nonatomic,strong) UIColor *lineColor;  // 线颜色
-@property(nonatomic,strong) UIColor *cancleColor;  // 取消颜色
-@property(nonatomic,strong) UIColor *titleColor;   // 标题颜色
-@property(nonatomic,strong) UIColor *textColor;    // 文字颜色
-// center
-@property(nonatomic,strong) UIColor *centerViewColor;  // 视图颜色
+/// 移出
+- (void)kj_Dissmiss;
 
-// bottom
-@property(nonatomic,strong) UIColor *bottomViewColor;  // 视图颜色
-@property(nonatomic,strong) UIColor *spaceColor;   // 间隙颜色
+/// 必须View相关的属性
+@property(nonatomic,strong,readonly) KJAlertView *(^KJTag)(NSInteger);
+@property(nonatomic,strong,readonly) KJAlertView *(^KJAddView)(UIView *);
+@property(nonatomic,strong,readonly) KJAlertView *(^KJBackgroundColor)(UIColor *);//backgroundColor
 
-- (instancetype)initWithTitle:(NSString *)title Content:(NSString *)contentStr whitTitleArray:(NSArray *)titleArray withType:(NSString *)type;
 
-- (void)showAlertView:(alertBlock)myBlock;
+/************************** 颜色属性，以下属性均有默认值 **************************/
+/// 公共颜色属性
+@property(nonatomic,strong,readonly) KJAlertView *(^KJComColor)(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor);
 
-- (void)dissmis;
+/// Center
+@property(nonatomic,strong,readonly) KJAlertView *(^KJCenterColor)(UIColor *centerViewColor);
+
+/// Bottom
+@property(nonatomic,strong,readonly) KJAlertView *(^KJBottomColor)(UIColor *bottomViewColor,UIColor *spaceColor);
 
 @end

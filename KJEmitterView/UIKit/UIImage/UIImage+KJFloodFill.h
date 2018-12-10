@@ -15,7 +15,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface UIImage (FloodFill)
+@interface UIImage (KJFloodFill)
 /**
  基于扫描线的泛洪算法，获取填充同颜色区域后的图片
  

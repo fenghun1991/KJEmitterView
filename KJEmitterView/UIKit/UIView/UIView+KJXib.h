@@ -30,10 +30,17 @@ NS_ASSUME_NONNULL_BEGIN
 /** 设置了这几个属性，xib创建的view右上角才有这几个选项
  * xib中显示的属性
  */
+/// 圆角边框
 @property (nonatomic)IBInspectable UIColor *borderColor;
 @property (nonatomic)IBInspectable CGFloat borderWidth;
 @property (nonatomic)IBInspectable CGFloat cornerRadius;
 @property (nonatomic)IBInspectable BOOL masksToBounds;
+
+/// 阴影
+@property (nonatomic)IBInspectable UIColor *shadowColor;
+@property (nonatomic)IBInspectable CGFloat shadowRadius;
+@property (nonatomic)IBInspectable CGFloat shadowOpacity;
+@property (nonatomic)IBInspectable CGSize shadowOffset;
 
 @end
 

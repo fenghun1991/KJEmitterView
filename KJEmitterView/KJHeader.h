@@ -24,7 +24,7 @@
 /******************* UIKit ******************************/
 #import "KJEmitterView.h"    // 粒子效果
 #import "KJErrorView.h"      // 错误效果
-#import "KJAlertView.h"      //
+#import "KJAlertView.h"      // 提示选择框
 #import "KJTagTextView.h"    // 标签
 
 /******************* Category ******************************/
@@ -41,12 +41,12 @@
 #import "UITextView+KJPlaceHolder.h"  // 输入框扩展
 #import "UITextView+KJLimitCounter.h" // 限制字数
 
-#import "UIImage+FloodFill.h" /// 图片泛洪算法
-#import "UIImage+KJFrame.h"   /// 处理图片尺寸相关
-#import "UIImage+KJFilter.h"  /// 处理图片滤镜，渲染相关
+#import "UIImage+KJFloodFill.h" /// 图片泛洪算法
+#import "UIImage+KJFrame.h"     /// 处理图片尺寸相关
+#import "UIImage+KJFilter.h"    /// 处理图片滤镜，渲染相关
 
 /******************* Foundation ******************************/
 #import "NSArray+KJLog.h"
-#import "NSDictionary+KJLog.h"  // xcode控制台打印中文问题
+#import "NSDictionary+KJLog.h"  /// Xcode控制台打印中文问题，调试模式打印
 
 #endif /* KJHeader_h */

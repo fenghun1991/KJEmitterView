@@ -19,25 +19,18 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)ClickCenter:(UIButton *)sender {
-    KJAlertView *view = [[KJAlertView alloc] initWithTitle:nil Content:@"是否清理缓存" whitTitleArray:@[@"取消",@"确定"] withType:@"center"];
-    [view showAlertView:^(NSInteger index) {
-        if (index == 1) {
-            
-        }
+    [KJAlertView createAlertViewWithType:(KJAlertViewTypeCenter) Title:nil Content:@"是否清理缓存" DataArray:@[@"取消",@"确定"] Block:^(KJAlertView *obj) {
+//        obj.KJCenterColor(UIColor.redColor);
+    } AlertBlock:^(NSInteger index) {
+        KJLog(@"%ld",index);
     }];
-    [self.view addSubview:view];
 }
 - (IBAction)ClickBottom:(UIButton *)sender {
-    KJAlertView *view = [[KJAlertView alloc] initWithTitle:@"Name" Content:nil whitTitleArray:@[@"拍照",@"相册选择",@"取消"] withType:@"bottom"];
-    [view showAlertView:^(NSInteger index) {
-        if (index == 0){ // 选择相机
-            
-        }
-        else if (index == 1){ // 选择相册
-            
-        }
+    [KJAlertView createAlertViewWithType:(KJAlertViewTypeBottom) Title:@"Name" Content:nil DataArray:@[@"拍照",@"相册选择",@"取消"] Block:^(KJAlertView *obj) {
+        obj.KJAddView([[UIApplication sharedApplication] keyWindow]);
+    } AlertBlock:^(NSInteger index) {
+        KJLog(@"%ld",index);
     }];
-    [[[UIApplication sharedApplication] keyWindow] addSubview:view];
 }
 
 /*

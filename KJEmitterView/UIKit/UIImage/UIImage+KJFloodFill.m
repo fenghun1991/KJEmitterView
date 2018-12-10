@@ -6,7 +6,7 @@
 //  Copyright © 2018 杨科军. All rights reserved.
 //
 
-#import "UIImage+FloodFill.h"
+#import "UIImage+KJFloodFill.h"
 
 
 /*****************************  栈操作 KJLinkedListQueue *****************************/
@@ -126,7 +126,7 @@ static const int8_t kFinallyNodeOffset = -1;
 
 
 
-@implementation UIImage (FloodFill)
+@implementation UIImage (KJFloodFill)
 
 /**
  基于扫描线的泛洪算法，获取填充同颜色区域后的图片
