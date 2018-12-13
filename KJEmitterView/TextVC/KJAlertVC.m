@@ -22,14 +22,14 @@
     [KJAlertView createAlertViewWithType:(KJAlertViewTypeCenter) Title:nil Content:@"是否清理缓存" DataArray:@[@"取消",@"确定"] Block:^(KJAlertView *obj) {
 //        obj.KJCenterColor(UIColor.redColor);
     } AlertBlock:^(NSInteger index) {
-        KJLog(@"%ld",index);
+        NSLog(@"%ld",index);
     }];
 }
 - (IBAction)ClickBottom:(UIButton *)sender {
     [KJAlertView createAlertViewWithType:(KJAlertViewTypeBottom) Title:@"Name" Content:nil DataArray:@[@"拍照",@"相册选择",@"取消"] Block:^(KJAlertView *obj) {
         obj.KJAddView([[UIApplication sharedApplication] keyWindow]);
     } AlertBlock:^(NSInteger index) {
-        KJLog(@"%ld",index);
+        NSLog(@"%ld",index);
     }];
 }
 

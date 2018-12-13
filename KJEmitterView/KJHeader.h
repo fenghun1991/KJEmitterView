@@ -14,11 +14,11 @@
 #ifndef KJHeader_h
 #define KJHeader_h
 
-// 项目打包上线都不会打印日志，因此可放心。
+// 输出日志 (格式: [时间] [哪个方法] [哪行] [输出内容])
 #ifdef DEBUG
-#define KJLog(s, ... ) NSLog( @"[%@ in line %d] 😎😎 =====>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+#define NSLog(format, ...)printf("\n[%s] %s [第%d行] 😎😎 %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String]);
 #else
-#define KJLog(s, ... )
+#define NSLog(format, ...)
 #endif
 
 /******************* UIKit ******************************/
@@ -26,6 +26,7 @@
 #import "KJErrorView.h"      // 错误效果
 #import "KJAlertView.h"      // 提示选择框
 #import "KJTagTextView.h"    // 标签
+#import "KJMenuCollectionView.h"  // 菜单
 
 /******************* Category ******************************/
 #import "UIButton+KJIndicator.h"
