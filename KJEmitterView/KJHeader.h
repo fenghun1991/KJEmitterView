@@ -34,7 +34,7 @@
 
 #import "UIView+KJXib.h"   // Xib
 #import "UIView+KJFrame.h" // Frame
-#import "UIView+KJRectCorner.h" // 切圆角
+#import "UIView+KJRectCorner.h" // 切圆角 - 渐变
 
 #import "UINavigationBar+KJExtension.h" // 设置NavigationBar背景
 #import "UIBarButtonItem+KJExtension.h" // 设置BarButtonItem

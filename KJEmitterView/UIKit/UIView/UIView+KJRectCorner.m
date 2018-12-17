@@ -51,4 +51,67 @@ static NSString * const krectCorner = @"kj_rectCorner";
     self.layer.mask = maskLayer;
 }
 
+#pragma mark - 渐变相关
+- (CAGradientLayer *)kj_GradientLayerWithColors:(NSArray *)colors Frame:(CGRect)frm Locations:(NSArray *)locations StartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint{
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    if (colors == nil || [colors isKindOfClass:[NSNull class]] || colors.count == 0){
+        return nil;
+    }
+    if (locations == nil || [locations isKindOfClass:[NSNull class]] || locations.count == 0){
+        return nil;
+    }
+    NSMutableArray *colorsTemp = [NSMutableArray new];
+    for (UIColor *color in colors) {
+        if ([color isKindOfClass:[UIColor class]]) {
+            [colorsTemp addObject:(__bridge id)color.CGColor];
+        }
+    }
+    gradientLayer.colors = colorsTemp;
+    gradientLayer.locations = locations;
+    gradientLayer.startPoint = startPoint;
+    gradientLayer.endPoint = endPoint;
+    gradientLayer.frame =  frm;
+    return gradientLayer;
+}
+
+- (void)kj_GradientBgColorWithColors:(NSArray *)colors Locations:(NSArray *)locations StartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint{
+    CAGradientLayer *gradientLayer = [self kj_GradientLayerWithColors:colors Frame:self.bounds Locations:locations StartPoint:startPoint EndPoint:endPoint];
+    
+    [self.layer insertSublayer:gradientLayer atIndex:0];
+}
+
+- (void)kj_BorderAndCornerWithRadius:(CGFloat)redius BorderWidth:(CGFloat)width BorderColor:(UIColor *)color{
+    [self.layer setCornerRadius:redius];
+    [self.layer setMasksToBounds:YES];
+    [self.layer setBorderWidth:width];
+    [self.layer setBorderColor:[color CGColor]];
+}
+
+- (void)kj_BorderTop:(BOOL)top Left:(BOOL)left Bottom:(BOOL)bottom Right:(BOOL)right BorderColor:(UIColor *)color BorderWidth:(CGFloat)width{
+    if (top) {
+        CALayer *layer = [CALayer layer];
+        layer.frame = CGRectMake(0, 0, self.frame.size.width, width);
+        layer.backgroundColor = color.CGColor;
+        [self.layer addSublayer:layer];
+    }
+    if (left) {
+        CALayer *layer = [CALayer layer];
+        layer.frame = CGRectMake(0, 0, width, self.frame.size.height);
+        layer.backgroundColor = color.CGColor;
+        [self.layer addSublayer:layer];
+    }
+    if (bottom) {
+        CALayer *layer = [CALayer layer];
+        layer.frame = CGRectMake(0, self.frame.size.height - width, self.frame.size.width, width);
+        layer.backgroundColor = color.CGColor;
+        [self.layer addSublayer:layer];
+    }
+    if (right) {
+        CALayer *layer = [CALayer layer];
+        layer.frame = CGRectMake(self.frame.size.width - width, 0, width, self.frame.size.height);
+        layer.backgroundColor = color.CGColor;
+        [self.layer addSublayer:layer];
+    }
+}
+
 @end
