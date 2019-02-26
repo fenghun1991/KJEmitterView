@@ -26,6 +26,8 @@ typedef void(^KJAlertBlock)(NSInteger index);
 /// 是否关闭BottomTableScroll 默认关闭
 @property (nonatomic,assign) BOOL isOpenBottomTableScroll;
 
+@property(nonatomic,strong,readonly) KJAlertView *(^KJBgColor)(UIColor *bgColor);
+@property(nonatomic,strong,readonly) KJAlertView *(^KJAddView)(UIView *addView);
 /************************** 颜色属性，以下属性均有默认值 **************************/
 /// 公共颜色属性
 @property(nonatomic,strong,readonly) KJAlertView *(^KJComColor)(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor);

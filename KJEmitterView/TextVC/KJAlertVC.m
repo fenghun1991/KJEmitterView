@@ -28,6 +28,8 @@
 - (IBAction)ClickBottom:(UIButton *)sender {
     KJAlertView *view = [KJAlertView createAlertViewWithType:(KJAlertViewTypeBottom) Title:@"Name" Content:nil DataArray:@[@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"取消"] Block:^(KJAlertView *obj) {
         obj.KJBottomTableH(300, 30);
+        obj.KJBgColor(UIColor.redColor);
+        obj.KJAddView(self.view);
     } AlertBlock:^(NSInteger index) {
         NSLog(@"%ld",index);
     }];

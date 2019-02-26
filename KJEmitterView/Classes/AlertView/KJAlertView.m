@@ -34,7 +34,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 @property (nonatomic, strong) NSString   *title;// 提示标题
 @property (nonatomic, strong) NSString   *contentStr;// 提示内容
 @property (nonatomic, strong) NSArray    *titleArray;// 按钮标题数组
-
+@property (nonatomic, strong) UIView *addView;
 @property (nonatomic, strong) UIButton     *bgView;
 @property (nonatomic, strong) UIView       *centerView;
 @property (nonatomic, strong) UITableView  *bottomTableView;
@@ -76,6 +76,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     self.backgroundColor = UIColorFromHEXA(0x333333, 0.3);
     self.bottomTableCellH = 44;
     self.bottomTableMaxH = 12 * self.bottomTableCellH;
+    self.addView = [UIApplication sharedApplication].windows[0];
 }
 
 /// 初始化
@@ -325,14 +326,12 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 - (void)kj_Show{
     switch (self.type) {
         case KJAlertViewTypeCenter:{
-            UIWindow *window = [UIApplication sharedApplication].windows[0];
-            [window addSubview:self];
+            [self.addView addSubview:self];
             [self exChangeOut:_centerView dur:0.5];
         }
             break;
         case KJAlertViewTypeBottom:{
-            UIWindow *window = [UIApplication sharedApplication].windows[0];
-            [window addSubview:self];
+            [self.addView addSubview:self];
             [UIView animateWithDuration:0.25 animations:^{
                 CGFloat h = self.titleArray.count*(self.bottomTableCellH);
                 if (h>=self.bottomTableMaxH) {
@@ -411,6 +410,22 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 }
 
 #pragma mark - 链接编程设置View的一些属性
+- (KJAlertView *(^)(UIView *addView))KJAddView {
+    return ^(UIView *addView){
+        if (addView) {
+            self.addView = addView;
+        }
+        return self;
+    };
+}
+- (KJAlertView *(^)(UIColor *bgColor))KJBgColor {
+    return ^(UIColor *bgColor){
+        if (bgColor) {
+            self.backgroundColor = bgColor;
+        }
+        return self;
+    };
+}
 - (KJAlertView *(^)(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor))KJComColor {
     return ^(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor){
         if (lineColor) {
