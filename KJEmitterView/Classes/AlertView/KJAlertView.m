@@ -37,7 +37,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 @property (nonatomic, strong) UIButton     *bgView;
 @property (nonatomic, strong) UIView       *centerView;
-@property (nonatomic, strong) UITableView  *bottomView;
+@property (nonatomic, strong) UITableView  *bottomTableView;
 
 //*****************  颜色相关  *******************
 @property(nonatomic,strong) UIColor *lineColor;  // 线颜色
@@ -51,21 +51,31 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 @property(nonatomic,strong) UIColor *bottomViewColor;  // 视图颜色
 @property(nonatomic,strong) UIColor *spaceColor;   // 间隙颜色
 
+/// bottomTableCellH 默认44
+@property (nonatomic,assign) CGFloat bottomTableCellH;
+/// bottomTableMaxH 默认12个Cell高度
+@property (nonatomic,assign) CGFloat bottomTableMaxH;
+
 @end
 
 @implementation KJAlertView
 
+- (void)setIsOpenBottomTableScroll:(BOOL)isOpenBottomTableScroll{
+    self.bottomTableView.scrollEnabled = isOpenBottomTableScroll;
+}
+
 - (void)_config{
     self.bottomHeader = 0.1;
-    self.lineColor    = UIColorFromHEXA(0xeeeeee, 1);
-    self.spaceColor   = UIColorFromHEXA(0xe8e8e8, 1);
+    self.lineColor    = UIColorFromHEXA(0xeeeeee,0.5);
+    self.spaceColor   = UIColorFromHEXA(0xeeeeee,1.0);
+    self.textColor    = UIColorFromHEXA(0x9d87ef,1.0);
+    self.titleColor   = UIColorFromHEXA(0x9d87ef,1.0);
     self.cancleColor  = UIColor.redColor;
-    self.textColor    = UIColor.blueColor;
-    self.titleColor   = UIColor.blackColor;
     self.centerViewColor = UIColor.whiteColor;
     self.bottomViewColor = UIColor.whiteColor;
-    
     self.backgroundColor = UIColorFromHEXA(0x333333, 0.3);
+    self.bottomTableCellH = 44;
+    self.bottomTableMaxH = 12 * self.bottomTableCellH;
 }
 
 /// 初始化
@@ -201,17 +211,22 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 - (void)createAlertViewBottom{
     if ([self.title isEqualToString:@""] || self.title == nil) {
         self.bottomHeader = 0.1;
+    }else{
+        self.bottomHeader = self.bottomTableCellH;
     }
-    else{
-        self.bottomHeader = (50);
+    CGFloat h = self.titleArray.count*(self.bottomTableCellH);
+    if (h>=self.bottomTableMaxH) {
+        h = self.bottomTableMaxH + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
+    }else{
+        h = h + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
     }
-    _bottomView = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT+self.bottomHeader) style:UITableViewStyleGrouped];
-    _bottomView.delegate = self;
-    _bottomView.dataSource = self;
-    _bottomView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    _bottomView.scrollEnabled = NO;
-    _bottomView.backgroundColor = self.spaceColor;
-    [_bgView addSubview:_bottomView];
+    _bottomTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, h) style:UITableViewStyleGrouped];
+    _bottomTableView.delegate = self;
+    _bottomTableView.dataSource = self;
+    _bottomTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _bottomTableView.scrollEnabled = NO;
+    _bottomTableView.backgroundColor = self.spaceColor;
+    [_bgView addSubview:_bottomTableView];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -221,21 +236,20 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return self.titleArray.count-1;
-    }
-    else{
+    }else{
         return 1;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        cell.backgroundColor = self.bottomViewColor;
-    }
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    if (!cell) {
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    cell.backgroundColor = self.bottomViewColor;
+//    }
     
-    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((kScreenWidth-(150))/2, ((50)-(15))/2, (150), (15))];
+    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((kScreenWidth-(150))/2, (self.bottomTableCellH-(15))/2, (150), (15))];
     titleLab.font = SystemFontSize(15);
     titleLab.textAlignment = NSTextAlignmentCenter;
     [cell.contentView addSubview:titleLab];
@@ -243,13 +257,12 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     if (indexPath.section == 0) {
         titleLab.text = self.titleArray[indexPath.row];
         titleLab.textColor = self.textColor;
-    }
-    else{
+    }else{
         titleLab.text = [self.titleArray lastObject];
         titleLab.textColor = self.cancleColor;
     }
     
-    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, (50)-0.5, kScreenWidth, 0.5)];
+    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.bottomTableCellH-0.5, kScreenWidth, 0.5)];
     imageLine.backgroundColor = self.lineColor;
     [cell.contentView addSubview:imageLine];
     
@@ -257,7 +270,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (50);
+    return self.bottomTableCellH;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -275,13 +288,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section==0) {
-        UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, (50))];
+        UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.bottomTableCellH)];
         titleLab.text = self.title;
         titleLab.backgroundColor = [self.bottomViewColor colorWithAlphaComponent:0.8];
         titleLab.textColor = self.titleColor;
         titleLab.textAlignment = NSTextAlignmentCenter;
         titleLab.font = SystemFontSize(15);
-        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(2, (50), kScreenWidth-4, 1)];
+        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(2, self.bottomTableCellH, kScreenWidth-4, 1)];
         line.backgroundColor = [self.bottomViewColor colorWithAlphaComponent:0.9];
         [titleLab addSubview:line];
         return titleLab;
@@ -321,7 +334,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             UIWindow *window = [UIApplication sharedApplication].windows[0];
             [window addSubview:self];
             [UIView animateWithDuration:0.25 animations:^{
-                self.bottomView.frame = CGRectMake(0, kScreenHeight - self.titleArray.count * (50) - (10) - kBOTTOM_SPACE_HEIGHT - self.bottomHeader, kScreenWidth, self.titleArray.count * (50) + (10) + kBOTTOM_SPACE_HEIGHT + self.bottomHeader);
+                CGFloat h = self.titleArray.count*(self.bottomTableCellH);
+                if (h>=self.bottomTableMaxH) {
+                    h = self.bottomTableMaxH + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
+                }else{
+                    h = h + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
+                }
+                self.bottomTableView.frame = CGRectMake(0, kScreenHeight - h, kScreenWidth, h);
             }];
         }
             break;
@@ -338,7 +357,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             break;
         case KJAlertViewTypeBottom:{
             [UIView animateWithDuration:0.25 animations:^{
-                self.bottomView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, self.titleArray.count*(50)+(10)+kBOTTOM_SPACE_HEIGHT);
+                CGFloat h = self.titleArray.count*(self.bottomTableCellH);
+                if (h>=self.bottomTableMaxH) {
+                    h = self.bottomTableMaxH + 10 + kBOTTOM_SPACE_HEIGHT;
+                }else{
+                    h = h + 10 + kBOTTOM_SPACE_HEIGHT;
+                }
+                self.bottomTableView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, h);
             } completion:^(BOOL finished) {
                 [self removeFromSuperview];
             }];
@@ -386,29 +411,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 }
 
 #pragma mark - 链接编程设置View的一些属性
-- (KJAlertView *(^)(UIColor *))KJBackgroundColor {
-    return ^(UIColor *color) {
-        self.backgroundColor = color;
-        return self;
-    };
-}
-- (KJAlertView *(^)(NSInteger))KJTag {
-    return ^(NSInteger tag){
-        self.tag = tag;
-        return self;
-    };
-}
-- (KJAlertView *(^)(UIView*))KJAddView {
-    return ^(UIView *superView){
-        if (!superView) {
-            [superView addSubview:self];
-        }else{
-            [[[UIApplication sharedApplication] keyWindow] addSubview:self];
-        }
-        return self;
-    };
-}
-
 - (KJAlertView *(^)(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor))KJComColor {
     return ^(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor){
         if (lineColor) {
@@ -447,7 +449,17 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         return self;
     };
 }
-
+- (KJAlertView *(^)(CGFloat maxH,CGFloat cellH))KJBottomTableH {
+    return ^(CGFloat maxH,CGFloat cellH){
+        if (maxH) {
+            self.bottomTableMaxH = maxH;
+        }
+        if (cellH) {
+            self.bottomTableCellH = cellH;
+        }
+        return self;
+    };
+}
 
 @end
 

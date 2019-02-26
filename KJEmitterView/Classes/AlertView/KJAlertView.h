@@ -23,11 +23,8 @@ typedef void(^KJAlertBlock)(NSInteger index);
 /// 移出
 - (void)kj_Dissmiss;
 
-/// 必须View相关的属性
-@property(nonatomic,strong,readonly) KJAlertView *(^KJTag)(NSInteger);
-@property(nonatomic,strong,readonly) KJAlertView *(^KJAddView)(UIView *);
-@property(nonatomic,strong,readonly) KJAlertView *(^KJBackgroundColor)(UIColor *);//backgroundColor
-
+/// 是否关闭BottomTableScroll 默认关闭
+@property (nonatomic,assign) BOOL isOpenBottomTableScroll;
 
 /************************** 颜色属性，以下属性均有默认值 **************************/
 /// 公共颜色属性
@@ -38,5 +35,6 @@ typedef void(^KJAlertBlock)(NSInteger index);
 
 /// Bottom
 @property(nonatomic,strong,readonly) KJAlertView *(^KJBottomColor)(UIColor *bottomViewColor,UIColor *spaceColor);
+@property(nonatomic,strong,readonly) KJAlertView *(^KJBottomTableH)(CGFloat maxH,CGFloat cellH);
 
 @end

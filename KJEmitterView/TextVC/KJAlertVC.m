@@ -19,18 +19,19 @@
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)ClickCenter:(UIButton *)sender {
-    [KJAlertView createAlertViewWithType:(KJAlertViewTypeCenter) Title:nil Content:@"是否清理缓存" DataArray:@[@"取消",@"确定"] Block:^(KJAlertView *obj) {
+    [KJAlertView createAlertViewWithType:(KJAlertViewTypeCenter) Title:@"提示" Content:@"是否清理缓存" DataArray:@[@"取消",@"确定"] Block:^(KJAlertView *obj) {
 //        obj.KJCenterColor(UIColor.redColor);
     } AlertBlock:^(NSInteger index) {
         NSLog(@"%ld",index);
     }];
 }
 - (IBAction)ClickBottom:(UIButton *)sender {
-    [KJAlertView createAlertViewWithType:(KJAlertViewTypeBottom) Title:@"Name" Content:nil DataArray:@[@"拍照",@"相册选择",@"取消"] Block:^(KJAlertView *obj) {
-        obj.KJAddView([[UIApplication sharedApplication] keyWindow]);
+    KJAlertView *view = [KJAlertView createAlertViewWithType:(KJAlertViewTypeBottom) Title:@"Name" Content:nil DataArray:@[@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"拍照",@"相册选择",@"取消"] Block:^(KJAlertView *obj) {
+        obj.KJBottomTableH(300, 30);
     } AlertBlock:^(NSInteger index) {
         NSLog(@"%ld",index);
     }];
+    view.isOpenBottomTableScroll = YES;
 }
 
 /*
