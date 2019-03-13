@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		684BFEF021BA11020015641A /* NSArray+KJLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 684BFEEF21BA11020015641A /* NSArray+KJLog.m */; };
 		684BFEF421BA11870015641A /* NSDictionary+KJLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 684BFEF321BA11870015641A /* NSDictionary+KJLog.m */; };
-		684BFEF821BA169F0015641A /* KJTagTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 684BFEF621BA169F0015641A /* KJTagTextView.m */; };
 		6869043021B25BC700ED072F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869042F21B25BC700ED072F /* BaseViewController.m */; };
 		6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043221B25C5C00ED072F /* KJEmitterVC.m */; };
 		6869043921B265E400ED072F /* KJButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869043821B265E400ED072F /* KJButtonVC.m */; };
@@ -55,8 +54,6 @@
 		684BFEEF21BA11020015641A /* NSArray+KJLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KJLog.m"; sourceTree = "<group>"; };
 		684BFEF221BA11870015641A /* NSDictionary+KJLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KJLog.h"; sourceTree = "<group>"; };
 		684BFEF321BA11870015641A /* NSDictionary+KJLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+KJLog.m"; sourceTree = "<group>"; };
-		684BFEF621BA169F0015641A /* KJTagTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJTagTextView.m; sourceTree = "<group>"; };
-		684BFEF721BA169F0015641A /* KJTagTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJTagTextView.h; sourceTree = "<group>"; };
 		6869042D21B25B1000ED072F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6869042E21B25BC700ED072F /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		6869042F21B25BC700ED072F /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -160,15 +157,6 @@
 			path = NSArray;
 			sourceTree = "<group>";
 		};
-		684BFEF521BA169F0015641A /* TagView */ = {
-			isa = PBXGroup;
-			children = (
-				684BFEF721BA169F0015641A /* KJTagTextView.h */,
-				684BFEF621BA169F0015641A /* KJTagTextView.m */,
-			);
-			path = TagView;
-			sourceTree = "<group>";
-		};
 		6869042B21B253FC00ED072F /* TextVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				68C7389C21C24E130031D634 /* MenuCollectionView */,
-				684BFEF521BA169F0015641A /* TagView */,
 				68959BFD21B3998A004F794F /* AlertView */,
 				68B02FF121B2FBC400349510 /* EmitterView */,
 				68B0300821B2FBC400349510 /* ErrorView */,
@@ -471,7 +458,6 @@
 				68959C0021B3998A004F794F /* KJAlertView.m in Sources */,
 				68BA6C3321B303D40013C4AD /* UITextView+KJPlaceHolder.m in Sources */,
 				68BA6C3021B303D40013C4AD /* UIView+KJRectCorner.m in Sources */,
-				684BFEF821BA169F0015641A /* KJTagTextView.m in Sources */,
 				68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */,
 				684BFEF021BA11020015641A /* NSArray+KJLog.m in Sources */,
 				6869043021B25BC700ED072F /* BaseViewController.m in Sources */,

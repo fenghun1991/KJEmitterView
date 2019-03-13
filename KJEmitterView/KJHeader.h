@@ -25,7 +25,6 @@
 #import "KJEmitterView.h"    // 粒子效果
 #import "KJErrorView.h"      // 错误效果
 #import "KJAlertView.h"      // 提示选择框
-#import "KJTagTextView.h"    // 标签
 #import "KJMenuCollectionView.h"  // 菜单
 
 /******************* Category ******************************/
