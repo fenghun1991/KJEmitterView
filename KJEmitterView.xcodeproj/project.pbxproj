@@ -39,12 +39,6 @@
 		68BA6C3321B303D40013C4AD /* UITextView+KJPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2221B303D40013C4AD /* UITextView+KJPlaceHolder.m */; };
 		68BA6C3421B303D40013C4AD /* UIBarButtonItem+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */; };
 		68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */; };
-		68C738A321C24E130031D634 /* KJMenuCollectionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C7389E21C24E130031D634 /* KJMenuCollectionTool.m */; };
-		68C738A421C24E130031D634 /* KJMenuCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C7389F21C24E130031D634 /* KJMenuCollectionViewCell.m */; };
-		68C738A521C24E130031D634 /* KJMenuCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C738A021C24E130031D634 /* KJMenuCollectionView.m */; };
-		68C738A821C24E5E0031D634 /* KJMenuCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C738A721C24E5E0031D634 /* KJMenuCollectionVC.m */; };
-		68C738AE21C24F2D0031D634 /* KJBoardPlayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C738AB21C24F2D0031D634 /* KJBoardPlayModel.m */; };
-		68C738AF21C24F2D0031D634 /* KJBoardPlayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68C738AD21C24F2D0031D634 /* KJBoardPlayCell.m */; };
 		68E283B821B38DCC009B708F /* KJAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E283B621B38DCC009B708F /* KJAlertVC.m */; };
 		68E283B921B38DCC009B708F /* KJAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E283B721B38DCC009B708F /* KJAlertVC.xib */; };
 /* End PBXBuildFile section */
@@ -111,18 +105,6 @@
 		68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KJExtension.m"; sourceTree = "<group>"; };
 		68BA6C2721B303D40013C4AD /* UINavigationBar+KJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KJExtension.h"; sourceTree = "<group>"; };
 		68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KJExtension.m"; sourceTree = "<group>"; };
-		68C7389D21C24E130031D634 /* KJMenuCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJMenuCollectionView.h; sourceTree = "<group>"; };
-		68C7389E21C24E130031D634 /* KJMenuCollectionTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJMenuCollectionTool.m; sourceTree = "<group>"; };
-		68C7389F21C24E130031D634 /* KJMenuCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJMenuCollectionViewCell.m; sourceTree = "<group>"; };
-		68C738A021C24E130031D634 /* KJMenuCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJMenuCollectionView.m; sourceTree = "<group>"; };
-		68C738A121C24E130031D634 /* KJMenuCollectionTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJMenuCollectionTool.h; sourceTree = "<group>"; };
-		68C738A221C24E130031D634 /* KJMenuCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJMenuCollectionViewCell.h; sourceTree = "<group>"; };
-		68C738A621C24E5E0031D634 /* KJMenuCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMenuCollectionVC.h; sourceTree = "<group>"; };
-		68C738A721C24E5E0031D634 /* KJMenuCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJMenuCollectionVC.m; sourceTree = "<group>"; };
-		68C738AA21C24F2D0031D634 /* KJBoardPlayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJBoardPlayModel.h; sourceTree = "<group>"; };
-		68C738AB21C24F2D0031D634 /* KJBoardPlayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJBoardPlayModel.m; sourceTree = "<group>"; };
-		68C738AC21C24F2D0031D634 /* KJBoardPlayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJBoardPlayCell.h; sourceTree = "<group>"; };
-		68C738AD21C24F2D0031D634 /* KJBoardPlayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJBoardPlayCell.m; sourceTree = "<group>"; };
 		68E283B521B38DCC009B708F /* KJAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAlertVC.h; sourceTree = "<group>"; };
 		68E283B621B38DCC009B708F /* KJAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAlertVC.m; sourceTree = "<group>"; };
 		68E283B721B38DCC009B708F /* KJAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJAlertVC.xib; sourceTree = "<group>"; };
@@ -174,7 +156,6 @@
 				68E283B521B38DCC009B708F /* KJAlertVC.h */,
 				68E283B621B38DCC009B708F /* KJAlertVC.m */,
 				68E283B721B38DCC009B708F /* KJAlertVC.xib */,
-				68C738A921C24F1B0031D634 /* New Group */,
 			);
 			path = TextVC;
 			sourceTree = "<group>";
@@ -248,7 +229,6 @@
 		68B02FF021B2FBC400349510 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				68C7389C21C24E130031D634 /* MenuCollectionView */,
 				68959BFD21B3998A004F794F /* AlertView */,
 				68B02FF121B2FBC400349510 /* EmitterView */,
 				68B0300821B2FBC400349510 /* ErrorView */,
@@ -355,32 +335,6 @@
 			path = UINavigationBar;
 			sourceTree = "<group>";
 		};
-		68C7389C21C24E130031D634 /* MenuCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				68C7389D21C24E130031D634 /* KJMenuCollectionView.h */,
-				68C7389E21C24E130031D634 /* KJMenuCollectionTool.m */,
-				68C7389F21C24E130031D634 /* KJMenuCollectionViewCell.m */,
-				68C738A021C24E130031D634 /* KJMenuCollectionView.m */,
-				68C738A121C24E130031D634 /* KJMenuCollectionTool.h */,
-				68C738A221C24E130031D634 /* KJMenuCollectionViewCell.h */,
-			);
-			path = MenuCollectionView;
-			sourceTree = "<group>";
-		};
-		68C738A921C24F1B0031D634 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				68C738A621C24E5E0031D634 /* KJMenuCollectionVC.h */,
-				68C738A721C24E5E0031D634 /* KJMenuCollectionVC.m */,
-				68C738AC21C24F2D0031D634 /* KJBoardPlayCell.h */,
-				68C738AD21C24F2D0031D634 /* KJBoardPlayCell.m */,
-				68C738AA21C24F2D0031D634 /* KJBoardPlayModel.h */,
-				68C738AB21C24F2D0031D634 /* KJBoardPlayModel.m */,
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,17 +419,14 @@
 				68E283B821B38DCC009B708F /* KJAlertVC.m in Sources */,
 				68BA6C2B21B303D40013C4AD /* UIImage+KJFloodFill.m in Sources */,
 				68BA6C2F21B303D40013C4AD /* UIView+KJXib.m in Sources */,
-				68C738A521C24E130031D634 /* KJMenuCollectionView.m in Sources */,
 				68BA6C2D21B303D40013C4AD /* UIButton+KJButtonContentLayout.m in Sources */,
 				68B0301521B2FBC400349510 /* KJEmitterView.m in Sources */,
 				6869043921B265E400ED072F /* KJButtonVC.m in Sources */,
-				68C738A321C24E130031D634 /* KJMenuCollectionTool.m in Sources */,
 				6869044021B27A6600ED072F /* KJViewVC.m in Sources */,
 				68BA6C3121B303D40013C4AD /* UIView+KJFrame.m in Sources */,
 				6869046C21B2D36B00ED072F /* KJFloodImageVC.m in Sources */,
 				684BFEF421BA11870015641A /* NSDictionary+KJLog.m in Sources */,
 				68BA6C3221B303D40013C4AD /* UITextView+KJLimitCounter.m in Sources */,
-				68C738A421C24E130031D634 /* KJMenuCollectionViewCell.m in Sources */,
 				68BA6C2C21B303D40013C4AD /* UIButton+KJIndicator.m in Sources */,
 				68B0301E21B2FBC400349510 /* KJErrorView.m in Sources */,
 				6869044A21B28E0300ED072F /* KJTextViewVC.m in Sources */,
@@ -484,10 +435,7 @@
 				68776CED21AC34A0000A1435 /* ViewController.m in Sources */,
 				6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */,
 				68776CF821AC34A0000A1435 /* main.m in Sources */,
-				68C738A821C24E5E0031D634 /* KJMenuCollectionVC.m in Sources */,
 				68776CEA21AC34A0000A1435 /* AppDelegate.m in Sources */,
-				68C738AE21C24F2D0031D634 /* KJBoardPlayModel.m in Sources */,
-				68C738AF21C24F2D0031D634 /* KJBoardPlayCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
