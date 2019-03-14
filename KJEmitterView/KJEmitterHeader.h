@@ -1,5 +1,5 @@
 //
-//  KJHeader.h
+//  KJEmitterHeader.h
 //  KJEmitterDemo
 //
 //  Created by 杨科军 on 2018/11/26.
@@ -11,8 +11,8 @@
  博客地址：https://blog.csdn.net/qq_34534179
  */
 
-#ifndef KJHeader_h
-#define KJHeader_h
+#ifndef KJEmitterHeader_h
+#define KJEmitterHeader_h
 
 // 输出日志 (格式: [时间] [哪个方法] [哪行] [输出内容])
 #ifdef DEBUG
@@ -48,4 +48,4 @@
 #import "NSArray+KJLog.h"
 #import "NSDictionary+KJLog.h"  /// Xcode控制台打印中文问题，调试模式打印
 
-#endif /* KJHeader_h */
+#endif /* KJEmitterHeader_h */

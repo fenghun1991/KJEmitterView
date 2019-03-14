@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "3.0.2"
+  s.version      = "3.0.3"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
@@ -12,7 +12,6 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://www.jianshu.com/u/c84c00476ab6'
   s.requires_arc = true
   
-  
   s.ios.source_files = 'KJEmitterView/KJHeader.h' # 添加头文件
   
   s.subspec 'Classes' do |ss|
@@ -21,10 +20,9 @@ Pod::Spec.new do |s|
     ss.resources    = "KJEmitterView/Classes/**/*.{bundle}" # 添加数据资料
   end
 
-  s.subspec 'KeJun' do |y|
-    y.source_files = "KJEmitterView/UIKit/**/*.{h,m}" # 添加文件
-    y.public_header_files = 'KJEmitterView/UIKit/*.h',"KJEmitterView/UIKit/**/*.h"   # 添加头文件
-    # y.resources    = "KJEmitterView/UIKit/**/*.{bundle}" # 添加数据资料
+  s.subspec 'Kit' do |y|
+    y.source_files = "KJEmitterView/Kit/**/*.{h,m}" # 添加文件
+    y.public_header_files = 'KJEmitterView/Kit/*.h',"KJEmitterView/Kit/**/*.h"   # 添加头文件
   end
 
   s.subspec 'Function' do |fun|

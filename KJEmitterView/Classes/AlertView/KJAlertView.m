@@ -247,6 +247,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 //    if (!cell) {
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.backgroundColor = self.bottomViewColor;
 //    }
     

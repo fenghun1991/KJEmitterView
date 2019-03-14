@@ -41,6 +41,8 @@
 		68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */; };
 		68E283B821B38DCC009B708F /* KJAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E283B621B38DCC009B708F /* KJAlertVC.m */; };
 		68E283B921B38DCC009B708F /* KJAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E283B721B38DCC009B708F /* KJAlertVC.xib */; };
+		68F0906C223A0A5400EA06C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68F0906B223A0A5400EA06C1 /* README.md */; };
+		68F0906E223A0A5900EA06C1 /* KJEmitterView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 68F0906D223A0A5900EA06C1 /* KJEmitterView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,7 +76,7 @@
 		68776CF721AC34A0000A1435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		68959BFE21B3998A004F794F /* KJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJAlertView.m; sourceTree = "<group>"; };
 		68959BFF21B3998A004F794F /* KJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJAlertView.h; sourceTree = "<group>"; };
-		68AB4F8521AF834E003A2A60 /* KJHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJHeader.h; sourceTree = "<group>"; };
+		68AB4F8521AF834E003A2A60 /* KJEmitterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJEmitterHeader.h; sourceTree = "<group>"; };
 		68B02FF221B2FBC400349510 /* KJEmitterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJEmitterView.h; sourceTree = "<group>"; };
 		68B02FF321B2FBC400349510 /* KJEmitter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KJEmitter.bundle; sourceTree = "<group>"; };
 		68B02FF421B2FBC400349510 /* KJEmitterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJEmitterView.m; sourceTree = "<group>"; };
@@ -108,6 +110,8 @@
 		68E283B521B38DCC009B708F /* KJAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAlertVC.h; sourceTree = "<group>"; };
 		68E283B621B38DCC009B708F /* KJAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAlertVC.m; sourceTree = "<group>"; };
 		68E283B721B38DCC009B708F /* KJAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJAlertVC.xib; sourceTree = "<group>"; };
+		68F0906B223A0A5400EA06C1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		68F0906D223A0A5900EA06C1 /* KJEmitterView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KJEmitterView.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,12 +192,12 @@
 		68776CE721AC349F000A1435 /* KJEmitterView */ = {
 			isa = PBXGroup;
 			children = (
-				68AB4F8521AF834E003A2A60 /* KJHeader.h */,
+				68AB4F8521AF834E003A2A60 /* KJEmitterHeader.h */,
 				68776CE821AC34A0000A1435 /* AppDelegate.h */,
 				68776CE921AC34A0000A1435 /* AppDelegate.m */,
-				684BFEED21BA10E60015641A /* Foundation */,
-				68BA6C0821B303D40013C4AD /* UIKit */,
+				68BA6C0821B303D40013C4AD /* Kit */,
 				68B02FF021B2FBC400349510 /* Classes */,
+				684BFEED21BA10E60015641A /* Foundation */,
 				6869042C21B2541400ED072F /* Base */,
 				6869042B21B253FC00ED072F /* TextVC */,
 				68776CEB21AC34A0000A1435 /* ViewController.h */,
@@ -204,6 +208,8 @@
 				68776CF321AC34A0000A1435 /* LaunchScreen.storyboard */,
 				68776CF621AC34A0000A1435 /* Info.plist */,
 				68776CF721AC34A0000A1435 /* main.m */,
+				68F0906B223A0A5400EA06C1 /* README.md */,
+				68F0906D223A0A5900EA06C1 /* KJEmitterView.podspec */,
 			);
 			path = KJEmitterView;
 			sourceTree = "<group>";
@@ -256,7 +262,7 @@
 			path = ErrorView;
 			sourceTree = "<group>";
 		};
-		68BA6C0821B303D40013C4AD /* UIKit */ = {
+		68BA6C0821B303D40013C4AD /* Kit */ = {
 			isa = PBXGroup;
 			children = (
 				68BA6C0921B303D40013C4AD /* UIImage */,
@@ -266,7 +272,7 @@
 				68BA6C2321B303D40013C4AD /* UIBarButtonItem */,
 				68BA6C2621B303D40013C4AD /* UINavigationBar */,
 			);
-			path = UIKit;
+			path = Kit;
 			sourceTree = "<group>";
 		};
 		68BA6C0921B303D40013C4AD /* UIImage */ = {
@@ -392,12 +398,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68F0906E223A0A5900EA06C1 /* KJEmitterView.podspec in Resources */,
 				6869046D21B2D36B00ED072F /* KJFloodImageVC.xib in Resources */,
 				68776CF521AC34A0000A1435 /* LaunchScreen.storyboard in Resources */,
 				68B0301F21B2FBC400349510 /* KJErrorView.bundle in Resources */,
 				68B0301421B2FBC400349510 /* KJEmitter.bundle in Resources */,
 				68776CF221AC34A0000A1435 /* Assets.xcassets in Resources */,
 				68776CF021AC34A0000A1435 /* Main.storyboard in Resources */,
+				68F0906C223A0A5400EA06C1 /* README.md in Resources */,
 				68E283B921B38DCC009B708F /* KJAlertVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,6 @@ a simple project for KJEmitterDemo
 #### 简书地址
 [简书地址](https://www.jianshu.com/p/3ef51991c0e9）
 
-
 ### 一、先将代码传到github上
 ###### 1．创建本地仓库                 ```git init```
 ###### 2．添加名称为origin的远程连接    ```git remote add origin 'Github项目地址'```
