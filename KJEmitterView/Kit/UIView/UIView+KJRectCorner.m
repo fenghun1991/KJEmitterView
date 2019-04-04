@@ -7,6 +7,7 @@
 //
 
 #import "UIView+KJRectCorner.h"
+#import "UIView+KJFrame.h"
 #import <objc/runtime.h>
 
 static NSString * const kcornerRadius = @"kj_rectCornerRadius";
