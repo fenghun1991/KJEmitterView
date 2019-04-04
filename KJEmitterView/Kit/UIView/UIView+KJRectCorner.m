@@ -7,7 +7,6 @@
 //
 
 #import "UIView+KJRectCorner.h"
-#import "UIView+KJFrame.h"
 #import <objc/runtime.h>
 
 static NSString * const kcornerRadius = @"kj_rectCornerRadius";
@@ -118,7 +117,7 @@ static NSString * const krectCorner = @"kj_rectCorner";
 //虚线边框
 - (void)kj_DashedLineColor:(UIColor *)lineColor lineWidth:(CGFloat)lineWidth spaceAry:(NSArray<NSNumber *> *)spaceAry {
     CAShapeLayer *borderLayer = [CAShapeLayer layer];
-    borderLayer.bounds = CGRectMake(0, 0, self.width , self.height);
+    borderLayer.bounds = CGRectMake(0, 0, self.frame.size.width , self.frame.size.height);
     borderLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
     
     //不带圆角
