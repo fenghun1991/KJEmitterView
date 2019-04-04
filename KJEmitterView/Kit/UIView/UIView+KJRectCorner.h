@@ -54,5 +54,11 @@
  */
 - (void)kj_BorderTop:(BOOL)top Left:(BOOL)left Bottom:(BOOL)bottom Right:(BOOL)right BorderColor:(UIColor *)color BorderWidth:(CGFloat)width;
 
+/** 虚线边框
+ @param lineColor 线条颜色
+ @param lineWidth 线宽
+ @param spaceAry  线条之间间隔数组
+ */
+- (void)kj_DashedLineColor:(UIColor *)lineColor lineWidth:(CGFloat)lineWidth spaceAry:(NSArray<NSNumber *> *)spaceAry;
 
 @end

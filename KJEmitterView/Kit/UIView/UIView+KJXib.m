@@ -10,7 +10,7 @@
 
 @implementation UIView (KJXib)
 
-@dynamic borderColor,borderWidth,masksToBounds,cornerRadius;
+@dynamic borderColor,borderWidth,cornerRadius;
 @dynamic shadowColor,shadowRadius,shadowOffset,shadowOpacity;
 
 /**
@@ -51,16 +51,15 @@
 }
 
 -(void)setBorderWidth:(CGFloat)borderWidth {
+    if (borderWidth < 0) return;
     [self.layer setBorderWidth:borderWidth];
 }
 
 -(void)setCornerRadius:(CGFloat)cornerRadius {
     [self.layer setCornerRadius:cornerRadius];
+    self.layer.masksToBounds = cornerRadius > 0;
 }
 
-- (void)setMasksToBounds:(BOOL)masksToBounds {
-    [self.layer setMasksToBounds:masksToBounds];
-}
 
 - (void)setShadowColor:(UIColor *)shadowColor{
     [self.layer setShadowColor:shadowColor.CGColor];

@@ -26,15 +26,14 @@ typedef NS_ENUM(NSInteger, KJButtonContentLayoutStyle) {
 @interface UIButton (KJContentLayout)
 
 /* Button 图文样式 */
-@property(nonatomic, assign) KJButtonContentLayoutStyle kj_ButtonContentLayoutType;
-
-/* 图文间距，默认为：0 */
-@property (nonatomic, assign) CGFloat kj_Padding;
-
-/* 图文边界的间距，默认为：5 */
-@property (nonatomic, assign) CGFloat kj_PaddingInset;
+@property(nonatomic,assign) KJButtonContentLayoutStyle kj_ButtonContentLayoutType;
+/* 图文间距, 默认为0 */
+@property(nonatomic,assign) CGFloat kj_Padding;
+/* 图文边界的间距, 默认为5 */
+@property(nonatomic,assign) CGFloat kj_PaddingInset;
 
 @end
+
 NS_ASSUME_NONNULL_END
 
 

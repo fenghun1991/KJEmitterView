@@ -114,4 +114,22 @@ static NSString * const krectCorner = @"kj_rectCorner";
     }
 }
 
+//虚线边框
+- (void)kj_DashedLineColor:(UIColor *)lineColor lineWidth:(CGFloat)lineWidth spaceAry:(NSArray<NSNumber *> *)spaceAry {
+    CAShapeLayer *borderLayer = [CAShapeLayer layer];
+    borderLayer.bounds = CGRectMake(0, 0, self.width , self.height);
+    borderLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
+    
+    //不带圆角
+    //    borderLayer.path = [UIBezierPath bezierPathWithRect:borderLayer.bounds].CGPath;
+    //带圆角
+    borderLayer.path = [UIBezierPath bezierPathWithRoundedRect:borderLayer.bounds cornerRadius:self.layer.cornerRadius].CGPath;
+    borderLayer.lineWidth = lineWidth / [[UIScreen mainScreen] scale];
+    //虚线边框
+    borderLayer.lineDashPattern = spaceAry;
+    borderLayer.fillColor = [UIColor clearColor].CGColor;
+    borderLayer.strokeColor = lineColor.CGColor;
+    [self.layer addSublayer:borderLayer];
+}
+
 @end

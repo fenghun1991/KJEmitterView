@@ -26,18 +26,18 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 @interface KJAlertView ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, copy) KJAlertBlock myBlock;
-@property (nonatomic, assign) KJAlertViewType type;
+@property(nonatomic,copy) KJAlertBlock myBlock;
+@property(nonatomic,assign) KJAlertViewType type;
 
-@property (nonatomic, assign) CGFloat bottomHeader;
+@property(nonatomic,assign) CGFloat bottomHeader;
 
-@property (nonatomic, strong) NSString   *title;// 提示标题
-@property (nonatomic, strong) NSString   *contentStr;// 提示内容
-@property (nonatomic, strong) NSArray    *titleArray;// 按钮标题数组
-@property (nonatomic, strong) UIView *addView;
-@property (nonatomic, strong) UIButton     *bgView;
-@property (nonatomic, strong) UIView       *centerView;
-@property (nonatomic, strong) UITableView  *bottomTableView;
+@property(nonatomic,strong) NSString   *title;// 提示标题
+@property(nonatomic,strong) NSString   *contentStr;// 提示内容
+@property(nonatomic,strong) NSArray    *titleArray;// 按钮标题数组
+@property(nonatomic,strong) UIView *addView;
+@property(nonatomic,strong) UIButton     *bgView;
+@property(nonatomic,strong) UIView       *centerView;
+@property(nonatomic,strong) UITableView  *bottomTableView;
 
 //*****************  颜色相关  *******************
 @property(nonatomic,strong) UIColor *lineColor;  // 线颜色

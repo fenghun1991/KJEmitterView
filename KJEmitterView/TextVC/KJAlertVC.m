@@ -9,6 +9,7 @@
 #import "KJAlertVC.h"
 #import "KJAlertView.h"      // 
 @interface KJAlertVC ()
+@property (weak, nonatomic) IBOutlet UIButton *button;
 
 @end
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
 }
 - (IBAction)ClickCenter:(UIButton *)sender {
     [KJAlertView createAlertViewWithType:(KJAlertViewTypeCenter) Title:@"提示" Content:@"是否清理缓存" DataArray:@[@"取消",@"确定"] Block:^(KJAlertView *obj) {

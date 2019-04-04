@@ -27,11 +27,13 @@
 #import "KJAlertView.h"      // 提示选择框
 
 /******************* Category ******************************/
-#import "UIButton+KJIndicator.h"
 #import "UIButton+KJButtonContentLayout.h"  // 图文混排
+#import "UIButton+KJBlock.h" // 改变UIButton的响应区域 - 点击事件ButtonBlock
+
+#import "UILabel+KJAttributedString.h" // 富文本
 
 #import "UIView+KJXib.h"   // Xib
-#import "UIView+KJFrame.h" // Frame
+#import "UIView+KJFrame.h" // Frame - 轻量级布局
 #import "UIView+KJRectCorner.h" // 切圆角 - 渐变
 
 #import "UINavigationBar+KJExtension.h" // 设置NavigationBar背景
