@@ -24,7 +24,7 @@ typedef NSUInteger KJAnimationLabelType;
 
 @interface KJMarqueeLabel : UILabel
 /** 文字宽度 */
-@property(nonatomic, retain) NSArray *wordList;
+@property(nonatomic, retain) NSArray *__nonnull wordList;
 /** 持续时间 */
 @property(nonatomic, assign) double duration;
 /** 动画类型 */

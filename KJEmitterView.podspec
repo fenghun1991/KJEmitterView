@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "4.1.0"
+  s.version      = "4.1.1"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
@@ -17,7 +17,6 @@ Pod::Spec.new do |s|
   s.subspec 'Control' do |a|
     a.source_files = "KJEmitterView/Control/**/*.{h,m}" # 添加文件
     a.public_header_files = "KJEmitterView/Control/**/*.h",'KJEmitterView/Control/*.h'# 添加头文件
-    a.resources    = "KJEmitterView/Control/**/*.{bundle}" # 添加数据资料
   end
 
   s.subspec 'Classes' do |ss|

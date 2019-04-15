@@ -20,7 +20,7 @@
 - (void)animateWithWords:(NSArray *)words forDuration:(double)time withAnimation:(KJAnimationLabelType)animation {
     self.duration = time;
     if (self.wordList) {
-        self.wordList = nil;
+        _wordList = nil;
     }
     self.animationType = animation;
     self.wordList = [[NSArray alloc] initWithArray:words];
