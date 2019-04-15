@@ -12,7 +12,7 @@
 @property(nonatomic,strong)UIButton *button;
 @property(nonatomic,strong)NSArray *segmentedTitleArray;
 @property(nonatomic,strong)NSArray *NameArray;
-@property(nonatomic, strong)NSMutableArray <UILabel *>*labelArray;
+@property(nonatomic,strong)NSMutableArray <UILabel *>*labelArray;
 
 @end
 
@@ -25,7 +25,7 @@
     
     [self createSegmented];
 }
-// 重写SET传值，需要在图文元素确定后才能设置布局，之后参数即可动态调整  ************************************************
+// 重写SET传值，需要在图文元素确定后才能设置布局，之后参数即可动态调整
 - (void)clicksegmented:(UISegmentedControl *)sender{    // 两排控制布局的选择器
     NSInteger tag = sender.tag - 100;
     NSArray *arr = self.segmentedTitleArray[tag];

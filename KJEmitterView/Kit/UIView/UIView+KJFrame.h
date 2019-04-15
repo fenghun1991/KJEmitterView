@@ -44,8 +44,8 @@
 
 @interface UIView (KJFrame)
 
-@property (nonatomic, assign) CGFloat right;
-@property (nonatomic, assign) CGFloat bottom;
+@property(nonatomic,assign) CGFloat right;
+@property(nonatomic,assign) CGFloat bottom;
 //x坐标属性
 @property (nonatomic,assign)CGFloat x;
 //y坐标

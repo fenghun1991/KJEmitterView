@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqS-wZ-zww">
-                    <rect key="frame" x="132" y="308.5" width="111" height="50"/>
+                    <rect key="frame" x="132" y="258.5" width="111" height="50"/>
                     <color key="backgroundColor" red="0.50196078430000002" green="0.3921568627" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="FqS-wZ-zww" secondAttribute="height" multiplier="20:9" id="Eg0-KT-a4c"/>
@@ -55,7 +55,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bT4-37-STu">
-                    <rect key="frame" x="132" y="408.5" width="111" height="50"/>
+                    <rect key="frame" x="132" y="358.5" width="111" height="50"/>
                     <state key="normal" title="Test Bottom"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -77,7 +77,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="bT4-37-STu" firstAttribute="top" secondItem="FqS-wZ-zww" secondAttribute="bottom" constant="50" id="6a9-qb-puU"/>
-                <constraint firstItem="FqS-wZ-zww" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="EgT-Rv-aoO"/>
+                <constraint firstItem="FqS-wZ-zww" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="EgT-Rv-aoO"/>
                 <constraint firstItem="bT4-37-STu" firstAttribute="height" secondItem="FqS-wZ-zww" secondAttribute="height" id="Qk6-LE-FxK"/>
                 <constraint firstItem="FqS-wZ-zww" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sKl-6d-64P"/>
                 <constraint firstItem="bT4-37-STu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tPX-yA-NiE"/>

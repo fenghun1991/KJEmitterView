@@ -11,8 +11,8 @@
 @interface UITextView (KJPlaceHolder)
 
 /**  UITextView+placeholder */
-@property (nonatomic, copy)NSString *kj_PlaceHolder;
+@property(nonatomic,copy)NSString *kj_PlaceHolder;
 /** placeHolder颜色 */
-@property (nonatomic, strong)UIColor *kj_PlaceHolderColor;
+@property(nonatomic,strong)UIColor *kj_PlaceHolderColor;
 
 @end

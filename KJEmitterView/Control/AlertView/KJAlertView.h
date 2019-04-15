@@ -7,7 +7,7 @@
 //  提示,确认框
 
 #import <UIKit/UIKit.h>
-
+NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM (NSInteger, KJAlertViewType){
     KJAlertViewTypeCenter     = 0,  // 中间位置
     KJAlertViewTypeBottom     = 1,  // 底部位置
@@ -29,14 +29,14 @@ typedef void(^KJAlertBlock)(NSInteger index);
 @property(nonatomic,strong,readonly) KJAlertView *(^KJBgColor)(UIColor *bgColor);
 @property(nonatomic,strong,readonly) KJAlertView *(^KJAddView)(UIView *addView);
 /************************** 颜色属性，以下属性均有默认值 **************************/
-/// 公共颜色属性
+/* 公共颜色属性 */
 @property(nonatomic,strong,readonly) KJAlertView *(^KJComColor)(UIColor *lineColor,UIColor *titleColor,UIColor *textColor,UIColor *cancleColor);
-
-/// Center
+/* Center相关颜色属性 */
 @property(nonatomic,strong,readonly) KJAlertView *(^KJCenterColor)(UIColor *centerViewColor);
-
-/// Bottom
+/* Bottom相关属性 */
 @property(nonatomic,strong,readonly) KJAlertView *(^KJBottomColor)(UIColor *bottomViewColor,UIColor *spaceColor);
 @property(nonatomic,strong,readonly) KJAlertView *(^KJBottomTableH)(CGFloat maxH,CGFloat cellH);
 
 @end
+
+NS_ASSUME_NONNULL_END

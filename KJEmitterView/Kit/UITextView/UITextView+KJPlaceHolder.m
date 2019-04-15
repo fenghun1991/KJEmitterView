@@ -10,7 +10,7 @@
 #import <objc/runtime.h>
 
 @interface UITextView ()
-@property (nonatomic, readonly)UILabel *Label;
+@property(nonatomic,readonly)UILabel *Label;
 @end
 @implementation UITextView (KJPlaceHolder)
 +(void)load{

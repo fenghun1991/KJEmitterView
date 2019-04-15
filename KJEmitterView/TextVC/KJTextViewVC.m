@@ -10,7 +10,7 @@
 
 @interface KJTextViewVC ()
 
-@property (nonatomic, strong)UITextView  *remarkTextView;//备注
+@property(nonatomic,strong)UITextView  *remarkTextView;//备注
 
 @end
 

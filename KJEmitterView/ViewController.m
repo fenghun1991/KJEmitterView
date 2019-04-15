@@ -63,7 +63,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return self.sectionTitleArray[section];
 }
--(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
     UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
     header.textLabel.textAlignment = NSTextAlignmentCenter;
     header.textLabel.textColor = UIColor.blackColor;
@@ -81,7 +81,7 @@
 
 - (NSArray *)sectionTitleArray{
     if (!_sectionTitleArray) {
-        _sectionTitleArray = @[@"扩展类",@"控件类"];
+        _sectionTitleArray = @[@"扩展类",@"CALayer类",@"自定义控件"];
     }
     return _sectionTitleArray;
 }
@@ -97,9 +97,13 @@
         
         NSMutableArray *Group2 = [NSMutableArray array];
         [Group2 addObject:@{@"VCName":@"KJEmitterVC",@"describeName":@"粒子效果"}];
-        [Group2 addObject:@{@"VCName":@"KJAlertVC",@"describeName":@"两种AlertView"}];
+        [Group2 addObject:@{@"VCName":@"KJErrorVC",@"describeName":@"错误提示效果"}];
         
         NSMutableArray *Group3 = [NSMutableArray array];
+        [Group3 addObject:@{@"VCName":@"KJAlertVC",@"describeName":@"两种AlertView"}];
+        [Group3 addObject:@{@"VCName":@"KJSelectController",@"describeName":@"自定义一款动画选中控件"}];
+        [Group3 addObject:@{@"VCName":@"KJSwitchVC",@"describeName":@"自定义一款可爱的动画Switch控件"}];
+        [Group3 addObject:@{@"VCName":@"KJMarqueeLabelVC",@"describeName":@"一款跑马灯Label"}];
         [_dataArray addObject:Group1];
         [_dataArray addObject:Group2];
         [_dataArray addObject:Group3];

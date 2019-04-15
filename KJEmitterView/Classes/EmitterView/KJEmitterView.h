@@ -21,9 +21,9 @@ typedef NS_ENUM (NSInteger, KJEmitterType){
 + (instancetype)createEmitterViewWithType:(KJEmitterType)type Block:(void(^)(KJEmitterView *obj))block;
 
 /// 动画结束
-@property (nonatomic, readwrite, copy)void(^EndAnimation)(void);
+@property(nonatomic,readwrite, copy)void(^EndAnimation)(void);
 // 消失时间  默认1.0秒
-@property (nonatomic, assign) CGFloat dissmissTime;
+@property(nonatomic,assign) CGFloat dissmissTime;
 
 // 链接式设置属性
 @property(nonatomic,strong,readonly) KJEmitterView *(^KJTag)(NSInteger);
