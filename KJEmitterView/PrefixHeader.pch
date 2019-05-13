@@ -13,7 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "KJEmitterHeader.h"
-
+#import "UINavigationController+FDFullscreenPopGesture.h" // 侧滑返回
 #import "BaseViewController.h"
 
 //获取屏幕 宽度、高度

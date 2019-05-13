@@ -1,3 +1,6 @@
+# 上传至CocoaPods和Bug总结
+---
+
 ### 一、先将代码传到github上
 ###### 1．创建本地仓库                 ```git init```
 ###### 2．添加名称为origin的远程连接    ```git remote add origin 'Github项目地址'```
@@ -5,6 +8,7 @@
 ###### 4．提交修改到本地仓库            ```git commit -m '修改记录'```
 ###### 5．推送master分支的代码到名称为orgigin的远程仓库   ```git push origin master```
 
+---
 ### 二、给你git打上tag
 #### 打tag的目的就相当于给你的开源框架制定版本号，每个版本一个tag
 ###### 1．cd仓库目录
@@ -17,6 +21,7 @@
 ###### 1．删除本地tag         ```git tag -d 1.0.0```
 ###### 2．删除远程tag          ```git push origin -d tag 1.0.0```
 
+---
 ### 三、注册Trunk
 ###### 1．注册Trunk        ```pod trunk register 邮箱 '用户名' --description='描述'```
 ![图片 2.png](https://upload-images.jianshu.io/upload_images/1933747-c852db27cf095480.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -33,6 +38,7 @@
 ###### 4．如果你的pod是由多人维护的，你也可以添加其他维护者
 ```pod trunk add-owner 名称 邮箱```
 
+---
 ### 四、获取MIT文件
 ###### 1．网页链接     https://choosealicense.com/
 ![图片 5.png](https://upload-images.jianshu.io/upload_images/1933747-a5a136dae00879bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -41,6 +47,7 @@
 
 ###### 2．将生成的LICENSE文件同步至Github
 
+---
 ### 五、创建自己项目的Podspec描述文件
 ###### 1．创建podspec文件            ```pod spec create KJEmitterView```
 ###### 2．podspec文件代码
@@ -73,6 +80,7 @@ end
 验证成功，
 ![图片 7.png](https://upload-images.jianshu.io/upload_images/1933747-a0561698c89fcacf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+---
 ### 六、传到CocoaPods上
 ###### 1．首先验证你本地的podspec文件，之后会上传spec文件到trunk
 ###### 2．将podspec文件传到trunk上    ```pod trunk push KJEmitterView.podspec```
@@ -82,6 +90,7 @@ end
 ###### 3．一直处于Updating spec repo master 状态   
 可以选择更新下              ```pod repo update --verbose```
 ###### 4．检查是否上传成功：        ```pod search KJEmitterView```
+
 
 ### 七、Bug总结
 ###### 1、[!] There was an error registering with trunk: getaddrinfo: nodename nor servname provided, or not known
@@ -187,3 +196,8 @@ end
 
 ###### 15、ERROR | [iOS] unknown: Encountered an unknown error (Could not find a `ios` simulator (valid values: com.apple.coresimulator.simruntime.ios-12-2, com.apple.coresimulator.simruntime.tvos-12-2, com.apple.coresimulator.simruntime.watchos-5-2). Ensure that Xcode -> Window -> Devices has at least one `ios` simulator listed or otherwise add one.) during validation.
 - 解决方案：升级CocoaPods，终端执行 sudo gem install cocoapods 代码即可
+
+###### 16、- WARN  | [KJEmitterView/Control] xcodebuild:  KJEmitterView/KJEmitterView/Control/MarqueeLabel/KJMarqueeLabel.m:23:14: warning: null passed to a callee that requires a non-null argument [-Wnonnull]
+
+- 原因：此警告就是某属性说好的不能为空，你又在某地方写了XX = nil 所以冲突  
+- 解决方案：声明一个属性的时候加上 __nullable（？可以为空）与__nonnull（！不能为空）或者用宏 NS_ASSUME_NONNULL_BEGIN 和 NS_ASSUME_NONNULL_END 包住多个属性全部具备nonnull，然后仅对需要nullable的改下就行

@@ -26,8 +26,6 @@
 		687115DA22633BCA009EC3E0 /* KJSwitchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 687115D822633BCA009EC3E0 /* KJSwitchControl.m */; };
 		687115DE22633BF0009EC3E0 /* KJSwitchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 687115DC22633BF0009EC3E0 /* KJSwitchVC.m */; };
 		687115DF22633BF0009EC3E0 /* KJSwitchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 687115DD22633BF0009EC3E0 /* KJSwitchVC.xib */; };
-		687115E6226372FA009EC3E0 /* KJMarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 687115E5226372FA009EC3E0 /* KJMarqueeLabel.m */; };
-		687115EA22637425009EC3E0 /* KJMarqueeLabelVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 687115E822637425009EC3E0 /* KJMarqueeLabelVC.m */; };
 		68776CEA21AC34A0000A1435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 68776CE921AC34A0000A1435 /* AppDelegate.m */; };
 		68776CED21AC34A0000A1435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68776CEC21AC34A0000A1435 /* ViewController.m */; };
 		68776CF021AC34A0000A1435 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68776CEE21AC34A0000A1435 /* Main.storyboard */; };
@@ -93,10 +91,6 @@
 		687115DB22633BF0009EC3E0 /* KJSwitchVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJSwitchVC.h; sourceTree = "<group>"; };
 		687115DC22633BF0009EC3E0 /* KJSwitchVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJSwitchVC.m; sourceTree = "<group>"; };
 		687115DD22633BF0009EC3E0 /* KJSwitchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJSwitchVC.xib; sourceTree = "<group>"; };
-		687115E4226372FA009EC3E0 /* KJMarqueeLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMarqueeLabel.h; sourceTree = "<group>"; };
-		687115E5226372FA009EC3E0 /* KJMarqueeLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJMarqueeLabel.m; sourceTree = "<group>"; };
-		687115E722637424009EC3E0 /* KJMarqueeLabelVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMarqueeLabelVC.h; sourceTree = "<group>"; };
-		687115E822637425009EC3E0 /* KJMarqueeLabelVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJMarqueeLabelVC.m; sourceTree = "<group>"; };
 		68776CE521AC349F000A1435 /* KJEmitterView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJEmitterView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68776CE821AC34A0000A1435 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		68776CE921AC34A0000A1435 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -208,8 +202,6 @@
 				687115DB22633BF0009EC3E0 /* KJSwitchVC.h */,
 				687115DC22633BF0009EC3E0 /* KJSwitchVC.m */,
 				687115DD22633BF0009EC3E0 /* KJSwitchVC.xib */,
-				687115E722637424009EC3E0 /* KJMarqueeLabelVC.h */,
-				687115E822637425009EC3E0 /* KJMarqueeLabelVC.m */,
 			);
 			path = TextVC;
 			sourceTree = "<group>";
@@ -226,7 +218,6 @@
 		687115C62262FC01009EC3E0 /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				687115E022636E3A009EC3E0 /* MarqueeLabel */,
 				687115D722633BB6009EC3E0 /* SwitchContorl */,
 				687115C7226311F0009EC3E0 /* SelectControl */,
 				68959BFD21B3998A004F794F /* AlertView */,
@@ -261,15 +252,6 @@
 			path = SwitchContorl;
 			sourceTree = "<group>";
 		};
-		687115E022636E3A009EC3E0 /* MarqueeLabel */ = {
-			isa = PBXGroup;
-			children = (
-				687115E4226372FA009EC3E0 /* KJMarqueeLabel.h */,
-				687115E5226372FA009EC3E0 /* KJMarqueeLabel.m */,
-			);
-			path = MarqueeLabel;
-			sourceTree = "<group>";
-		};
 		68776CDC21AC349F000A1435 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +283,7 @@
 				68776CEB21AC34A0000A1435 /* ViewController.h */,
 				68776CEC21AC34A0000A1435 /* ViewController.m */,
 				68776CEE21AC34A0000A1435 /* Main.storyboard */,
+				687115CB226312ED009EC3E0 /* UINavigationController */,
 				6869042D21B25B1000ED072F /* PrefixHeader.pch */,
 				68776CF121AC34A0000A1435 /* Assets.xcassets */,
 				68776CF321AC34A0000A1435 /* LaunchScreen.storyboard */,
@@ -367,7 +350,6 @@
 				68BA6C0921B303D40013C4AD /* UIImage */,
 				685CE15A2256206E004E3AF4 /* UILabel */,
 				68BA6C2621B303D40013C4AD /* UINavigationBar */,
-				687115CB226312ED009EC3E0 /* UINavigationController */,
 				68BA6C1E21B303D40013C4AD /* UITextView */,
 				68BA6C1721B303D40013C4AD /* UIView */,
 			);
@@ -531,7 +513,6 @@
 				68BA6C2F21B303D40013C4AD /* UIView+KJXib.m in Sources */,
 				685CE15D22562085004E3AF4 /* UILabel+KJAttributedString.m in Sources */,
 				68BA6C2D21B303D40013C4AD /* UIButton+KJButtonContentLayout.m in Sources */,
-				687115E6226372FA009EC3E0 /* KJMarqueeLabel.m in Sources */,
 				685CE15922560193004E3AF4 /* UIButton+KJBlock.m in Sources */,
 				687115CA22631201009EC3E0 /* KJSelectControl.m in Sources */,
 				68B0301521B2FBC400349510 /* KJEmitterView.m in Sources */,
@@ -553,7 +534,6 @@
 				687115D622631878009EC3E0 /* KJErrorVC.m in Sources */,
 				68776CEA21AC34A0000A1435 /* AppDelegate.m in Sources */,
 				687115DE22633BF0009EC3E0 /* KJSwitchVC.m in Sources */,
-				687115EA22637425009EC3E0 /* KJMarqueeLabelVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

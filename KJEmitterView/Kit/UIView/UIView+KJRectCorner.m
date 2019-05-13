@@ -80,13 +80,6 @@ static NSString * const krectCorner = @"kj_rectCorner";
     [self.layer insertSublayer:gradientLayer atIndex:0];
 }
 
-- (void)kj_BorderAndCornerWithRadius:(CGFloat)redius BorderWidth:(CGFloat)width BorderColor:(UIColor *)color{
-    [self.layer setCornerRadius:redius];
-    [self.layer setMasksToBounds:YES];
-    [self.layer setBorderWidth:width];
-    [self.layer setBorderColor:[color CGColor]];
-}
-
 - (void)kj_BorderTop:(BOOL)top Left:(BOOL)left Bottom:(BOOL)bottom Right:(BOOL)right BorderColor:(UIColor *)color BorderWidth:(CGFloat)width{
     if (top) {
         CALayer *layer = [CALayer layer];

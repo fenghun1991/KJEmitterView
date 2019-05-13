@@ -12,6 +12,12 @@
  
  ####版本更新日志：
  
+ #### Add 4.2.1
+ 1、暂时移出UIView+KJXib中布局相关
+ 2、移出UINavigationController+FDFullscreenPopGesture
+ 3、默认只引入Kit里面的文件
+ 4、重新整理Control、Classes和Foundation独立为文件夹
+ 
  #### Add 4.1.0
  1、整理新增控件类 Control
  2、KJSelectControl   自定义一款动画选中控件
@@ -38,16 +44,6 @@
 #define NSLog(format, ...)
 #endif
 
-/******************* Control ******************************/
-#import "KJAlertView.h"      // 提示选择框
-#import "KJSelectControl.h"  // 自定义一款动画选中控件
-#import "KJSwitchControl.h" // 自定义一款可爱的动画Switch控件
-#import "KJMarqueeLabel.h"  // 一款跑马灯Label
-
-/******************* UIKit ******************************/
-#import "KJEmitterView.h"    // 粒子效果
-#import "KJErrorView.h"      // 错误效果
-
 /******************* Category ******************************/
 #import "UIButton+KJButtonContentLayout.h"  // 图文混排
 #import "UIButton+KJBlock.h" // 改变UIButton的响应区域 - 点击事件ButtonBlock
@@ -60,7 +56,6 @@
 
 #import "UINavigationBar+KJExtension.h" // 设置NavigationBar背景
 #import "UIBarButtonItem+KJExtension.h" // 设置BarButtonItem
-#import "UINavigationController+FDFullscreenPopGesture.h" // 侧滑返回
 
 #import "UITextView+KJPlaceHolder.h"  // 输入框扩展
 #import "UITextView+KJLimitCounter.h" // 限制字数
@@ -68,9 +63,5 @@
 #import "UIImage+KJFloodFill.h" /// 图片泛洪算法
 #import "UIImage+KJFrame.h"     /// 处理图片尺寸相关
 #import "UIImage+KJFilter.h"    /// 处理图片滤镜，渲染相关
-
-/******************* Foundation ******************************/
-#import "NSArray+KJLog.h"
-#import "NSDictionary+KJLog.h"  /// Xcode控制台打印中文问题，调试模式打印
 
 #endif /* KJEmitterHeader_h */

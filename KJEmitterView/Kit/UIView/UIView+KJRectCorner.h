@@ -12,7 +12,6 @@
 
 /** 圆角半径 默认 5 */
 @property(nonatomic,assign)CGFloat kj_Radius;
-
 /** 圆角方位 */
 @property(nonatomic,assign)UIRectCorner kj_RectCorner;
 
@@ -33,15 +32,6 @@
  @param endPoint   渐变颜色的方向终点
  */
 - (void)kj_GradientBgColorWithColors:(NSArray *)colors Locations:(NSArray *)locations StartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint;
-
-/**
- 设置圆角和边框
- @param redius 圆角大小
- @param width  边框宽度
- @param color  边框颜色
- */
-- (void)kj_BorderAndCornerWithRadius:(CGFloat)redius BorderWidth:(CGFloat)width BorderColor:(UIColor *)color;
-
 
 /**
  设置某一条边的边框
