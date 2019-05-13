@@ -121,7 +121,7 @@
             InsSwitch.tag = i + 100;
             [self.view addSubview:InsSwitch];
         }else{
-            UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(width + 30,Y, SCREEN_WIDTH - (width + 40), 30)];
+            UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(width + 30,Y, kScreenW - (width + 40), 30)];
             [slider addTarget:self action:@selector(slidingSlider:)
              forControlEvents:UIControlEventValueChanged];
             slider.minimumValue = 0;
@@ -138,7 +138,7 @@
 - (UIView *)testView{
     if (!_testView) {
         _testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-        _testView.center = CGPointMake(SCREEN_WIDTH/2, 200);
+        _testView.center = CGPointMake(kScreenW/2, 200);
         _testView.backgroundColor =
         [UIColor colorWithRed:46.0f/255.0f green:204.0f/255.0f blue:113.0f/255.0f alpha:1.0f];
         // 初始30，看起来大一点

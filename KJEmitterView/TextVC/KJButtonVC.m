@@ -62,8 +62,8 @@
 - (UIButton *)button{
     if (!_button) {
         UIColor *iosSystemBlue = [UIColor colorWithRed:0.0f green:0.49f blue:0.96f alpha:1.0f];
-        _button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH-150, 80)];
-        _button.center = CGPointMake(SCREEN_WIDTH/2, 180);
+        _button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kScreenW-150, 80)];
+        _button.center = CGPointMake(kScreenW/2, 180);
         _button.backgroundColor = UIColor.whiteColor;
         _button.layer.borderWidth = 1;
         _button.layer.borderColor = [iosSystemBlue CGColor];
@@ -88,7 +88,7 @@
         CGFloat Y = i * 40 + self.button.frame.origin.y + CGRectGetHeight(self.button.frame) + 50;
         if (i < self.segmentedTitleArray.count) {
             UISegmentedControl *segmented = [[UISegmentedControl alloc] initWithItems:self.segmentedTitleArray[i]];
-            segmented.frame = CGRectMake(10, Y + i*10, SCREEN_WIDTH - 20, 40);
+            segmented.frame = CGRectMake(10, Y + i*10, kScreenW - 20, 40);
             segmented.tag = 100 + i;
             segmented.momentary = YES;
             UIFont *font = [UIFont boldSystemFontOfSize:12];
@@ -106,7 +106,7 @@
             [self.view addSubview:label];
             [self.labelArray addObject:label];
             
-            UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(width + 30,Y+30, SCREEN_WIDTH - (width + 40), 30)];
+            UISlider *slider = [[UISlider alloc] initWithFrame:CGRectMake(width + 30,Y+30, kScreenW - (width + 40), 30)];
             [slider addTarget:self action:@selector(slidingSlider:)
              forControlEvents:UIControlEventValueChanged];
             slider.minimumValue = 0;

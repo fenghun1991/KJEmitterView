@@ -7,6 +7,7 @@
 //
 
 #import "KJSelectController.h"
+#import "KJSelectControl.h"
 
 @interface KJSelectController ()<KJSelectControlDelegate>
 @property (weak, nonatomic) IBOutlet KJSelectControl *selectControl_1;

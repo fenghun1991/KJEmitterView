@@ -132,6 +132,7 @@
 		68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KJExtension.m"; sourceTree = "<group>"; };
 		68BA6C2721B303D40013C4AD /* UINavigationBar+KJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KJExtension.h"; sourceTree = "<group>"; };
 		68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KJExtension.m"; sourceTree = "<group>"; };
+		68C5E9E7228964CF002C82FA /* KJMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMacros.h; sourceTree = "<group>"; };
 		68E283B521B38DCC009B708F /* KJAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAlertVC.h; sourceTree = "<group>"; };
 		68E283B621B38DCC009B708F /* KJAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAlertVC.m; sourceTree = "<group>"; };
 		68E283B721B38DCC009B708F /* KJAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJAlertVC.xib; sourceTree = "<group>"; };
@@ -345,6 +346,7 @@
 		68BA6C0821B303D40013C4AD /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				68C5E9E6228964BB002C82FA /* Macros */,
 				68BA6C2321B303D40013C4AD /* UIBarButtonItem */,
 				68BA6C1021B303D40013C4AD /* UIButton */,
 				68BA6C0921B303D40013C4AD /* UIImage */,
@@ -420,6 +422,14 @@
 				68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */,
 			);
 			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		68C5E9E6228964BB002C82FA /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				68C5E9E7228964CF002C82FA /* KJMacros.h */,
+			);
+			path = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,7 +686,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VH48VHTX9R;
+				DEVELOPMENT_TEAM = HXTFJDA4H2;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KJEmitterView/PrefixHeader.pch";
 				INFOPLIST_FILE = KJEmitterView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,7 +704,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VH48VHTX9R;
+				DEVELOPMENT_TEAM = HXTFJDA4H2;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KJEmitterView/PrefixHeader.pch";
 				INFOPLIST_FILE = KJEmitterView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

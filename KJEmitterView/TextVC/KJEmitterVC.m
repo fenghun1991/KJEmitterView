@@ -7,6 +7,7 @@
 //
 
 #import "KJEmitterVC.h"
+#import "KJEmitterView.h"
 
 @interface KJEmitterVC ()
 

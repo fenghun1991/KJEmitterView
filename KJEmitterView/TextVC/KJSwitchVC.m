@@ -7,7 +7,7 @@
 //
 
 #import "KJSwitchVC.h"
-
+#import "KJSwitchControl.h"
 @interface KJSwitchVC ()<KJSwitchControlDelegate>
 
 @end

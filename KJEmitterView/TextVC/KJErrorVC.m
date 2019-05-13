@@ -7,7 +7,7 @@
 //
 
 #import "KJErrorVC.h"
-
+#import "KJErrorView.h"
 @interface KJErrorVC ()
 
 @end

@@ -12,6 +12,10 @@
  
  ####版本更新日志：
  
+ #### Add 4.2.2
+ 1、引入自己常用宏 KJMacros
+ 2、
+ 
  #### Add 4.2.1
  1、暂时移出UIView+KJXib中布局相关
  2、移出UINavigationController+FDFullscreenPopGesture
@@ -37,12 +41,7 @@
 #ifndef KJEmitterHeader_h
 #define KJEmitterHeader_h
 
-// 输出日志 (格式: [时间] [哪个方法] [哪行] [输出内容])
-#ifdef DEBUG
-#define NSLog(format, ...)printf("\n[%s] %s [第%d行] 😎😎 %s\n", __TIME__, __FUNCTION__, __LINE__, [[NSString stringWithFormat:format, ##__VA_ARGS__] UTF8String]);
-#else
-#define NSLog(format, ...)
-#endif
+#import "KJMacros.h" // 常用宏
 
 /******************* Category ******************************/
 #import "UIButton+KJButtonContentLayout.h"  // 图文混排

@@ -24,7 +24,7 @@
 
 - (UITextView *)remarkTextView{
     if (!_remarkTextView){
-        UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 100, SCREEN_WIDTH-20, 100)];
+        UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 100, kScreenW-20, 100)];
         textView.font = [UIFont systemFontOfSize:14];
         //文字设置居右、placeHolder会跟随设置
         textView.textAlignment = NSTextAlignmentLeft;
