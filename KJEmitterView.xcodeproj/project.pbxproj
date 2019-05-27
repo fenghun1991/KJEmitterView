@@ -272,6 +272,7 @@
 		68776CE721AC349F000A1435 /* KJEmitterView */ = {
 			isa = PBXGroup;
 			children = (
+				68C5E9E7228964CF002C82FA /* KJMacros.h */,
 				68AB4F8521AF834E003A2A60 /* KJEmitterHeader.h */,
 				68776CE821AC34A0000A1435 /* AppDelegate.h */,
 				68776CE921AC34A0000A1435 /* AppDelegate.m */,
@@ -346,7 +347,6 @@
 		68BA6C0821B303D40013C4AD /* Kit */ = {
 			isa = PBXGroup;
 			children = (
-				68C5E9E6228964BB002C82FA /* Macros */,
 				68BA6C2321B303D40013C4AD /* UIBarButtonItem */,
 				68BA6C1021B303D40013C4AD /* UIButton */,
 				68BA6C0921B303D40013C4AD /* UIImage */,
@@ -422,14 +422,6 @@
 				68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */,
 			);
 			path = UINavigationBar;
-			sourceTree = "<group>";
-		};
-		68C5E9E6228964BB002C82FA /* Macros */ = {
-			isa = PBXGroup;
-			children = (
-				68C5E9E7228964CF002C82FA /* KJMacros.h */,
-			);
-			path = Macros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
