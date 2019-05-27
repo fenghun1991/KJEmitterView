@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "4.2.3"
+  s.version      = "4.3.0"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
@@ -13,7 +13,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.default_subspec = 'Kit' # 默认引入的文件
-  s.ios.source_files = 'KJEmitterView/KJMacros.h' # 添加宏文件
   s.ios.source_files = 'KJEmitterView/KJEmitterHeader.h' # 添加头文件
 
   s.subspec 'Kit' do |y|

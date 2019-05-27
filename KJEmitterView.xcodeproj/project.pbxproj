@@ -132,7 +132,6 @@
 		68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KJExtension.m"; sourceTree = "<group>"; };
 		68BA6C2721B303D40013C4AD /* UINavigationBar+KJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KJExtension.h"; sourceTree = "<group>"; };
 		68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KJExtension.m"; sourceTree = "<group>"; };
-		68C5E9E7228964CF002C82FA /* KJMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJMacros.h; sourceTree = "<group>"; };
 		68E283B521B38DCC009B708F /* KJAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAlertVC.h; sourceTree = "<group>"; };
 		68E283B621B38DCC009B708F /* KJAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAlertVC.m; sourceTree = "<group>"; };
 		68E283B721B38DCC009B708F /* KJAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJAlertVC.xib; sourceTree = "<group>"; };
@@ -272,7 +271,6 @@
 		68776CE721AC349F000A1435 /* KJEmitterView */ = {
 			isa = PBXGroup;
 			children = (
-				68C5E9E7228964CF002C82FA /* KJMacros.h */,
 				68AB4F8521AF834E003A2A60 /* KJEmitterHeader.h */,
 				68776CE821AC34A0000A1435 /* AppDelegate.h */,
 				68776CE921AC34A0000A1435 /* AppDelegate.m */,
