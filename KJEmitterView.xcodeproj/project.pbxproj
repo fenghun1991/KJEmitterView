@@ -328,8 +328,8 @@
 		68B02FF121B2FBC400349510 /* EmitterView */ = {
 			isa = PBXGroup;
 			children = (
-				68B02FF221B2FBC400349510 /* KJEmitterView.h */,
 				68B02FF321B2FBC400349510 /* KJEmitter.bundle */,
+				68B02FF221B2FBC400349510 /* KJEmitterView.h */,
 				68B02FF421B2FBC400349510 /* KJEmitterView.m */,
 			);
 			path = EmitterView;
@@ -338,9 +338,9 @@
 		68B0300821B2FBC400349510 /* ErrorView */ = {
 			isa = PBXGroup;
 			children = (
-				68B0300921B2FBC400349510 /* KJErrorView.m */,
 				68B0300A21B2FBC400349510 /* KJErrorView.bundle */,
 				68B0300B21B2FBC400349510 /* KJErrorView.h */,
+				68B0300921B2FBC400349510 /* KJErrorView.m */,
 			);
 			path = ErrorView;
 			sourceTree = "<group>";

@@ -12,6 +12,7 @@
 static const char *KJGestureBlockKey;
 @implementation UIView (KJGestureBlock)
 - (UIGestureRecognizer *)kj_AddGestureRecognizer:(KJGestureType)type block:(KJGestureRecognizerBlock)block{
+    self.userInteractionEnabled = YES; /// 开启可交互
     if (block) {
         NSDictionary *dic = @{@"0":@"UITapGestureRecognizer",
                               @"1":@"UILongPressGestureRecognizer",

@@ -34,7 +34,7 @@
  * xib创建的view
  */
 + (instancetype)kj_viewFromXib{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self)owner:nil options:nil] lastObject];
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
 + (instancetype)kj_viewFromXibWithFrame:(CGRect)frame {
@@ -46,16 +46,16 @@
 /**
  * xib中显示的属性
  */
--(void)setBorderColor:(UIColor *)borderColor {
+- (void)setBorderColor:(UIColor *)borderColor {
     [self.layer setBorderColor:borderColor.CGColor];
 }
 
--(void)setBorderWidth:(CGFloat)borderWidth {
-    if (borderWidth < 0) return;
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    if (borderWidth <= 0) return;
     [self.layer setBorderWidth:borderWidth];
 }
 
--(void)setCornerRadius:(CGFloat)cornerRadius {
+- (void)setCornerRadius:(CGFloat)cornerRadius {
     [self.layer setCornerRadius:cornerRadius];
     self.layer.masksToBounds = cornerRadius > 0;
 }
