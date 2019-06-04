@@ -12,7 +12,7 @@
  
  ####版本更新日志:
  
- #### Add 4.3.1
+ #### Add 4.3.2
  1、修改单例宏  kSingletonImplementation_H
  2、添加一些宏的高级用法
  3、新增手势Block UIView+KJGestureBlock
