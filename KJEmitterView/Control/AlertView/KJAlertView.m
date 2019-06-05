@@ -11,18 +11,18 @@
 #define UIColorFromHEXA(hex,a)    [UIColor colorWithRed:((hex&0xFF0000)>>16)/255.0f green:((hex&0xFF00)>>8)/255.0f blue:(hex&0xFF)/255.0f alpha:a]
 #define SystemFontSize(fontsize)  [UIFont systemFontOfSize:(fontsize)]
 
-//// 判断是否为iPhone X 系列  这样写消除了在Xcode10上的警告。
-//#define iPhoneX \
-//({BOOL isPhoneX = NO;\
-//if (@available(iOS 11.0, *)) {\
-//isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
-//}\
-//(isPhoneX);})
+// 判断是否为iPhone X 系列  这样写消除了在Xcode10上的警告。
+#define iPhoneX \
+({BOOL isPhoneX = NO;\
+if (@available(iOS 11.0, *)) {\
+isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
+}\
+(isPhoneX);})
 // 屏幕总尺寸
 #define kScreenWidth        [[UIScreen mainScreen] bounds].size.width
 #define kScreenHeight       [[UIScreen mainScreen] bounds].size.height
-//// 没有tabar 距 底边高度
-//#define kBOTTOM_SPACE_HEIGHT (iPhoneX?34.0f:0.0f)
+// 没有tabar 距 底边高度
+#define kBOTTOM_SPACE_HEIGHT (iPhoneX?34.0f:0.0f)
 
 @interface KJAlertView ()<UITableViewDelegate,UITableViewDataSource>
 
