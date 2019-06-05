@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE // 在类名前加上此宏定义，初始化、布置和绘制方法将被用来在画布上渲染该类的自定义视图
-
 NS_ASSUME_NONNULL_BEGIN
+
+IB_DESIGNABLE // 动态刷新 在类名前加上此宏定义，初始化、布置和绘制方法将被用来在画布上渲染该类的自定义视图
 
 @interface UIView (KJXib)
 
@@ -23,8 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** xib创建的view */
 + (instancetype)kj_viewFromXibWithFrame:(CGRect)frame;
 
+/** 寻找子视图 */
+- (UIView*)kj_FindSubviewRecursively:(BOOL(^)(UIView*subview, BOOL* stop))recurse;
 
 /******************  xib中显示的属性 - xib创建的view右上角才有这几个选项 ******************/
+// 注意: 加上IBInspectable就可以可视化显示相关的属性
 /// 圆角边框
 @property (nonatomic,strong)IBInspectable UIColor *borderColor;
 @property (nonatomic,assign)IBInspectable CGFloat borderWidth;

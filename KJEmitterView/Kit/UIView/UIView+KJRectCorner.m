@@ -12,7 +12,6 @@
 static NSString * const kcornerRadius = @"kj_rectCornerRadius";
 static NSString * const krectCorner = @"kj_rectCorner";
 
-
 @implementation UIView (KJRectCorner)
 
 - (void)setKj_Radius:(CGFloat)kj_Radius{

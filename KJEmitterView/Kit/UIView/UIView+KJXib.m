@@ -42,6 +42,19 @@
     view.frame = frame;
     return view;
 }
+/** 寻找子视图 */
+- (UIView*)kj_FindSubviewRecursively:(BOOL(^)(UIView *subview, BOOL *stop))recurse{
+    for (UIView *view in self.subviews) {
+        BOOL stop = NO;
+        if(recurse(view, &stop)) {
+            /// 递归查找
+            return [view kj_FindSubviewRecursively:recurse];
+        }else if(stop) {
+            return view;
+        }
+    }
+    return nil;
+}
 
 /**
  * xib中显示的属性
@@ -76,6 +89,5 @@
 - (void)setShadowOffset:(CGSize)shadowOffset{
     [self.layer setShadowOffset:shadowOffset];
 }
-
 
 @end

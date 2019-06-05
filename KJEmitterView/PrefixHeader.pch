@@ -16,4 +16,8 @@
 #import "UINavigationController+FDFullscreenPopGesture.h" // 侧滑返回
 #import "BaseViewController.h"
 
+
+#import "UIImage+KJFloodFill.h" /// 图片泛洪算法
+#import "UINavigationBar+KJExtension.h" // 设置NavigationBar背景
+
 #endif /* PrefixHeader_pch */

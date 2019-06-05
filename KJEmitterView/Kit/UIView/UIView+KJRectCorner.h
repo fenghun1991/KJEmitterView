@@ -7,7 +7,7 @@
 //  渐变 - 圆角扩展
 
 #import <UIKit/UIKit.h>
-
+NS_ASSUME_NONNULL_BEGIN
 @interface UIView (KJRectCorner)
 
 /** 圆角半径 默认 5 */
@@ -52,3 +52,4 @@
 - (void)kj_DashedLineColor:(UIColor *)lineColor lineWidth:(CGFloat)lineWidth spaceAry:(NSArray<NSNumber *> *)spaceAry;
 
 @end
+NS_ASSUME_NONNULL_END

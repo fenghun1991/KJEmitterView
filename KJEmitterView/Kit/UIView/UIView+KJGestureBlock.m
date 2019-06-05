@@ -37,9 +37,7 @@ static const char *KJGestureBlockKey;
 - (void)gestureAction:(UIGestureRecognizer *)gesture{
     NSMutableDictionary *blockDic = objc_getAssociatedObject(gesture.view, KJGestureBlockKey);
     KJGestureRecognizerBlock block = blockDic[NSStringFromClass([gesture class])];
-    if (block) {
-        block(gesture.view, gesture);
-    }
+    !block?:block(gesture.view, gesture);
 }
 
 /// 单击手势

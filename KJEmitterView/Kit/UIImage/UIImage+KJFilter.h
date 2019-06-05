@@ -7,6 +7,7 @@
 //  滤镜相关，特效渲染
 
 #import <UIKit/UIKit.h>
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (KJFilter)
 
@@ -63,3 +64,4 @@
 
 @end
 
+NS_ASSUME_NONNULL_END

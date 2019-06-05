@@ -7,7 +7,7 @@
 //  首页 - 粒子效果背景
 
 #import <UIKit/UIKit.h>
-
+NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM (NSInteger, KJEmitterType){
     KJEmitterTypeFireworks     = 0,  // 烟花
     KJEmitterTypeBubble        = 1,  // 气泡
@@ -32,3 +32,4 @@ typedef NS_ENUM (NSInteger, KJEmitterType){
 @property(nonatomic,strong,readonly) KJEmitterView *(^KJAddView)(UIView *);
 
 @end
+NS_ASSUME_NONNULL_END

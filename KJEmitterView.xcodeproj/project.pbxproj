@@ -32,6 +32,7 @@
 		68776CF221AC34A0000A1435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68776CF121AC34A0000A1435 /* Assets.xcassets */; };
 		68776CF521AC34A0000A1435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68776CF321AC34A0000A1435 /* LaunchScreen.storyboard */; };
 		68776CF821AC34A0000A1435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68776CF721AC34A0000A1435 /* main.m */; };
+		6889503222A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889503122A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m */; };
 		68959C0021B3998A004F794F /* KJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68959BFE21B3998A004F794F /* KJAlertView.m */; };
 		68AEE23F22A6169600167F83 /* UIView+KJGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AEE23E22A6169600167F83 /* UIView+KJGestureBlock.m */; };
 		68B0301421B2FBC400349510 /* KJEmitter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68B02FF321B2FBC400349510 /* KJEmitter.bundle */; };
@@ -102,6 +103,9 @@
 		68776CF421AC34A0000A1435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68776CF621AC34A0000A1435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68776CF721AC34A0000A1435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6889503022A74ED60060C21E /* UIButton+KJEnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+KJEnlargeTouchArea.h"; sourceTree = "<group>"; };
+		6889503122A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJEnlargeTouchArea.m"; sourceTree = "<group>"; };
+		6889503422A7521E0060C21E /* _KJMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _KJMacros.h; sourceTree = "<group>"; };
 		68959BFE21B3998A004F794F /* KJAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJAlertView.m; sourceTree = "<group>"; };
 		68959BFF21B3998A004F794F /* KJAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJAlertView.h; sourceTree = "<group>"; };
 		68AB4F8521AF834E003A2A60 /* KJEmitterHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJEmitterHeader.h; sourceTree = "<group>"; };
@@ -307,6 +311,14 @@
 			path = NSDictionary;
 			sourceTree = "<group>";
 		};
+		6889503322A752090060C21E /* KJMacros */ = {
+			isa = PBXGroup;
+			children = (
+				6889503422A7521E0060C21E /* _KJMacros.h */,
+			);
+			path = KJMacros;
+			sourceTree = "<group>";
+		};
 		68959BFD21B3998A004F794F /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -348,6 +360,7 @@
 		68BA6C0821B303D40013C4AD /* Kit */ = {
 			isa = PBXGroup;
 			children = (
+				6889503322A752090060C21E /* KJMacros */,
 				68BA6C2321B303D40013C4AD /* UIBarButtonItem */,
 				68BA6C1021B303D40013C4AD /* UIButton */,
 				68BA6C0921B303D40013C4AD /* UIImage */,
@@ -379,6 +392,8 @@
 				68BA6C1221B303D40013C4AD /* UIButton+KJButtonContentLayout.m */,
 				685CE15722560193004E3AF4 /* UIButton+KJBlock.h */,
 				685CE15822560193004E3AF4 /* UIButton+KJBlock.m */,
+				6889503022A74ED60060C21E /* UIButton+KJEnlargeTouchArea.h */,
+				6889503122A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -537,6 +552,7 @@
 				68776CED21AC34A0000A1435 /* ViewController.m in Sources */,
 				6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */,
 				68776CF821AC34A0000A1435 /* main.m in Sources */,
+				6889503222A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m in Sources */,
 				687115D622631878009EC3E0 /* KJErrorVC.m in Sources */,
 				68776CEA21AC34A0000A1435 /* AppDelegate.m in Sources */,
 				687115DE22633BF0009EC3E0 /* KJSwitchVC.m in Sources */,

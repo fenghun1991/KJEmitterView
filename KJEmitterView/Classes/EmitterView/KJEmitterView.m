@@ -8,7 +8,7 @@
 
 #import "KJEmitterView.h"
 
-#define KJGetImage(imageName)  ((__bridge id _Nullable)([UIImage imageNamed:[NSString stringWithFormat:@"KJEmitter.bundle/%@",imageName]].CGImage))
+#define KJEmitterGetImage(imageName)  ((__bridge id _Nullable)([UIImage imageNamed:[NSString stringWithFormat:@"KJEmitter.bundle/%@",imageName]].CGImage))
 
 @interface KJEmitterView()<CAAnimationDelegate>
 
@@ -97,7 +97,7 @@
     bullet.birthRate = 2; //子弹诞生速度,每秒诞生个数
     bullet.lifetime = 1.3;//子弹的停留时间,即多少秒后消失
     //子弹的样式,可以给图片
-    bullet.contents = KJGetImage(@"fire");
+    bullet.contents = KJEmitterGetImage(@"fire");
     //子弹的发射弧度
     bullet.emissionRange = 0.15 * M_PI;
     //子弹的速度
@@ -134,7 +134,7 @@
     spark.velocityRange = 100;
     spark.emissionRange = 2 * M_PI;
     
-    spark.contents = KJGetImage(@"fire");
+    spark.contents = KJEmitterGetImage(@"fire");
     spark.scale = 0.1;
     spark.scaleRange = 0.05;
     
@@ -169,7 +169,7 @@
     emitter.emitterDepth = 10;
     
     CAEmitterCell *cell = [CAEmitterCell emitterCell];
-    cell.contents = KJGetImage(@"bubble");
+    cell.contents = KJEmitterGetImage(@"bubble");
     cell.birthRate = 5;
     cell.lifetime = 20;
     cell.lifetimeRange = 10;
@@ -214,7 +214,7 @@
     cell.emissionRange = 0.5 * M_PI; // 粒子发射角度范围
     cell.spin = 2 * M_PI;         // 自旋转角度
     cell.spinRange = 2 * M_PI;    // 自旋转角度范围
-    cell.contents =  KJGetImage(@"xuehua");
+    cell.contents =  KJEmitterGetImage(@"xuehua");
     cell.scale = 0.6;
     cell.scaleRange = 1;
     
@@ -241,7 +241,7 @@
     // 色块粒子
     CAEmitterCell * cell = [CAEmitterCell emitterCell];
     // 和CALayer一样，只是用来设置图片
-    cell.contents = KJGetImage(@"blue");
+    cell.contents = KJEmitterGetImage(@"blue");
     //    19.enabled:粒子是否被渲染；
     cell.enabled = YES;
     
