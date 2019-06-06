@@ -32,6 +32,7 @@
 		68776CF221AC34A0000A1435 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68776CF121AC34A0000A1435 /* Assets.xcassets */; };
 		68776CF521AC34A0000A1435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68776CF321AC34A0000A1435 /* LaunchScreen.storyboard */; };
 		68776CF821AC34A0000A1435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 68776CF721AC34A0000A1435 /* main.m */; };
+		6880171D22A89B86000CC362 /* UIView+KJAppointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6880171C22A89B86000CC362 /* UIView+KJAppointView.m */; };
 		6889503222A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6889503122A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m */; };
 		68959C0021B3998A004F794F /* KJAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68959BFE21B3998A004F794F /* KJAlertView.m */; };
 		68AEE23F22A6169600167F83 /* UIView+KJGestureBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 68AEE23E22A6169600167F83 /* UIView+KJGestureBlock.m */; };
@@ -103,6 +104,8 @@
 		68776CF421AC34A0000A1435 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68776CF621AC34A0000A1435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68776CF721AC34A0000A1435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6880171B22A89B86000CC362 /* UIView+KJAppointView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+KJAppointView.h"; sourceTree = "<group>"; };
+		6880171C22A89B86000CC362 /* UIView+KJAppointView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+KJAppointView.m"; sourceTree = "<group>"; };
 		6889503022A74ED60060C21E /* UIButton+KJEnlargeTouchArea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+KJEnlargeTouchArea.h"; sourceTree = "<group>"; };
 		6889503122A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJEnlargeTouchArea.m"; sourceTree = "<group>"; };
 		6889503422A7521E0060C21E /* _KJMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _KJMacros.h; sourceTree = "<group>"; };
@@ -401,14 +404,16 @@
 		68BA6C1721B303D40013C4AD /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				68BA6C1D21B303D40013C4AD /* UIView+KJXib.h */,
-				68BA6C1921B303D40013C4AD /* UIView+KJXib.m */,
+				6880171B22A89B86000CC362 /* UIView+KJAppointView.h */,
+				6880171C22A89B86000CC362 /* UIView+KJAppointView.m */,
 				68BA6C1821B303D40013C4AD /* UIView+KJFrame.h */,
 				68BA6C1B21B303D40013C4AD /* UIView+KJFrame.m */,
-				68BA6C1C21B303D40013C4AD /* UIView+KJRectCorner.h */,
-				68BA6C1A21B303D40013C4AD /* UIView+KJRectCorner.m */,
 				68AEE23D22A6169600167F83 /* UIView+KJGestureBlock.h */,
 				68AEE23E22A6169600167F83 /* UIView+KJGestureBlock.m */,
+				68BA6C1C21B303D40013C4AD /* UIView+KJRectCorner.h */,
+				68BA6C1A21B303D40013C4AD /* UIView+KJRectCorner.m */,
+				68BA6C1D21B303D40013C4AD /* UIView+KJXib.h */,
+				68BA6C1921B303D40013C4AD /* UIView+KJXib.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -545,6 +550,7 @@
 				684BFEF421BA11870015641A /* NSDictionary+KJLog.m in Sources */,
 				68BA6C3221B303D40013C4AD /* UITextView+KJLimitCounter.m in Sources */,
 				68B0301E21B2FBC400349510 /* KJErrorView.m in Sources */,
+				6880171D22A89B86000CC362 /* UIView+KJAppointView.m in Sources */,
 				687115D22263156B009EC3E0 /* KJSelectController.m in Sources */,
 				6869044A21B28E0300ED072F /* KJTextViewVC.m in Sources */,
 				68BA6C2921B303D40013C4AD /* UIImage+KJFrame.m in Sources */,

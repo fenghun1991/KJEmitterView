@@ -75,7 +75,6 @@ static NSString * const krectCorner = @"kj_rectCorner";
 
 - (void)kj_GradientBgColorWithColors:(NSArray *)colors Locations:(NSArray *)locations StartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint{
     CAGradientLayer *gradientLayer = [self kj_GradientLayerWithColors:colors Frame:self.bounds Locations:locations StartPoint:startPoint EndPoint:endPoint];
-    
     [self.layer insertSublayer:gradientLayer atIndex:0];
 }
 
@@ -111,12 +110,14 @@ static NSString * const krectCorner = @"kj_rectCorner";
     CAShapeLayer *borderLayer = [CAShapeLayer layer];
     borderLayer.bounds = CGRectMake(0, 0, self.frame.size.width , self.frame.size.height);
     borderLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-    
-    //不带圆角
-    //    borderLayer.path = [UIBezierPath bezierPathWithRect:borderLayer.bounds].CGPath;
-    //带圆角
-    borderLayer.path = [UIBezierPath bezierPathWithRoundedRect:borderLayer.bounds cornerRadius:self.layer.cornerRadius].CGPath;
-    borderLayer.lineWidth = lineWidth / [[UIScreen mainScreen] scale];
+    if (self.layer.cornerRadius>0) {
+        //带圆角
+        borderLayer.path = [UIBezierPath bezierPathWithRoundedRect:borderLayer.bounds cornerRadius:self.layer.cornerRadius].CGPath;
+    }else{
+        //不带圆角
+        borderLayer.path = [UIBezierPath bezierPathWithRect:borderLayer.bounds].CGPath;
+    }
+    borderLayer.lineWidth = lineWidth / [UIScreen mainScreen].scale;
     //虚线边框
     borderLayer.lineDashPattern = spaceAry;
     borderLayer.fillColor = [UIColor clearColor].CGColor;

@@ -12,7 +12,11 @@
  
  ####版本更新日志:
  
- #### Add 4.3.4
+ #### Add 4.3.6
+ 1、新增画一些指定图形 UIView+KJAppointView （直线、虚线、五角星、六边形、八边形）
+ 
+ 
+ #### Add 4.3.5
  1、新增改变UIButton的响应区域 扩大点击域 UIButton+KJEnlargeTouchArea
  2、重新将宏转移到 _KJMacros 文件
  3、全部文件都引入 NS_ASSUME_NONNULL_BEGIN 宏
@@ -69,6 +73,7 @@
 #import "UIView+KJFrame.h" // Frame - 轻量级布局
 #import "UIView+KJRectCorner.h" // 切圆角 - 渐变
 #import "UIView+KJGestureBlock.h" // 手势Block
+//#import "UIView+KJAppointView.h"  // 画一些指定图形（直线、虚线、五角星、六边形、八边形）
 
 //#import "UINavigationBar+KJExtension.h" // 设置NavigationBar背景
 #import "UIBarButtonItem+KJExtension.h" // 设置BarButtonItem
@@ -76,8 +81,8 @@
 #import "UITextView+KJPlaceHolder.h"  // 输入框扩展
 #import "UITextView+KJLimitCounter.h" // 限制字数
 
-//#import "UIImage+KJFloodFill.h" /// 图片泛洪算法
 #import "UIImage+KJFrame.h"     /// 处理图片尺寸相关
+//#import "UIImage+KJFloodFill.h" /// 图片泛洪算法
 //#import "UIImage+KJFilter.h"    /// 处理图片滤镜，渲染相关
 
 #endif /* KJEmitterHeader_h */
