@@ -24,7 +24,7 @@
                                 withSwizzledSelector:@selector(safeObjectAtIndexedSubscript:)];
     });
 }
-- (instancetype)safeObjectAtIndex:(NSUInteger)index {
+- (instancetype)safeObjectAtIndex:(NSInteger)index {
     if (self.count == 0) {
         /*   __FUNCTION__    输出当前方法   */
         NSLog(@"😓😓😓😓😓😓 数组个数为零 😓😓😓😓😓😓");
@@ -36,7 +36,7 @@
     return nil; // 越界返回为nil
 }
 
-- (instancetype)safeObjectAtIndexedSubscript:(NSUInteger)index{
+- (instancetype)safeObjectAtIndexedSubscript:(NSInteger)index{
     if (self.count == 0) {
         NSLog(@"😓😓😓😓😓😓 数组个数为零 😓😓😓😓😓😓");
         return nil;
@@ -96,7 +96,7 @@
     }
 }
 
-- (void)kj_removeObjectAtIndex:(NSUInteger)index {
+- (void)kj_removeObjectAtIndex:(NSInteger)index {
     if (self.count <= 0) {
         NSLog(@"😓😓😓😓😓😓 数组个数为空 😓😓😓😓😓😓");
         return;
@@ -107,7 +107,7 @@
     [self kj_removeObjectAtIndex:index];
 }
 
-- (void)kj_insertObject:(id)anObject atIndex:(NSUInteger)index {
+- (void)kj_insertObject:(id)anObject atIndex:(NSInteger)index {
     if (anObject == nil) {
         NSLog(@"😓😓😓😓😓😓 空数据不能插入数组 😓😓😓😓😓😓");
     } else if (index > self.count) {
@@ -117,7 +117,7 @@
     }
 }
 
-- (instancetype)kj_objectAtIndex:(NSUInteger)index {
+- (instancetype)kj_objectAtIndex:(NSInteger)index {
     if (self.count == 0) {
         NSLog(@"😓😓😓😓😓😓 数组个数为零 😓😓😓😓😓😓");
         return nil;
@@ -128,7 +128,7 @@
     return [self kj_objectAtIndex:index];
 }
 
-- (instancetype)kj_objectAtIndexedSubscript:(NSUInteger)index{
+- (instancetype)kj_objectAtIndexedSubscript:(NSInteger)index{
     if (self.count == 0) {
         NSLog(@"😓😓😓😓😓😓 数组个数为零 😓😓😓😓😓😓");
         return nil;
@@ -141,9 +141,9 @@
     return nil; // 越界返回为nil
 }
 
-- (instancetype)kj_initWithObjects:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt {
+- (instancetype)kj_initWithObjects:(const id  _Nonnull __unsafe_unretained *)objects count:(NSInteger)cnt {
     BOOL hasNilObject = NO;
-    for (NSUInteger i = 0; i < cnt; i++) {
+    for (NSInteger i = 0; i < cnt; i++) {
         if ([objects[i] isKindOfClass:[NSArray class]]) {
             NSLog(@"%@", objects[i]);
         }
@@ -156,8 +156,8 @@
     // 因为有值为nil的元素，那么我们可以过滤掉值为nil的元素
     if (hasNilObject) {
         id __unsafe_unretained newObjects[cnt];
-        NSUInteger index = 0;
-        for (NSUInteger i = 0; i < cnt; ++i) {
+        NSInteger index = 0;
+        for (NSInteger i = 0; i < cnt; ++i) {
             if (objects[i] != nil) {
                 newObjects[index++] = objects[i];
             }
@@ -185,7 +185,7 @@
 //    });
 //}
 //
-//- (instancetype)safeObjectAtIndex:(NSUInteger)index {
+//- (instancetype)safeObjectAtIndex:(NSInteger)index {
 //    if (index < self.count) {
 //        return [self safeObjectAtIndex:index];
 //    }else{
