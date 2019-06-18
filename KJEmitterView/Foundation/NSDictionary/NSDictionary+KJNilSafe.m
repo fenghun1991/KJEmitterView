@@ -47,12 +47,16 @@
         id key = keys[i];
         id obj = objects[i];
         if (!key || !obj) {
+            /* break是结束整个循环，而continue是结束本次循环（跳过下一步），
+             为了循环的继续，我们就必须选择continue. */
+            NSLog(@"字典赋值存在空 key: %@, val: %@",key,obj);
             continue;
         }
         safeKeys[j] = key;
         safeObjects[j] = obj;
         j++;
     }
+    //处理完毕之后，我们返回新的kay、value以及count，此时我们已经将nil的key&value清除掉
     return [self kj_dictionaryWithObjects:safeObjects forKeys:safeKeys count:j];
 }
 
@@ -64,6 +68,7 @@
         id key = keys[i];
         id obj = objects[i];
         if (!key || !obj) {
+            NSLog(@"字典赋值存在空 key: %@, val: %@",key,obj);
             continue;
         }
         if (!obj) {

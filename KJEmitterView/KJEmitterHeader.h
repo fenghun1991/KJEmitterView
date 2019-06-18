@@ -12,6 +12,11 @@
  
  ####版本更新日志:
  
+ #### Add 4.3.9
+ 1、修改Bug
+ 2、NSMutableArray当中新增 处理空对象方法交换
+ 3、Function文件夹中新增 NSString+KJStringDebug 解决字典 或者 数组 每次都崩溃到 Main函数，无法定位到位置的问题
+ 
  #### Add 4.3.8
  1、Function文件夹中新增 NSDictionary+KJNilSafe 字典防止键和值为空的时候崩溃
  2、Function文件夹中新增 NSArray+KJOverstep 数组解决数组越界异常崩溃问题
