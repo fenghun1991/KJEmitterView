@@ -12,9 +12,13 @@
  
  ####版本更新日志:
  
+ #### Add 4.3.8
+ 1、Function文件夹中新增 NSDictionary+KJNilSafe 字典防止键和值为空的时候崩溃
+ 2、Function文件夹中新增 NSArray+KJOverstep 数组解决数组越界异常崩溃问题
+ 3、Function文件夹中新增 NSNull+KJSafe 解决后台返回数据为空造成程序崩溃
+ 
  #### Add 4.3.7
  1、新增画一些指定图形 UIView+KJAppointView （直线、虚线、五角星、六边形、八边形）
- 
  
  #### Add 4.3.5
  1、新增改变UIButton的响应区域 扩大点击域 UIButton+KJEnlargeTouchArea
@@ -54,6 +58,8 @@
  4、UIView+KJFrame   新增一些轻量级布局链式属性
  5、UIView+KJRectCorner  新增方法  虚线边框  kj_DashedLineColor
  
+ 
+ 备注：部分资料来源于网络～  就不一一指出道谢，整理起来方便自己和大家使用
  */
 
 #ifndef KJEmitterHeader_h
@@ -62,7 +68,7 @@
 /// 宏
 #import "_KJMacros.h"
 
-/******************* Category ******************************/
+/******************* Kit ******************************/
 #import "UIButton+KJBlock.h" // 点击事件ButtonBlock
 #import "UIButton+KJEnlargeTouchArea.h" // 改变UIButton的响应区域
 #import "UIButton+KJButtonContentLayout.h"  // 图文混排
@@ -84,5 +90,8 @@
 #import "UIImage+KJFrame.h"     /// 处理图片尺寸相关
 //#import "UIImage+KJFloodFill.h" /// 图片泛洪算法
 //#import "UIImage+KJFilter.h"    /// 处理图片滤镜，渲染相关
+
+/******************* Foundation ******************************/
+
 
 #endif /* KJEmitterHeader_h */
