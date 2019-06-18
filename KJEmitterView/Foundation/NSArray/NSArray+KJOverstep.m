@@ -82,7 +82,7 @@
 #pragma mark - 交换的方法
 - (void)kj_removeObject:(id)obj {
     if (obj == nil) {
-        NSLog(@"😓😓😓😓😓😓 数组不能移出 😓😓😓😓😓😓");
+        NSLog(@"😓😓😓😓😓😓 提示移除的数据不能为空 😓😓😓😓😓😓");
         return;
     }
     [self kj_removeObject:obj];
@@ -90,7 +90,7 @@
 
 - (void)kj_addObject:(id)obj {
     if (obj == nil) {
-        NSLog(@"😓😓😓😓😓😓 数组不能添加数据 😓😓😓😓😓😓");
+        NSLog(@"😓😓😓😓😓😓 提示数组不能添加为nil的数据 😓😓😓😓😓😓");
     } else {
         [self kj_addObject:obj];
     }
@@ -109,7 +109,7 @@
 
 - (void)kj_insertObject:(id)anObject atIndex:(NSUInteger)index {
     if (anObject == nil) {
-        NSLog(@"😓😓😓😓😓😓 数组不能插入 😓😓😓😓😓😓");
+        NSLog(@"😓😓😓😓😓😓 空数据不能插入数组 😓😓😓😓😓😓");
     } else if (index > self.count) {
         NSLog(@"😓😓😓😓😓😓 数组插入索引越界 😓😓😓😓😓😓");
     } else {

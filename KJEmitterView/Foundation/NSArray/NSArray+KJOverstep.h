@@ -7,7 +7,7 @@
 //  解决数组越界异常崩溃问题
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSArray (KJOverstep)
