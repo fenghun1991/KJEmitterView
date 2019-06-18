@@ -21,7 +21,6 @@
 		6869044A21B28E0300ED072F /* KJTextViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869044921B28E0300ED072F /* KJTextViewVC.m */; };
 		6869046C21B2D36B00ED072F /* KJFloodImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6869046A21B2D36B00ED072F /* KJFloodImageVC.m */; };
 		6869046D21B2D36B00ED072F /* KJFloodImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6869046B21B2D36B00ED072F /* KJFloodImageVC.xib */; };
-		686F0FC122B8C2E400D263CC /* NSString+KJStringDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 686F0FC022B8C2E400D263CC /* NSString+KJStringDebug.m */; };
 		686F0FC522B8C5F800D263CC /* NSObject+KJSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 686F0FC422B8C5F800D263CC /* NSObject+KJSwizzling.m */; };
 		687115CA22631201009EC3E0 /* KJSelectControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 687115C822631200009EC3E0 /* KJSelectControl.m */; };
 		687115CE226312F5009EC3E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 687115CC226312F5009EC3E0 /* UINavigationController+FDFullscreenPopGesture.m */; };
@@ -56,6 +55,7 @@
 		68BA6C3321B303D40013C4AD /* UITextView+KJPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2221B303D40013C4AD /* UITextView+KJPlaceHolder.m */; };
 		68BA6C3421B303D40013C4AD /* UIBarButtonItem+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */; };
 		68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */; };
+		68CBD0F722B8DD5C00737AF7 /* NSString+KJStringDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CBD0F522B8DD5B00737AF7 /* NSString+KJStringDebug.m */; };
 		68E283B821B38DCC009B708F /* KJAlertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 68E283B621B38DCC009B708F /* KJAlertVC.m */; };
 		68E283B921B38DCC009B708F /* KJAlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E283B721B38DCC009B708F /* KJAlertVC.xib */; };
 		68F0906C223A0A5400EA06C1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 68F0906B223A0A5400EA06C1 /* README.md */; };
@@ -91,8 +91,6 @@
 		6869046921B2D36B00ED072F /* KJFloodImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJFloodImageVC.h; sourceTree = "<group>"; };
 		6869046A21B2D36B00ED072F /* KJFloodImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJFloodImageVC.m; sourceTree = "<group>"; };
 		6869046B21B2D36B00ED072F /* KJFloodImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KJFloodImageVC.xib; sourceTree = "<group>"; };
-		686F0FBF22B8C2E400D263CC /* NSString+KJStringDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+KJStringDebug.h"; sourceTree = "<group>"; };
-		686F0FC022B8C2E400D263CC /* NSString+KJStringDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+KJStringDebug.m"; sourceTree = "<group>"; };
 		686F0FC322B8C5F800D263CC /* NSObject+KJSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KJSwizzling.h"; sourceTree = "<group>"; };
 		686F0FC422B8C5F800D263CC /* NSObject+KJSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KJSwizzling.m"; sourceTree = "<group>"; };
 		687115C822631200009EC3E0 /* KJSelectControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJSelectControl.m; sourceTree = "<group>"; };
@@ -157,6 +155,8 @@
 		68BA6C2521B303D40013C4AD /* UIBarButtonItem+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+KJExtension.m"; sourceTree = "<group>"; };
 		68BA6C2721B303D40013C4AD /* UINavigationBar+KJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+KJExtension.h"; sourceTree = "<group>"; };
 		68BA6C2821B303D40013C4AD /* UINavigationBar+KJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+KJExtension.m"; sourceTree = "<group>"; };
+		68CBD0F522B8DD5B00737AF7 /* NSString+KJStringDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+KJStringDebug.m"; sourceTree = "<group>"; };
+		68CBD0F622B8DD5B00737AF7 /* NSString+KJStringDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+KJStringDebug.h"; sourceTree = "<group>"; };
 		68E283B521B38DCC009B708F /* KJAlertVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJAlertVC.h; sourceTree = "<group>"; };
 		68E283B621B38DCC009B708F /* KJAlertVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJAlertVC.m; sourceTree = "<group>"; };
 		68E283B721B38DCC009B708F /* KJAlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJAlertVC.xib; sourceTree = "<group>"; };
@@ -187,8 +187,8 @@
 		684BFEED21BA10E60015641A /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				68CBD0F822B8DD5F00737AF7 /* NSString */,
 				686F0FC222B8C55000D263CC /* NSObject */,
-				686F0FBE22B8C26000D263CC /* NSString */,
 				6813E4A422B8B4C700D4772D /* NSNull */,
 				6878CD0721BA3E1700CF7822 /* NSDictionary */,
 				684BFEF121BA11090015641A /* NSArray */,
@@ -252,15 +252,6 @@
 				6869042F21B25BC700ED072F /* BaseViewController.m */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		686F0FBE22B8C26000D263CC /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-				686F0FBF22B8C2E400D263CC /* NSString+KJStringDebug.h */,
-				686F0FC022B8C2E400D263CC /* NSString+KJStringDebug.m */,
-			);
-			path = NSString;
 			sourceTree = "<group>";
 		};
 		686F0FC222B8C55000D263CC /* NSObject */ = {
@@ -496,6 +487,15 @@
 			path = UINavigationBar;
 			sourceTree = "<group>";
 		};
+		68CBD0F822B8DD5F00737AF7 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				68CBD0F622B8DD5B00737AF7 /* NSString+KJStringDebug.h */,
+				68CBD0F522B8DD5B00737AF7 /* NSString+KJStringDebug.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -575,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				687115CE226312F5009EC3E0 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				68CBD0F722B8DD5C00737AF7 /* NSString+KJStringDebug.m in Sources */,
 				68959C0021B3998A004F794F /* KJAlertView.m in Sources */,
 				68AEE23F22A6169600167F83 /* UIView+KJGestureBlock.m in Sources */,
 				6813E4A022B8B12E00D4772D /* NSArray+KJOverstep.m in Sources */,
@@ -593,7 +594,6 @@
 				686F0FC522B8C5F800D263CC /* NSObject+KJSwizzling.m in Sources */,
 				687115CA22631201009EC3E0 /* KJSelectControl.m in Sources */,
 				68B0301521B2FBC400349510 /* KJEmitterView.m in Sources */,
-				686F0FC122B8C2E400D263CC /* NSString+KJStringDebug.m in Sources */,
 				687115DA22633BCA009EC3E0 /* KJSwitchControl.m in Sources */,
 				6869043921B265E400ED072F /* KJButtonVC.m in Sources */,
 				6869044021B27A6600ED072F /* KJViewVC.m in Sources */,

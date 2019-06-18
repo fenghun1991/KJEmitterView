@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (KJStringDebug)
 #if DEBUG // 调试模式
 
-- (void)objectForKey:(NSString*) str;
+- (void)objectForKey:(NSString*)str;
 - (void)objectAtIndex:(NSInteger)intergaer;
 
 #endif
