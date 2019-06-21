@@ -150,7 +150,7 @@
         }
         if (objects[i] == nil) {
             hasNilObject = YES;
-            NSLog(@"%s 添加数据中 %ld 为 nil, 剔除掉 nil", __FUNCTION__, i);
+//            NSLog(@"%s 添加数据中 %ld 为 nil, 剔除掉 nil", __FUNCTION__, i);
         }
     }
     
