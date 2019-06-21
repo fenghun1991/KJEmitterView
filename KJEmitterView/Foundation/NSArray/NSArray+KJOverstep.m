@@ -99,12 +99,11 @@
 - (void)kj_removeObjectAtIndex:(NSUInteger)index {
     if (self.count <= 0) {
         NSLog(@"😓😓😓😓😓😓 数组个数为空 😓😓😓😓😓😓");
-        return;
-    }else if (index >= self.count) {
+    }else if (index < self.count) {
+        [self kj_removeObjectAtIndex:index];
+    }else{
         NSLog(@"😓😓😓😓😓😓 数组移出索引越界 😓😓😓😓😓😓");
-        return;
     }
-    [self kj_removeObjectAtIndex:index];
 }
 
 - (void)kj_insertObject:(id)anObject atIndex:(NSUInteger)index {
@@ -121,11 +120,13 @@
     if (self.count == 0) {
         NSLog(@"😓😓😓😓😓😓 数组个数为零 😓😓😓😓😓😓");
         return nil;
-    }else if (index > self.count) {
-        NSLog(@"😓😓😓😓😓😓 数组索引越界 😓😓😓😓😓😓");
-        return nil;
+    }else if (index < self.count) {
+        // 这时候调用自己，看起来像是死循环
+        // 但是其实自己的实现已经被替换了
+        return [self kj_objectAtIndex:index];
     }
-    return [self kj_objectAtIndex:index];
+    NSLog(@"😓😓😓😓😓😓 数组索引越界 😓😓😓😓😓😓");
+    return nil; // 越界返回为nil
 }
 
 - (instancetype)kj_objectAtIndexedSubscript:(NSUInteger)index{
@@ -143,13 +144,13 @@
 
 - (instancetype)kj_initWithObjects:(const id  _Nonnull __unsafe_unretained *)objects count:(NSUInteger)cnt {
     BOOL hasNilObject = NO;
-    for (NSUInteger i = 0; i < cnt; i++) {
+    for (NSInteger i = 0; i < cnt; i++) {
         if ([objects[i] isKindOfClass:[NSArray class]]) {
             NSLog(@"%@", objects[i]);
         }
         if (objects[i] == nil) {
             hasNilObject = YES;
-//            NSLog(@"%s 添加数据中 %lunsigned long 为 nil, 剔除掉 nil", __FUNCTION__, (unsigned long)i);
+            NSLog(@"%s 添加数据中 %ld 为 nil, 剔除掉 nil", __FUNCTION__, i);
         }
     }
     
@@ -167,51 +168,6 @@
     }
     return [self kj_initWithObjects:objects count:cnt];
 }
-
-
-
-//+ (void)load {
-//    // 利用GCD只执行一次，防止多线程问题
-//    static dispatch_once_t onceToken;
-//    // 调用原方法以及新方法进行交换，处理崩溃问题。
-//    dispatch_once(&onceToken, ^{
-//        Method fromMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(objectAtIndex:));
-//        Method toMethod = class_getInstanceMethod(objc_getClass("__NSArrayM"), @selector(safeObjectAtIndex:));
-//        method_exchangeImplementations(fromMethod, toMethod);
-//
-//        Method methodAdd = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(addObject:));
-//        Method _methodAdd = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(safeAddObject:));
-//        method_exchangeImplementations(methodAdd, _methodAdd);
-//    });
-//}
-//
-//- (instancetype)safeObjectAtIndex:(NSUInteger)index {
-//    if (index < self.count) {
-//        return [self safeObjectAtIndex:index];
-//    }else{
-//        NSLog(@"NSMutableArray数组越界错误");
-//        return nil; // 越界返回为nil
-//        //            @try {
-//        //                return [self safeObjectAtIndex:index];
-//        //            }
-//        //            @catch (NSException *exception) {
-//        //                NSLog(@"-------- %s Crash Because Method %s -------\n",class_getName(self.class),__func__);
-//        //                NSLog(@"%@", [exception callStackSymbols]);
-//        //                return nil;
-//        //            }
-//        //            @finally {
-//        //
-//        //            }
-//    }
-//}
-//
-//- (void)safeAddObject:(id)obj{
-//    if (obj) {
-//        [self safeAddObject:obj];
-//    }else{
-//        NSLog(@"NSMutableArray数组添加空对象");
-//    }
-//}
 
 @end
 
