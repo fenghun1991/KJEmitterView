@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "KJEmitterView"
-  s.version      = "4.4.7"
+  s.version      = "4.5.0"
   s.summary      = "Some iOS Emitter"
   s.homepage     = "https://github.com/yangKJ/KJEmitterView"
   s.license      = "MIT"
@@ -12,13 +12,20 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://www.jianshu.com/u/c84c00476ab6'
   s.requires_arc = true
 
-  s.default_subspec  = 'Kit' # 默认引入的文件
+  s.default_subspec = 'Kit' # 默认引入的文件
   s.ios.source_files = 'KJEmitterView/KJEmitterHeader.h' # 添加头文件
 
-  s.subspec 'Kit' do |kit|
-    kit.source_files = "KJEmitterView/Kit/**/*.{h,m}"
-    kit.public_header_files = 'KJEmitterView/Kit/*.h',"KJEmitterView/Kit/**/*.h"
-    kit.frameworks = 'Foundation','UIKit','Accelerate'
+  s.subspec 'Kit' do |y|
+    y.source_files = "KJEmitterView/Kit/**/*.{h,m}" # 添加文件
+    y.public_header_files = 'KJEmitterView/Kit/*.h',"KJEmitterView/Kit/**/*.h"   # 添加头文件
+    y.frameworks = 'Foundation','UIKit','Accelerate'
+  end
+
+  s.subspec 'Control' do |a|
+    a.source_files = "KJEmitterView/Control/**/*.{h,m}" # 添加文件
+    a.public_header_files = "KJEmitterView/Control/**/*.h",'KJEmitterView/Control/*.h'# 添加头文件
+    a.dependency 'KJEmitterView/Kit'
+    a.frameworks = 'QuartzCore'
   end
 
   s.subspec 'Classes' do |ss|
@@ -28,19 +35,11 @@ Pod::Spec.new do |s|
     ss.dependency 'KJEmitterView/Kit'
   end
 
-  s.subspec 'Control' do |con|
-    con.source_files = "KJEmitterView/Control/**/*.{h,m}"
-    con.public_header_files = "KJEmitterView/Control/**/*.h",'KJEmitterView/Control/*.h'
-    con.dependency 'KJEmitterView/Kit'
-    con.frameworks = 'QuartzCore'
-  end
-
   s.subspec 'Function' do |fun|
-    fun.source_files = "KJEmitterView/Foundation/**/*.{h,m}"
-    fun.public_header_files = 'KJEmitterView/Foundation/*.h',"KJEmitterView/Foundation/**/*.h"
+    fun.source_files = "KJEmitterView/Foundation/**/*.{h,m}" # 添加文件
+    fun.public_header_files = 'KJEmitterView/Foundation/*.h',"KJEmitterView/Foundation/**/*.h"   # 添加头文件
     fun.dependency 'KJEmitterView/Kit'
   end
-
   
 end
 

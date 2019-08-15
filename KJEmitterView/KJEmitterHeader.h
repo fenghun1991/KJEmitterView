@@ -23,15 +23,12 @@
  加载Loading - 多种样式供选择
  pod 'KJLoadingAnimation' # 加载控件
  
- 
  Github地址：https://github.com/yangKJ
  简书地址：https://www.jianshu.com/u/c84c00476ab6
  博客地址：https://blog.csdn.net/qq_34534179
-
  
  ####版本更新日志:
- 
- #### Add 4.4.7
+ #### Add 4.5.0
  1、NSArray+ElementDeal 新增对数组元素的处理 包括排序、查找、去重等等
  2、整理富文本扩展 UILabel+KJAttributedString
  
