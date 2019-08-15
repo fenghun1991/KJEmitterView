@@ -1,0 +1,1 @@
+../../../KJEmitterView/KJEmitterView/Kit/UINavigationController/UINavigationController+FDFullscreenPopGesture.h

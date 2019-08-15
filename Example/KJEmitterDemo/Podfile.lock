@@ -1,0 +1,24 @@
+PODS:
+  - KJEmitterView (4.1.1):
+    - KJEmitterView/Classes (= 4.1.1)
+    - KJEmitterView/Control (= 4.1.1)
+    - KJEmitterView/Function (= 4.1.1)
+    - KJEmitterView/Kit (= 4.1.1)
+  - KJEmitterView/Classes (4.1.1)
+  - KJEmitterView/Control (4.1.1)
+  - KJEmitterView/Function (4.1.1)
+  - KJEmitterView/Kit (4.1.1)
+
+DEPENDENCIES:
+  - KJEmitterView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KJEmitterView
+
+SPEC CHECKSUMS:
+  KJEmitterView: 08f5a96e46458aed4f75f2a24d9d86a347ac7982
+
+PODFILE CHECKSUM: 1cdb82f7c18d1ce86a3ed2aba5ac1f208d1821ae
+
+COCOAPODS: 1.6.1
