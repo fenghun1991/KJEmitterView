@@ -57,7 +57,7 @@ pod 'KJEmitterView/Control' # 自定义控件
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
-#### Add 4.5.1
+#### Add 4.5.0
 1、NSArray+ElementDeal 新增对数组元素的处理 包括排序、查找、去重等等
 2、整理富文本扩展 UILabel+KJAttributedString
 

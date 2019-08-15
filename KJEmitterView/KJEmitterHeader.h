@@ -5,30 +5,30 @@
 //  Created by 杨科军 on 2018/11/26.
 //  Copyright © 2018 杨科军. All rights reserved.
 /*------------- 本人其他库 -------------
- 播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
+ 播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView 支持缓存到本地视频
  pod 'KJPlayer'  # 播放器功能区
  pod 'KJPlayer/KJPlayerView'  # 自带展示界面
  
- 实用又方便的Category和一些自定义控件
+ 实用又方便的Category和自定义控件(Switch、选择控件等等)
  pod 'KJEmitterView'
  pod 'KJEmitterView/Function'#
  pod 'KJEmitterView/Control' # 自定义控件
  
  轮播图 - 支持缩放 多种pagecontrol 支持继承自定义样式 自带网络加载和缓存
- pod 'KJBannerView'  # 轮播图，网络图片加载
+ pod 'KJBannerView'  # 轮播图，网络图片加载 支持网络GIF和网络图片和本地图片混合轮播
+ 
+ 加载Loading - 多种样式供选择 HUD控件封装
+ pod 'KJLoadingAnimation' # 加载控件
  
  菜单控件 - 下拉控件 选择控件
  pod 'KJMenuView' # 菜单控件
- 
- 加载Loading - 多种样式供选择
- pod 'KJLoadingAnimation' # 加载控件
  
  Github地址：https://github.com/yangKJ
  简书地址：https://www.jianshu.com/u/c84c00476ab6
  博客地址：https://blog.csdn.net/qq_34534179
  
  ####版本更新日志:
- #### Add 4.5.1
+ #### Add 4.5.2
  1、NSArray+ElementDeal 新增对数组元素的处理 包括排序、查找、去重等等
  2、整理富文本扩展 UILabel+KJAttributedString
  
@@ -124,7 +124,6 @@
 //#import "UIImage+KJFilter.h"    /// 处理图片滤镜，渲染相关
 
 /******************* Foundation ******************************/
-#import "NSArray+ElementDeal.h"  /// 对数组元素的处理 包括排序、查找、去重等等
-
+//#import "NSArray+ElementDeal.h"  /// 对数组元素的处理 包括排序、查找、去重等等
 
 #endif /* KJEmitterHeader_h */
