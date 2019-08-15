@@ -28,7 +28,7 @@
  博客地址：https://blog.csdn.net/qq_34534179
  
  ####版本更新日志:
- #### Add 4.5.0
+ #### Add 4.5.1
  1、NSArray+ElementDeal 新增对数组元素的处理 包括排序、查找、去重等等
  2、整理富文本扩展 UILabel+KJAttributedString
  

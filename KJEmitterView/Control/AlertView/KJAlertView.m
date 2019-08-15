@@ -8,21 +8,21 @@
 
 #import "KJAlertView.h"
 
-#define UIColorFromHEXA(hex,a)    [UIColor colorWithRed:((hex&0xFF0000)>>16)/255.0f green:((hex&0xFF00)>>8)/255.0f blue:(hex&0xFF)/255.0f alpha:a]
-#define SystemFontSize(fontsize)  [UIFont systemFontOfSize:(fontsize)]
+#define ALERT_UIColorFromHEXA(hex,a)    [UIColor colorWithRed:((hex&0xFF0000)>>16)/255.0f green:((hex&0xFF00)>>8)/255.0f blue:(hex&0xFF)/255.0f alpha:a]
+#define ALERT_SystemFontSize(fontsize)  [UIFont systemFontOfSize:(fontsize)]
 
 // 判断是否为iPhone X 系列  这样写消除了在Xcode10上的警告。
-#define iPhoneX \
+#define ALERT_IPHONEX \
 ({BOOL isPhoneX = NO;\
 if (@available(iOS 11.0, *)) {\
 isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bottom > 0.0;\
 }\
 (isPhoneX);})
 // 屏幕总尺寸
-#define kScreenWidth        [[UIScreen mainScreen] bounds].size.width
-#define kScreenHeight       [[UIScreen mainScreen] bounds].size.height
+#define ALERT_WIDTH        [[UIScreen mainScreen] bounds].size.width
+#define ALERT_HEIGHT       [[UIScreen mainScreen] bounds].size.height
 //// 没有tabar 距 底边高度
-//#define kBOTTOM_SPACE_HEIGHT (iPhoneX?34.0f:0.0f)
+#define ALERT_BOTTOM_SPACE_HEIGHT (ALERT_IPHONEX?34.0f:0.0f)
 
 @interface KJAlertView ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -66,14 +66,14 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 - (void)_config{
     self.bottomHeader = 0.1;
-    self.lineColor    = UIColorFromHEXA(0xeeeeee,0.5);
-    self.spaceColor   = UIColorFromHEXA(0xeeeeee,1.0);
-    self.textColor    = UIColorFromHEXA(0x9d87ef,1.0);
-    self.titleColor   = UIColorFromHEXA(0x9d87ef,1.0);
+    self.lineColor    = ALERT_UIColorFromHEXA(0xeeeeee,0.5);
+    self.spaceColor   = ALERT_UIColorFromHEXA(0xeeeeee,1.0);
+    self.textColor    = ALERT_UIColorFromHEXA(0x9d87ef,1.0);
+    self.titleColor   = ALERT_UIColorFromHEXA(0x9d87ef,1.0);
     self.cancleColor  = UIColor.redColor;
     self.centerViewColor = UIColor.whiteColor;
     self.bottomViewColor = UIColor.whiteColor;
-    self.backgroundColor = UIColorFromHEXA(0x333333, 0.3);
+    self.backgroundColor = ALERT_UIColorFromHEXA(0x333333, 0.3);
     self.bottomTableCellH = 44;
     self.bottomTableMaxH = 12 * self.bottomTableCellH;
     self.addView = [UIApplication sharedApplication].windows[0];
@@ -122,13 +122,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 //获取字符串大小
 - (CGRect)getStringFrame:(NSString *)str withFont:(NSInteger)fontSize withMaxSize:(CGSize)size{
-    CGRect rect = [str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:SystemFontSize(fontSize)} context:nil];
+    CGRect rect = [str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:ALERT_SystemFontSize(fontSize)} context:nil];
     return rect;
 }
 
 #pragma mark - AlertViewCenter
 - (void)createAlertViewCenter {
-    _centerView = [[UIView alloc] initWithFrame:CGRectMake((kScreenWidth-(270))/2, (kScreenHeight-(120))/2, (270), (120))];
+    _centerView = [[UIView alloc] initWithFrame:CGRectMake((ALERT_WIDTH-(270))/2, (ALERT_HEIGHT-(120))/2, (270), (120))];
     _centerView.backgroundColor = self.centerViewColor;
     _centerView.layer.masksToBounds = YES;
     _centerView.layer.cornerRadius = (10);
@@ -160,14 +160,14 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     contentLab.text = self.contentStr;
     contentLab.textColor = self.textColor;
     contentLab.textAlignment = NSTextAlignmentCenter;
-    contentLab.font = SystemFontSize(15);
+    contentLab.font = ALERT_SystemFontSize(15);
     contentLab.numberOfLines = 0;
     [_centerView addSubview:contentLab];
     
     CGFloat contentLaby = contentLab.frame.origin.y;
     CGFloat contentLabheight = CGRectGetHeight(contentLab.frame);
     
-    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, contentLaby+contentLabheight+(25)-0.5, kScreenWidth, 0.5)];
+    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, contentLaby+contentLabheight+(25)-0.5, ALERT_WIDTH, 0.5)];
     imageLine.backgroundColor = self.lineColor;
     [_centerView addSubview:imageLine];
     
@@ -177,7 +177,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         titleBtn.backgroundColor = [UIColor clearColor];
         [titleBtn addTarget:self action:@selector(titleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [titleBtn setTitle:self.titleArray[i] forState:UIControlStateNormal];
-        titleBtn.titleLabel.font = SystemFontSize(15);
+        titleBtn.titleLabel.font = ALERT_SystemFontSize(15);
         
         if (self.titleArray.count == 1) {
             titleBtn.frame = CGRectMake(_centerViewwidth/self.titleArray.count*i, contentLaby+contentLabheight+(25), _centerViewwidth, (45));
@@ -190,7 +190,6 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             }
             else{
                 [titleBtn setTitleColor:self.textColor forState:UIControlStateNormal];
-                
                 UIImageView *centerLine = [[UIImageView alloc] initWithFrame:CGRectMake(_centerViewwidth/self.titleArray.count*i-0.5, titleBtn.frame.origin.y, 0.5, titleBtn.frame.size.height)];
                 centerLine.backgroundColor = self.lineColor;
                 [_centerView addSubview:centerLine];
@@ -204,7 +203,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         [_centerView addSubview:titleBtn];
     }
     
-    _centerView.frame = CGRectMake((kScreenWidth-(270))/2, (kScreenHeight-(120))/2, (270), contentLaby+contentLabheight+(25)+(45));
+    _centerView.frame = CGRectMake((ALERT_WIDTH-(270))/2, (ALERT_HEIGHT-(120))/2, (270), contentLaby+contentLabheight+(25)+(45));
 }
 
 
@@ -217,11 +216,11 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     }
     CGFloat h = self.titleArray.count*(self.bottomTableCellH);
     if (h>=self.bottomTableMaxH) {
-        h = self.bottomTableMaxH + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
+        h = self.bottomTableMaxH + 10 + ALERT_BOTTOM_SPACE_HEIGHT + self.bottomHeader;
     }else{
-        h = h + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
+        h = h + 10 + ALERT_BOTTOM_SPACE_HEIGHT + self.bottomHeader;
     }
-    _bottomTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kScreenHeight, kScreenWidth, h) style:UITableViewStyleGrouped];
+    _bottomTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, ALERT_HEIGHT, ALERT_WIDTH, h) style:UITableViewStyleGrouped];
     _bottomTableView.delegate = self;
     _bottomTableView.dataSource = self;
     _bottomTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -251,8 +250,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     cell.backgroundColor = self.bottomViewColor;
 //    }
     
-    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((kScreenWidth-(150))/2, (self.bottomTableCellH-(15))/2, (150), (15))];
-    titleLab.font = SystemFontSize(15);
+    UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake((ALERT_WIDTH-(150))/2, (self.bottomTableCellH-(15))/2, (150), (15))];
+    titleLab.font = ALERT_SystemFontSize(15);
     titleLab.textAlignment = NSTextAlignmentCenter;
     [cell.contentView addSubview:titleLab];
     
@@ -264,7 +263,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
         titleLab.textColor = self.cancleColor;
     }
     
-    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.bottomTableCellH-0.5, kScreenWidth, 0.5)];
+    UIImageView *imageLine = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.bottomTableCellH-0.5, ALERT_WIDTH, 0.5)];
     imageLine.backgroundColor = self.lineColor;
     [cell.contentView addSubview:imageLine];
     
@@ -290,13 +289,13 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section==0) {
-        UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.bottomTableCellH)];
+        UILabel *titleLab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ALERT_WIDTH, self.bottomTableCellH)];
         titleLab.text = self.title;
         titleLab.backgroundColor = [self.bottomViewColor colorWithAlphaComponent:0.8];
         titleLab.textColor = self.titleColor;
         titleLab.textAlignment = NSTextAlignmentCenter;
-        titleLab.font = SystemFontSize(15);
-        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(2, self.bottomTableCellH, kScreenWidth-4, 1)];
+        titleLab.font = ALERT_SystemFontSize(15);
+        UIView *line = [[UIView alloc]initWithFrame:CGRectMake(2, self.bottomTableCellH, ALERT_WIDTH-4, 1)];
         line.backgroundColor = [self.bottomViewColor colorWithAlphaComponent:0.9];
         [titleLab addSubview:line];
         return titleLab;
@@ -336,11 +335,11 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             [UIView animateWithDuration:0.25 animations:^{
                 CGFloat h = self.titleArray.count*(self.bottomTableCellH);
                 if (h>=self.bottomTableMaxH) {
-                    h = self.bottomTableMaxH + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
+                    h = self.bottomTableMaxH + 10 + ALERT_BOTTOM_SPACE_HEIGHT + self.bottomHeader;
                 }else{
-                    h = h + 10 + kBOTTOM_SPACE_HEIGHT + self.bottomHeader;
+                    h = h + 10 + ALERT_BOTTOM_SPACE_HEIGHT + self.bottomHeader;
                 }
-                self.bottomTableView.frame = CGRectMake(0, kScreenHeight - h, kScreenWidth, h);
+                self.bottomTableView.frame = CGRectMake(0, ALERT_HEIGHT - h, ALERT_WIDTH, h);
             }];
         }
             break;
@@ -359,11 +358,11 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
             [UIView animateWithDuration:0.25 animations:^{
                 CGFloat h = self.titleArray.count*(self.bottomTableCellH);
                 if (h>=self.bottomTableMaxH) {
-                    h = self.bottomTableMaxH + 10 + kBOTTOM_SPACE_HEIGHT;
+                    h = self.bottomTableMaxH + 10 + ALERT_BOTTOM_SPACE_HEIGHT;
                 }else{
-                    h = h + 10 + kBOTTOM_SPACE_HEIGHT;
+                    h = h + 10 + ALERT_BOTTOM_SPACE_HEIGHT;
                 }
-                self.bottomTableView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, h);
+                self.bottomTableView.frame = CGRectMake(0, ALERT_HEIGHT, ALERT_WIDTH, h);
             } completion:^(BOOL finished) {
                 [self removeFromSuperview];
             }];
@@ -402,7 +401,7 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(0.9, 0.9, 0.9)]];
     [values addObject:[NSValue valueWithCATransform3D:CATransform3DMakeScale(1.0, 1.0, 1.0)]];
     animation.values = values;
-    animation.timingFunction = [CAMediaTimingFunction functionWithName: @"easeInEaseOut"];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:@"easeInEaseOut"];
     [changeOutView.layer addAnimation:animation forKey:nil];
 }
 
