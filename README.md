@@ -9,18 +9,21 @@
   <img width="200" src="Res/131566445322_.pic.jpg" hspace="30px" />
   <img width="200" src="Res/191566445328_.pic.jpg" hspace="30px" />
   <img width="200" src="Res/181566445327_.pic.jpg" hspace="30px" />
-  <img width="200" src="Res/231566445332_.pic.jpg" hspace="30px" />
 </p>
 
 <p align="left">
+  <img width="200" src="Res/231566445332_.pic.jpg" hspace="30px" />
   <img width="200" src="Res/151566445324_.pic.jpg" hspace="30px" />
   <img width="200" src="Res/141566445323_.pic.jpg" hspace="30px" />
-  <img width="200" src="Res/221566445331_.pic.jpg" hspace="30px" />
-  <img width="200" src="Res/161566445325_.pic.jpg" hspace="30px" />
 </p>
 
 <p align="left">
+  <img width="200" src="Res/221566445331_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/161566445325_.pic.jpg" hspace="30px" />
   <img width="200" src="Res/171566445326_.pic.jpg" hspace="30px" />
+</p>
+
+<p align="left">
   <img width="200" src="Res/211566445330_.pic.jpg" hspace="30px" />
   <img width="200" src="Res/201566445329_.pic.jpg" hspace="30px" />
 </p>
