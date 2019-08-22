@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UINavigationBar+KJExtension.h" // 设置NavigationBar背景
 
 NS_ASSUME_NONNULL_BEGIN
 

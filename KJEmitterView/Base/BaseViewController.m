@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = UIColor.whiteColor;
+    self.view.backgroundColor = UIColorFromHEXA(0xf5f5f5, 1);
     
     /// 去掉返回文字
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem kj_ItemWithImage:@"Arrow" HighImage:@"" Title:@"" TitleColor:UIColor.clearColor Target:self Action:@selector(back)];

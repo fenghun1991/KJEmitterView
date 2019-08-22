@@ -12,9 +12,8 @@
 @implementation UIImage (KJFilter)
 
 #pragma mark - 特效渲染
-/**
- *  根据图片和颜色返回一张加深颜色以后的图片
- *  图片着色
+/**根据图片和颜色返回一张加深颜色以后的图片
+ * 图片着色
  */
 - (UIImage *)kj_drawingWithColorizeImageWithcolor:(UIColor *)color{
     UIGraphicsBeginImageContext(CGSizeMake(self.size.width*2, self.size.height*2));
@@ -34,9 +33,7 @@
     return destImage;
 }
 
-/**
- *  马赛克函数
- */
+/**马赛克函数 */
 - (UIImage *)kj_drawingWithMosaic{
     CIImage *ciImage = [[CIImage alloc]initWithImage:self];   // 这里特别注意的是  必须要用.png格式的图片  否则加载不出来。
     //创建filter 滤镜 马赛克效果
@@ -53,10 +50,8 @@
     return showImage;
 }
 
-/**
- *  高斯模糊函数
- */
-- (UIImage *)kj_drawingWithGaussianBlurNumber:(CGFloat)blur {
+/** 高斯模糊函数 */
+- (UIImage *)kj_drawingWithGaussianBlurNumber:(CGFloat)blur{
     int boxSize = (int)(blur * 40);
     boxSize = boxSize - (boxSize % 2) + 1;
     CGImageRef img = self.CGImage;
@@ -100,10 +95,7 @@
     return returnImage;
 }
 
-
-/**
- *  边缘锐化函数
- */
+/** 边缘锐化函数 */
 - (UIImage *)kj_drawingWithEdgeDetection{
     const size_t width = self.size.width;
     const size_t height = self.size.height;
@@ -133,9 +125,7 @@
     return edged;
 }
 
-/**
- *  浮雕函数
- */
+/** 浮雕函数 */
 - (UIImage *)kj_drawingWithEmboss{
     const size_t width = self.size.width;
     const size_t height = self.size.height;
@@ -165,9 +155,7 @@
     return emboss;
 }
 
-/**
- *  锐化函数
- */
+/** 锐化函数 */
 - (UIImage *)kj_drawingWithSharpen{
     const size_t width = self.size.width;
     const size_t height = self.size.height;
@@ -197,9 +185,7 @@
     return sharpened;
 }
 
-/**
- *  进一步锐化函数
- */
+/** 进一步锐化函数 */
 - (UIImage *)kj_drawingWithNnsharpen{
     const size_t width = self.size.width;
     const size_t height = self.size.height;
@@ -253,9 +239,7 @@
 
 
 #pragma mark - 形态操作
-/**
- *  形态膨胀/扩张
- */
+/** 形态膨胀/扩张 */
 - (UIImage *)kj_drawingWithDilate{
     const size_t width = self.size.width;
     const size_t height = self.size.height;
@@ -375,12 +359,9 @@
     return destImage;
 }
 
-
 #pragma mark - 复用函数
 // 混合函数
-- (UIImage *)kj_imageBlendedWithImage:(UIImage *)overlayImage
-                               blendMode:(CGBlendMode)blendMode
-                                   alpha:(CGFloat)alpha {
+- (UIImage *)kj_imageBlendedWithImage:(UIImage *)overlayImage blendMode:(CGBlendMode)blendMode alpha:(CGFloat)alpha {
     UIGraphicsBeginImageContext(self.size);
     CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
     [self drawInRect:rect];

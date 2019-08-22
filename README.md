@@ -5,6 +5,29 @@
 * 这里有我经常用到的一些扩展，方便好用开发
 * 整理一些好用的自定义控件，部分数据来源于网络 
 
+<p align="left">
+  <img width="200" src="Res/131566445322_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/191566445328_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/181566445327_.pic.jpg" hspace="30px" />
+</p>
+
+<p align="left">
+  <img width="200" src="Res/231566445332_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/151566445324_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/141566445323_.pic.jpg" hspace="30px" />
+</p>
+
+<p align="left">
+  <img width="200" src="Res/221566445331_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/161566445325_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/171566445326_.pic.jpg" hspace="30px" />
+</p>
+
+<p align="left">
+  <img width="200" src="Res/211566445330_.pic.jpg" hspace="30px" />
+  <img width="200" src="Res/201566445329_.pic.jpg" hspace="30px" />
+</p>
+
 ----------------------------------------
 ### 框架整体介绍
 * [作者信息](#作者信息)
@@ -13,6 +36,7 @@
 * [Cocoapods安装](#Cocoapods安装)
 * [更新日志](#更新日志)
 * [效果图](#效果图)
+* [目录结构](#目录结构)
 * [打赏作者 &radic;](#打赏作者)
 
 ----------------------------------------
@@ -25,23 +49,24 @@
 
 #### <a id="作者其他库"></a>作者其他Pod库
 ```
-播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
-pod 'KJPlayer'  # 播放器功能区
-pod 'KJPlayer/KJPlayerView'  # 自带展示界面
-
-实用又方便的Category和一些自定义控件
+实用又方便的Category和自定义控件(Switch、选择控件等等)
 pod 'KJEmitterView'
 pod 'KJEmitterView/Function'#
 pod 'KJEmitterView/Control' # 自定义控件
 
+播放器 - KJPlayer是一款视频播放器，AVPlayer的封装，继承UIView
+- 视频可以边下边播，把播放器播放过的数据流缓存到本地，下次直接从缓冲读取播放
+pod 'KJPlayer'  # 播放器功能区
+pod 'KJPlayer/KJPlayerView'  # 自带展示界面
+
 轮播图 - 支持缩放 多种pagecontrol 支持继承自定义样式 自带网络加载和缓存
-pod 'KJBannerView'  # 轮播图，网络图片加载
+pod 'KJBannerView'  # 轮播图，网络图片加载 支持网络GIF和网络图片和本地图片混合轮播
+
+加载Loading - 多种样式供选择 HUD控件封装
+pod 'KJLoadingAnimation' # 加载控件
 
 菜单控件 - 下拉控件 选择控件
 pod 'KJMenuView' # 菜单控件
-
-加载Loading - 多种样式供选择
-pod 'KJLoadingAnimation' # 加载控件
 
 ```
 
@@ -51,12 +76,18 @@ pod 'KJLoadingAnimation' # 加载控件
 #### <a id="Cocoapods安装"></a>Cocoapods安装
 ```
 pod 'KJEmitterView'
+pod 'KJEmitterView/Function'#
 pod 'KJEmitterView/Control' # 自定义控件
 ```
 
 #### <a id="更新日志"></a>更新日志
 ```
 ####版本更新日志:
+#### Add 4.5.3
+1、UIImage+KJProcessing 新增 kj_jointImageWithMasterImage 拼接图片
+2、UIImage+KJProcessing 新增 kj_imageCompoundWithLocalImage 图片多次合成处理
+3、UIImage+KJProcessing 新增 kj_rotationImageWithOrientation 图片旋转
+
 #### Add 4.5.0
 1、NSArray+ElementDeal 新增对数组元素的处理 包括排序、查找、去重等等
 2、整理富文本扩展 UILabel+KJAttributedString
@@ -118,6 +149,16 @@ pod 'KJEmitterView/Control' # 自定义控件
 
 备注：部分资料来源于网络～  就不一一指出道谢，整理起来方便自己和大家使用
 ```
+#### <a id="效果图"></a>效果图
+<p align="left">
+  <img width="200" src="Res/131566445322_.pic.jpg" hspace="30px" />
+</p>
+
+#### <a id="目录结构"></a>目录结构
+<p align="left">
+  <img width="200" src="Res/目录结构.png" hspace="30px" />
+</p>
+
 
 #### <a id="打赏作者"></a>打赏作者
 * 如果你觉得有帮助，还请为我Star

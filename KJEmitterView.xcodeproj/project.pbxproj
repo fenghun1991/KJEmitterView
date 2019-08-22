@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		680A61A1230E308500BCE302 /* KJIMageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A619F230E308500BCE302 /* KJIMageVC.m */; };
+		680A61A2230E308500BCE302 /* KJIMageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680A61A0230E308500BCE302 /* KJIMageVC.xib */; };
+		680A61A6230E3E9700BCE302 /* KJFilterImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A61A4230E3E9700BCE302 /* KJFilterImageVC.m */; };
+		680A61A7230E3E9700BCE302 /* KJFilterImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680A61A5230E3E9700BCE302 /* KJFilterImageVC.xib */; };
+		680A61AB230E461000BCE302 /* KJViewGradientVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A61A9230E461000BCE302 /* KJViewGradientVC.m */; };
+		680A61AC230E461000BCE302 /* KJViewGradientVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 680A61AA230E461000BCE302 /* KJViewGradientVC.xib */; };
 		6813E4A022B8B12E00D4772D /* NSArray+KJOverstep.m in Sources */ = {isa = PBXBuildFile; fileRef = 6813E49F22B8B12E00D4772D /* NSArray+KJOverstep.m */; };
 		6813E4A322B8B29400D4772D /* NSDictionary+KJNilSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6813E4A222B8B29400D4772D /* NSDictionary+KJNilSafe.m */; };
 		6813E4A722B8B4C700D4772D /* NSNull+KJSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6813E4A622B8B4C700D4772D /* NSNull+KJSafe.m */; };
@@ -47,7 +53,7 @@
 		68B0301521B2FBC400349510 /* KJEmitterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B02FF421B2FBC400349510 /* KJEmitterView.m */; };
 		68B0301E21B2FBC400349510 /* KJErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B0300921B2FBC400349510 /* KJErrorView.m */; };
 		68B0301F21B2FBC400349510 /* KJErrorView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 68B0300A21B2FBC400349510 /* KJErrorView.bundle */; };
-		68BA6C2921B303D40013C4AD /* UIImage+KJFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C0A21B303D40013C4AD /* UIImage+KJFrame.m */; };
+		68BA6C2921B303D40013C4AD /* UIImage+KJProcessing.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C0A21B303D40013C4AD /* UIImage+KJProcessing.m */; };
 		68BA6C2A21B303D40013C4AD /* UIImage+KJFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C0C21B303D40013C4AD /* UIImage+KJFilter.m */; };
 		68BA6C2B21B303D40013C4AD /* UIImage+KJFloodFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C0E21B303D40013C4AD /* UIImage+KJFloodFill.m */; };
 		68BA6C2D21B303D40013C4AD /* UIButton+KJButtonContentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 68BA6C1221B303D40013C4AD /* UIButton+KJButtonContentLayout.m */; };
@@ -63,6 +69,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		680A619E230E308500BCE302 /* KJIMageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJIMageVC.h; sourceTree = "<group>"; };
+		680A619F230E308500BCE302 /* KJIMageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJIMageVC.m; sourceTree = "<group>"; };
+		680A61A0230E308500BCE302 /* KJIMageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJIMageVC.xib; sourceTree = "<group>"; };
+		680A61A3230E3E9700BCE302 /* KJFilterImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJFilterImageVC.h; sourceTree = "<group>"; };
+		680A61A4230E3E9700BCE302 /* KJFilterImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJFilterImageVC.m; sourceTree = "<group>"; };
+		680A61A5230E3E9700BCE302 /* KJFilterImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJFilterImageVC.xib; sourceTree = "<group>"; };
+		680A61A8230E461000BCE302 /* KJViewGradientVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KJViewGradientVC.h; sourceTree = "<group>"; };
+		680A61A9230E461000BCE302 /* KJViewGradientVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJViewGradientVC.m; sourceTree = "<group>"; };
+		680A61AA230E461000BCE302 /* KJViewGradientVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KJViewGradientVC.xib; sourceTree = "<group>"; };
 		6813E49E22B8B12E00D4772D /* NSArray+KJOverstep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KJOverstep.h"; sourceTree = "<group>"; };
 		6813E49F22B8B12E00D4772D /* NSArray+KJOverstep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KJOverstep.m"; sourceTree = "<group>"; };
 		6813E4A122B8B29400D4772D /* NSDictionary+KJNilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+KJNilSafe.h"; sourceTree = "<group>"; };
@@ -137,10 +152,10 @@
 		68B0300921B2FBC400349510 /* KJErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KJErrorView.m; sourceTree = "<group>"; };
 		68B0300A21B2FBC400349510 /* KJErrorView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = KJErrorView.bundle; sourceTree = "<group>"; };
 		68B0300B21B2FBC400349510 /* KJErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KJErrorView.h; sourceTree = "<group>"; };
-		68BA6C0A21B303D40013C4AD /* UIImage+KJFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KJFrame.m"; sourceTree = "<group>"; };
+		68BA6C0A21B303D40013C4AD /* UIImage+KJProcessing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KJProcessing.m"; sourceTree = "<group>"; };
 		68BA6C0B21B303D40013C4AD /* UIImage+KJFloodFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KJFloodFill.h"; sourceTree = "<group>"; };
 		68BA6C0C21B303D40013C4AD /* UIImage+KJFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KJFilter.m"; sourceTree = "<group>"; };
-		68BA6C0D21B303D40013C4AD /* UIImage+KJFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KJFrame.h"; sourceTree = "<group>"; };
+		68BA6C0D21B303D40013C4AD /* UIImage+KJProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KJProcessing.h"; sourceTree = "<group>"; };
 		68BA6C0E21B303D40013C4AD /* UIImage+KJFloodFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KJFloodFill.m"; sourceTree = "<group>"; };
 		68BA6C0F21B303D40013C4AD /* UIImage+KJFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KJFilter.h"; sourceTree = "<group>"; };
 		68BA6C1221B303D40013C4AD /* UIButton+KJButtonContentLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KJButtonContentLayout.m"; sourceTree = "<group>"; };
@@ -310,10 +325,10 @@
 				684BFEED21BA10E60015641A /* Foundation */,
 				6869042C21B2541400ED072F /* Base */,
 				6869042B21B253FC00ED072F /* TextDemo */,
+				687115CB226312ED009EC3E0 /* UINavigationController */,
 				68776CEB21AC34A0000A1435 /* ViewController.h */,
 				68776CEC21AC34A0000A1435 /* ViewController.m */,
 				68776CEE21AC34A0000A1435 /* Main.storyboard */,
-				687115CB226312ED009EC3E0 /* UINavigationController */,
 				6869042D21B25B1000ED072F /* PrefixHeader.pch */,
 				68776CF121AC34A0000A1435 /* Assets.xcassets */,
 				68776CF321AC34A0000A1435 /* LaunchScreen.storyboard */,
@@ -348,6 +363,15 @@
 				6869046921B2D36B00ED072F /* KJFloodImageVC.h */,
 				6869046A21B2D36B00ED072F /* KJFloodImageVC.m */,
 				6869046B21B2D36B00ED072F /* KJFloodImageVC.xib */,
+				680A619E230E308500BCE302 /* KJIMageVC.h */,
+				680A619F230E308500BCE302 /* KJIMageVC.m */,
+				680A61A0230E308500BCE302 /* KJIMageVC.xib */,
+				680A61A3230E3E9700BCE302 /* KJFilterImageVC.h */,
+				680A61A4230E3E9700BCE302 /* KJFilterImageVC.m */,
+				680A61A5230E3E9700BCE302 /* KJFilterImageVC.xib */,
+				680A61A8230E461000BCE302 /* KJViewGradientVC.h */,
+				680A61A9230E461000BCE302 /* KJViewGradientVC.m */,
+				680A61AA230E461000BCE302 /* KJViewGradientVC.xib */,
 			);
 			path = "扩展类";
 			sourceTree = "<group>";
@@ -445,8 +469,8 @@
 			children = (
 				68BA6C0F21B303D40013C4AD /* UIImage+KJFilter.h */,
 				68BA6C0C21B303D40013C4AD /* UIImage+KJFilter.m */,
-				68BA6C0D21B303D40013C4AD /* UIImage+KJFrame.h */,
-				68BA6C0A21B303D40013C4AD /* UIImage+KJFrame.m */,
+				68BA6C0D21B303D40013C4AD /* UIImage+KJProcessing.h */,
+				68BA6C0A21B303D40013C4AD /* UIImage+KJProcessing.m */,
 				68BA6C0B21B303D40013C4AD /* UIImage+KJFloodFill.h */,
 				68BA6C0E21B303D40013C4AD /* UIImage+KJFloodFill.m */,
 			);
@@ -572,6 +596,8 @@
 				6869046D21B2D36B00ED072F /* KJFloodImageVC.xib in Resources */,
 				68776CF521AC34A0000A1435 /* LaunchScreen.storyboard in Resources */,
 				68A5ECCF2305091700A3069D /* README.md in Resources */,
+				680A61A2230E308500BCE302 /* KJIMageVC.xib in Resources */,
+				680A61AC230E461000BCE302 /* KJViewGradientVC.xib in Resources */,
 				68B0301F21B2FBC400349510 /* KJErrorView.bundle in Resources */,
 				68B0301421B2FBC400349510 /* KJEmitter.bundle in Resources */,
 				68776CF221AC34A0000A1435 /* Assets.xcassets in Resources */,
@@ -579,6 +605,7 @@
 				687115D32263156B009EC3E0 /* KJSelectController.xib in Resources */,
 				68E283B921B38DCC009B708F /* KJAlertVC.xib in Resources */,
 				687115DF22633BF0009EC3E0 /* KJSwitchVC.xib in Resources */,
+				680A61A7230E3E9700BCE302 /* KJFilterImageVC.xib in Resources */,
 				68A5ECD02305091700A3069D /* KJEmitterView.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,6 +623,7 @@
 				6813E4A022B8B12E00D4772D /* NSArray+KJOverstep.m in Sources */,
 				68BA6C3321B303D40013C4AD /* UITextView+KJPlaceHolder.m in Sources */,
 				68BA6C3021B303D40013C4AD /* UIView+KJRectCorner.m in Sources */,
+				680A61A1230E308500BCE302 /* KJIMageVC.m in Sources */,
 				68BA6C3521B303D40013C4AD /* UINavigationBar+KJExtension.m in Sources */,
 				684BFEF021BA11020015641A /* NSArray+KJLog.m in Sources */,
 				6869043021B25BC700ED072F /* BaseViewController.m in Sources */,
@@ -616,18 +644,20 @@
 				68BA6C3121B303D40013C4AD /* UIView+KJFrame.m in Sources */,
 				6869046C21B2D36B00ED072F /* KJFloodImageVC.m in Sources */,
 				684BFEF421BA11870015641A /* NSDictionary+KJLog.m in Sources */,
+				680A61A6230E3E9700BCE302 /* KJFilterImageVC.m in Sources */,
 				68BA6C3221B303D40013C4AD /* UITextView+KJLimitCounter.m in Sources */,
 				68B0301E21B2FBC400349510 /* KJErrorView.m in Sources */,
 				6880171D22A89B86000CC362 /* UIView+KJAppointView.m in Sources */,
 				687115D22263156B009EC3E0 /* KJSelectController.m in Sources */,
 				6869044A21B28E0300ED072F /* KJTextViewVC.m in Sources */,
-				68BA6C2921B303D40013C4AD /* UIImage+KJFrame.m in Sources */,
+				68BA6C2921B303D40013C4AD /* UIImage+KJProcessing.m in Sources */,
 				68BA6C3421B303D40013C4AD /* UIBarButtonItem+KJExtension.m in Sources */,
 				68776CED21AC34A0000A1435 /* ViewController.m in Sources */,
 				6869043321B25C5C00ED072F /* KJEmitterVC.m in Sources */,
 				68776CF821AC34A0000A1435 /* main.m in Sources */,
 				6887C13823039F4E00CD063D /* NSArray+ElementDeal.m in Sources */,
 				6889503222A74ED60060C21E /* UIButton+KJEnlargeTouchArea.m in Sources */,
+				680A61AB230E461000BCE302 /* KJViewGradientVC.m in Sources */,
 				687115D622631878009EC3E0 /* KJErrorVC.m in Sources */,
 				68776CEA21AC34A0000A1435 /* AppDelegate.m in Sources */,
 				687115DE22633BF0009EC3E0 /* KJSwitchVC.m in Sources */,
@@ -774,7 +804,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HXTFJDA4H2;
+				DEVELOPMENT_TEAM = A48YQ26WG3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KJEmitterView/PrefixHeader.pch";
 				INFOPLIST_FILE = KJEmitterView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -792,7 +822,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HXTFJDA4H2;
+				DEVELOPMENT_TEAM = A48YQ26WG3;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KJEmitterView/PrefixHeader.pch";
 				INFOPLIST_FILE = KJEmitterView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
