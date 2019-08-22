@@ -12,7 +12,6 @@
 static NSString * const kcornerRadius = @"kj_rectCornerRadius";
 static NSString * const krectCorner = @"kj_rectCorner";
 
-
 @implementation UIView (KJRectCorner)
 
 - (void)setKj_Radius:(CGFloat)kj_Radius{
@@ -76,15 +75,7 @@ static NSString * const krectCorner = @"kj_rectCorner";
 
 - (void)kj_GradientBgColorWithColors:(NSArray *)colors Locations:(NSArray *)locations StartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint{
     CAGradientLayer *gradientLayer = [self kj_GradientLayerWithColors:colors Frame:self.bounds Locations:locations StartPoint:startPoint EndPoint:endPoint];
-    
     [self.layer insertSublayer:gradientLayer atIndex:0];
-}
-
-- (void)kj_BorderAndCornerWithRadius:(CGFloat)redius BorderWidth:(CGFloat)width BorderColor:(UIColor *)color{
-    [self.layer setCornerRadius:redius];
-    [self.layer setMasksToBounds:YES];
-    [self.layer setBorderWidth:width];
-    [self.layer setBorderColor:[color CGColor]];
 }
 
 - (void)kj_BorderTop:(BOOL)top Left:(BOOL)left Bottom:(BOOL)bottom Right:(BOOL)right BorderColor:(UIColor *)color BorderWidth:(CGFloat)width{
@@ -119,12 +110,14 @@ static NSString * const krectCorner = @"kj_rectCorner";
     CAShapeLayer *borderLayer = [CAShapeLayer layer];
     borderLayer.bounds = CGRectMake(0, 0, self.frame.size.width , self.frame.size.height);
     borderLayer.position = CGPointMake(CGRectGetMidX(self.bounds), CGRectGetMidY(self.bounds));
-    
-    //不带圆角
-    //    borderLayer.path = [UIBezierPath bezierPathWithRect:borderLayer.bounds].CGPath;
-    //带圆角
-    borderLayer.path = [UIBezierPath bezierPathWithRoundedRect:borderLayer.bounds cornerRadius:self.layer.cornerRadius].CGPath;
-    borderLayer.lineWidth = lineWidth / [[UIScreen mainScreen] scale];
+    if (self.layer.cornerRadius>0) {
+        //带圆角
+        borderLayer.path = [UIBezierPath bezierPathWithRoundedRect:borderLayer.bounds cornerRadius:self.layer.cornerRadius].CGPath;
+    }else{
+        //不带圆角
+        borderLayer.path = [UIBezierPath bezierPathWithRect:borderLayer.bounds].CGPath;
+    }
+    borderLayer.lineWidth = lineWidth / [UIScreen mainScreen].scale;
     //虚线边框
     borderLayer.lineDashPattern = spaceAry;
     borderLayer.fillColor = [UIColor clearColor].CGColor;

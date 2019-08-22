@@ -28,34 +28,34 @@
             [button kj_addAction:^(UIButton * _Nonnull kButton) {
                 switch (kButton.tag) {
                     case 500:
-                        weakself.Image.image = [image kj_drawingWithMosaic];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithMosaic];
                         break;
                     case 501:
-                        weakself.Image.image = [image kj_drawingWithGaussianBlurNumber:.5];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithGaussianBlurNumber:.5];
                         break;
                     case 502:
-                        weakself.Image.image = [image kj_drawingWithEdgeDetection];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithEdgeDetection];
                         break;
                     case 503:
-                        weakself.Image.image = [image kj_drawingWithEmboss];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithEmboss];
                         break;
                     case 504:
-                        weakself.Image.image = [image kj_drawingWithSharpen];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithSharpen];
                         break;
                     case 505:
-                        weakself.Image.image = [image kj_drawingWithGrayImage];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithGrayImage];
                         break;
                     case 506:
-                        weakself.Image.image = [image kj_drawingWithErodeIterations:5];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithErodeIterations:5];
                         break;
                     case 507:
-                        weakself.Image.image = [image kj_drawingWithGradientIterations:5];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithGradientIterations:5];
                         break;
                     case 508:
-                        weakself.Image.image = [image kj_drawingWithBlackhatIterations:5];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithBlackhatIterations:5];
                         break;
                     case 509:
-                        weakself.Image.image = [image kj_drawingWithEqualization];
+                        weakself.Image.image = [weakself.Image.image kj_drawingWithEqualization];
                         break;
                     default:
                         break;

@@ -46,8 +46,7 @@ static const int8_t kFinallyNodeOffset = -1;
 }
 
 - (instancetype)initWithCapacity:(NSInteger)capacity cacheSizeIncrements:(NSInteger)increments multiplier: (NSInteger)multiplier {
-    self = [super init];
-    if (self) {
+    if (self == [super init]) {
         _nodeCache = [NSMutableData dataWithLength:capacity * sizeof(PointNode)];
         _cacheSizeIncrements = increments;
         _multiplier = multiplier;
@@ -88,7 +87,7 @@ static const int8_t kFinallyNodeOffset = -1;
 }
 
 - (NSInteger)offsetOfNode:(PointNode *)node {
-    return node -  (PointNode *)_nodeCache.mutableBytes;
+    return node - (PointNode *)_nodeCache.mutableBytes;
 }
 
 - (PointNode *)nextFreeNode {

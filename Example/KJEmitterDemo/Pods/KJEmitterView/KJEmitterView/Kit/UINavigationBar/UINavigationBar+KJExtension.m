@@ -47,7 +47,7 @@
     
     UIView *titleView = [self valueForKey:@"_titleView"];
     titleView.alpha = kj_Alpha;
-    //    when viewController first load, the titleView maybe nil
+    // when viewController first load, the titleView maybe nil
     [[self subviews] enumerateObjectsUsingBlock:^(UIView *obj, NSUInteger idx, BOOL *stop){
         if ([obj isKindOfClass:NSClassFromString(@"UINavigationItemView")]){
             obj.alpha = kj_Alpha;

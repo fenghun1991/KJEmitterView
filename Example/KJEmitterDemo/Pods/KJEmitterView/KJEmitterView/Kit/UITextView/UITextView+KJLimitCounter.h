@@ -6,6 +6,7 @@
 //  Copyright © 2018年 杨科军. All rights reserved.
 //
 #import <UIKit/UIKit.h>
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextView (KJLimitCounter)
 /** 限制字数*/
@@ -19,3 +20,4 @@
 /** 统计限制字数Label*/
 @property(nonatomic,readonly)UILabel *kj_InputLimitLabel;
 @end
+NS_ASSUME_NONNULL_END

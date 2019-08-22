@@ -98,14 +98,15 @@
     [attrString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, length)];
     self.kj_InputLimitLabel.attributedText = attrString;
 }
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"layer.borderWidth"]||
+#pragma mark - kvo
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    if ([keyPath isEqualToString:@"layer.borderWidth"] ||
         [keyPath isEqualToString:@"text"]){
         [self updateLimitCount];
     }
 }
 #pragma mark - lazzing
--(UILabel *)kj_InputLimitLabel{
+- (UILabel *)kj_InputLimitLabel{
     UILabel *label = objc_getAssociatedObject(self, @selector(kj_InputLimitLabel));
     if (!label){
         label = [[UILabel alloc] init];

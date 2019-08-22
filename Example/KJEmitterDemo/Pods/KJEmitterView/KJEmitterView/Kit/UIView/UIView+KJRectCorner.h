@@ -7,12 +7,11 @@
 //  渐变 - 圆角扩展
 
 #import <UIKit/UIKit.h>
-
+NS_ASSUME_NONNULL_BEGIN
 @interface UIView (KJRectCorner)
 
 /** 圆角半径 默认 5 */
 @property(nonatomic,assign)CGFloat kj_Radius;
-
 /** 圆角方位 */
 @property(nonatomic,assign)UIRectCorner kj_RectCorner;
 
@@ -35,15 +34,6 @@
 - (void)kj_GradientBgColorWithColors:(NSArray *)colors Locations:(NSArray *)locations StartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint;
 
 /**
- 设置圆角和边框
- @param redius 圆角大小
- @param width  边框宽度
- @param color  边框颜色
- */
-- (void)kj_BorderAndCornerWithRadius:(CGFloat)redius BorderWidth:(CGFloat)width BorderColor:(UIColor *)color;
-
-
-/**
  设置某一条边的边框
  @param top    顶部
  @param left   左侧
@@ -62,3 +52,4 @@
 - (void)kj_DashedLineColor:(UIColor *)lineColor lineWidth:(CGFloat)lineWidth spaceAry:(NSArray<NSNumber *> *)spaceAry;
 
 @end
+NS_ASSUME_NONNULL_END

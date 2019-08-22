@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextView (KJPlaceHolder)
 
-/**  UITextView+placeholder */
+/** UITextView+placeholder */
 @property(nonatomic,copy)NSString *kj_PlaceHolder;
 /** placeHolder颜色 */
 @property(nonatomic,strong)UIColor *kj_PlaceHolderColor;
 
 @end
+NS_ASSUME_NONNULL_END

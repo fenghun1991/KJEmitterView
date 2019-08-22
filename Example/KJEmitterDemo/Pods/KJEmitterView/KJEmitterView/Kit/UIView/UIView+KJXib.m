@@ -34,7 +34,7 @@
  * xib创建的view
  */
 + (instancetype)kj_viewFromXib{
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self)owner:nil options:nil] lastObject];
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
 + (instancetype)kj_viewFromXibWithFrame:(CGRect)frame {
@@ -42,20 +42,33 @@
     view.frame = frame;
     return view;
 }
+/** 寻找子视图 */
+- (UIView*)kj_FindSubviewRecursively:(BOOL(^)(UIView *subview, BOOL *stop))recurse{
+    for (UIView *view in self.subviews) {
+        BOOL stop = NO;
+        if(recurse(view, &stop)) {
+            /// 递归查找
+            return [view kj_FindSubviewRecursively:recurse];
+        }else if(stop) {
+            return view;
+        }
+    }
+    return nil;
+}
 
 /**
  * xib中显示的属性
  */
--(void)setBorderColor:(UIColor *)borderColor {
+- (void)setBorderColor:(UIColor *)borderColor {
     [self.layer setBorderColor:borderColor.CGColor];
 }
 
--(void)setBorderWidth:(CGFloat)borderWidth {
-    if (borderWidth < 0) return;
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    if (borderWidth <= 0) return;
     [self.layer setBorderWidth:borderWidth];
 }
 
--(void)setCornerRadius:(CGFloat)cornerRadius {
+- (void)setCornerRadius:(CGFloat)cornerRadius {
     [self.layer setCornerRadius:cornerRadius];
     self.layer.masksToBounds = cornerRadius > 0;
 }
@@ -76,6 +89,5 @@
 - (void)setShadowOffset:(CGSize)shadowOffset{
     [self.layer setShadowOffset:shadowOffset];
 }
-
 
 @end
